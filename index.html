@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smart edu AI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: #fdfdfd;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar */
+        nav {
+            background: linear-gradient(135deg, #ff8c42, #ffd23f);
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #333;
+        }
+
+        /* Responsive for smaller screens */
+        @media (max-width: 600px) {
+            .nav-links {
+                display: none;
+            }
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff8c42, #ffd23f);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header img {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #ff8c42;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .card-content h3 {
+            margin-top: 0;
+            color: #ff8c42;
+        }
+
+        .partners img {
+            max-width: 150px;
+            margin: 10px;
+            border-radius: 8px;
+            background-size: contain;
+            /* scale image to cover container */
+            background-position: center;
+            /* center the image */
+            background-repeat: no-repeat;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer img {
+            max-width: 120px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="#about" class="logo">Smart edu AI</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#partners">Partners</a></li>
+                <li><a href="#objectives">Objectives</a></li>
+                <li><a href="#activities">Activities</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header data-aos="fade-down">
+        <img src="images/logos/smartaiedu-logo.jpg" alt="Smart edu AI Logo" />
+        <h1>SMART TRANSFORMATION IN EDUCATION WITH ARTIFICIAL INTELLIGENCE</h1>
+        <p>Empowering Education with AI – Erasmus+ Small-Scale Partnership</p>
+    </header>
+
+    <section id="about" data-aos="fade-up">
+        <h2>About the Project</h2>
+        <div class="card">
+            <p><strong>Project Acronym:</strong> Smart edu AI</p>
+            <p>This Erasmus+ project, "Smart Transformation in Education with Artificial Intelligence" (Smart edu AI),
+                is a small-scale partnership in school education. It will run for 24 months, from January 1, 2025, to
+                December 31, 2026, with a total lump sum of €60,000.00.</p>
+            <p>The project's motivation is to enhance student development and learning experiences by integrating AI
+                technologies into educational processes. It addresses the necessity of AI in improving educational
+                quality, ensuring equal opportunities, and meeting individual learning needs in the digital age.</p>
+        </div>
+    </section>
+
+    <!-- Participating Organizations -->
+    <section id="partners" data-aos="fade-up">
+        <h2>Participating Organizations</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="images/logos/Eurolab for Teachers.png" alt="Eurolab for Teachers" />
+                <div class="card-content">
+                    <h3>Eurolab for Teachers (Poland)</h3>
+                    <p>Coordinator with expertise in modern pedagogy, gamification, and sustainability-focused AI
+                        initiatives.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/logos/Düzce Milli Egemenlik Bilim ve Sanat Merkezi_TÜRKİYE.jpg"
+                    alt="Düzce Milli Egemenlik" />
+                <div class="card-content">
+                    <h3>Düzce Milli Egemenlik (Türkiye)</h3>
+                    <p>Public institution for gifted students, specializing in research, teacher training, and AI
+                        project testing.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/logos/fcc-logo.jpg" alt="France Culture Connection" />
+                <div class="card-content">
+                    <h3>France Culture Connection (France)</h3>
+                    <p>NGO supporting disadvantaged groups through educational, cultural, and digital projects, with AI
+                        and ethics expertise.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/logos/novo-logo-cpiocruce.png" alt="Centro Público Integrado O Cruce" />
+                <div class="card-content">
+                    <h3>Centro Público Integrado O Cruce (Spain)</h3>
+                    <p>Multilingual public center recognized for innovative teaching, focusing on disadvantaged students
+                        and AI impact analysis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Objectives -->
+    <section id="objectives" data-aos="fade-up">
+        <h2>Core Objectives</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="images/objective1.jpg" alt="Student-Centered AI" />
+                <div class="card-content">
+                    <h3>Using Student-Centered AI Applications</h3>
+                    <p>Personalized learning experiences tailored to individual learning styles and paces. Adaptive AI
+                        tools enhance learning management and improve student engagement.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/objective2.jpg" alt="AI Training for Teachers" />
+                <div class="card-content">
+                    <h3>AI Training for Teachers</h3>
+                    <p>Improving educators' digital skills for more effective and personalized teaching. Addresses the
+                        global gap in AI tool readiness among teachers.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/objective3.jpg" alt="Learning Analysis" />
+                <div class="card-content">
+                    <h3>Learning Analysis & Feedback</h3>
+                    <p>AI-based data analysis to identify student strengths and weaknesses, allowing tailored teaching
+                        strategies for better outcomes.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/objective4.jpg" alt="Equality in Education" />
+                <div class="card-content">
+                    <h3>Ensuring Equality of Opportunity</h3>
+                    <p>Breaking down barriers for disadvantaged students through AI solutions, improving performance
+                        regardless of background or abilities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Activities -->
+    <section id="activities" data-aos="fade-up">
+        <h2>Key Activities Planned</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="images/activity1.jpg" alt="France AI Training" />
+                <div class="card-content">
+                    <h3>AI Training for Educators (France)</h3>
+                    <p>7-day program covering AI integration in teaching, lesson plans, AI-based tools, performance
+                        tracking, ethical AI, and digital pedagogy.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/activity2.jpg" alt="Spain AI Learning" />
+                <div class="card-content">
+                    <h3>Artificial Intelligences Combine (Spain)</h3>
+                    <p>Focus on personalized learning for disadvantaged and migrant students aged 12-15 using AI for
+                        language and subject learning support.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/activity3.jpg" alt="Turkey AI Science Art" />
+                <div class="card-content">
+                    <h3>Art of Science with AI (Türkiye)</h3>
+                    <p>AI-enhanced science experiments, music composition, and visual design activities fostering
+                        creativity, critical thinking, and tech literacy.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/activity4.jpg" alt="Poland AI Environment" />
+                <div class="card-content">
+                    <h3>AI & Environmental Protection (Poland)</h3>
+                    <p>Using AI to raise environmental awareness, calculate carbon footprints, and design eco-friendly
+                        cities in interactive simulations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Smart edu AI – Erasmus+ Project</p>
+        <img src="images/erasmus.png" alt="Erasmus+ Logo" />
+        <img src="images/eu.png" alt="EU Flag" />
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script>
+        AOS.init();
+        gsap.from("header h1", {
+            duration: 1,
+            y: -50,
+            opacity: 0,
+        });
+    </script>
+</body>
+
+</html>
