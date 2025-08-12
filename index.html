@@ -10,264 +10,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            background-color: #fdfdfd;
-            color: #333;
-            scroll-behavior: smooth;
-        }
+    <link rel="stylesheet" href="./style.css" />
 
-        /* Navbar */
-        nav {
-            background: linear-gradient(135deg, #ff8c42, #ffd23f);
-            padding: 10px 20px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo-container img {
-            height: 40px;
-            border-radius: 6px;
-        }
-
-        nav .logo {
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: white;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #333;
-        }
-
-        /* Responsive for smaller screens */
-        @media (max-width: 600px) {
-            .nav-links {
-                display: none;
-            }
-        }
-
-
-        header {
-            background: linear-gradient(135deg, #ff8c42, #ffd23f);
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
-
-        header img {
-            max-width: 250px;
-            margin-bottom: 20px;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        section {
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        h2 {
-            color: #ff8c42;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .card {
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .cardlogo {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-
-        }
-
-        .cardlogo img {
-            width: 100%;
-            height: 180px;
-            object-fit: contain;
-
-
-        }
-
-        .card-content {
-            padding: 20px;
-            flex-grow: 1;
-        }
-
-        .card-content h3 {
-            margin-top: 0;
-            color: #ff8c42;
-        }
-
-        .partners img {
-            max-width: 150px;
-            margin: 10px;
-            border-radius: 8px;
-            background-size: contain;
-            /* scale image to cover container */
-            background-position: center;
-            /* center the image */
-            background-repeat: no-repeat;
-        }
-
-        h2 {
-            color: #ff8c42;
-            margin-top: 40px;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .gallery img {
-            width: 100%;
-            height: 200px;
-            object-fit: contain;
-            background: white;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        footer img {
-            max-width: 250px;
-            margin: 10px;
-        }
-
-        #partners {
-            padding: 80px 40px 40px;
-            /* top | left/right | bottom */
-            text-align: center;
-
-        }
-
-        #partners h2 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            color: #333;
-        }
-
-        .cardslogo {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            justify-items: center;
-            /* Centers cards horizontally */
-        }
-
-        .cardlogo {
-            padding-top: 30px;
-            background: #fff;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            max-width: 320px;
-            /* Keeps all cards the same width */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* Centers content inside */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
-            /* Centers text inside */
-        }
-
-        .cardlogo:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25p
-    </style>
 
 </head>
 
 <body>
+
     <nav>
         <div class="nav-container">
             <div class="logo-container">
-                <img src="images/logos/smartaiedu-logo.jpg" alt="Smart edu AI Logo">
+                <img src="images/logos/smartaiedu-logo.jpg" alt="Smart edu AI Logo" />
                 <a href="#about" class="logo">Smart edu AI</a>
             </div>
             <ul class="nav-links">
@@ -276,6 +29,11 @@
                 <li><a href="#objectives">Objectives</a></li>
                 <li><a href="#activities">Activities</a></li>
             </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
     <header data-aos="fade-down">
@@ -706,6 +464,16 @@
             opacity: 0,
         });
     </script>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
 </body>
 
 </html>
