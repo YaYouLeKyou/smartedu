@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Smart edu AI</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logos/smartaiedu-logo.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
@@ -33,6 +35,17 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-container img {
+            height: 40px;
+            border-radius: 6px;
         }
 
         nav .logo {
@@ -68,6 +81,7 @@
             }
         }
 
+
         header {
             background: linear-gradient(135deg, #ff8c42, #ffd23f);
             color: white;
@@ -76,7 +90,7 @@
         }
 
         header img {
-            max-width: 150px;
+            max-width: 250px;
             margin-bottom: 20px;
         }
 
@@ -120,10 +134,28 @@
             flex-direction: column;
         }
 
+        .cardlogo {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
         .card img {
             width: 100%;
             height: 180px;
             object-fit: cover;
+
+        }
+
+        .cardlogo img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+
+
         }
 
         .card-content {
@@ -155,16 +187,20 @@
         }
 
         footer img {
-            max-width: 120px;
+            max-width: 250px;
             margin: 10px;
         }
     </style>
+
 </head>
 
 <body>
     <nav>
         <div class="nav-container">
-            <a href="#about" class="logo">Smart edu AI</a>
+            <div class="logo-container">
+                <img src="images/logos/smartaiedu-logo.jpg" alt="Smart edu AI Logo">
+                <a href="#about" class="logo">Smart edu AI</a>
+            </div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#partners">Partners</a></li>
@@ -173,11 +209,11 @@
             </ul>
         </div>
     </nav>
-
     <header data-aos="fade-down">
         <img src="images/logos/smartaiedu-logo.jpg" alt="Smart edu AI Logo" />
         <h1>SMART TRANSFORMATION IN EDUCATION WITH ARTIFICIAL INTELLIGENCE</h1>
         <p>Empowering Education with AI – Erasmus+ Small-Scale Partnership</p>
+        <img src="images/logos/eu_funded_en.jpg" alt="funded by eu" />
     </header>
 
     <section id="about" data-aos="fade-up">
@@ -197,37 +233,68 @@
     <section id="partners" data-aos="fade-up">
         <h2>Participating Organizations</h2>
         <div class="cards">
-            <div class="card">
+            <div class="cardlogo">
                 <img src="images/logos/Eurolab for Teachers.png" alt="Eurolab for Teachers" />
                 <div class="card-content">
-                    <h3>Eurolab for Teachers (Poland)</h3>
-                    <p>Coordinator with expertise in modern pedagogy, gamification, and sustainability-focused AI
-                        initiatives.</p>
+                    <h3><a href="https://eurolabforteachers.pl/" target="_blank" rel="noopener noreferrer"
+                            style="color: #ff8c42; text-decoration: none;">Eurolab for Teachers (Poland)</a></h3>
+
+                    <p>Offers workshops and professional development courses for schools and educators, focused on
+                        modern teaching methodologies, gamification, multisensory teaching techniques, and
+                        neuro-pedagogy. It organizes more than 10 international courses each year.</p>
+                    <a href="https://eurolabforteachers.pl/" target="_blank" rel="noopener noreferrer"
+                        style="color: #ff8c42; text-decoration: none;">Learn more</a>
+                    <p>
+                        Mother Zofia school in Kraków: The oldest girls' school in
+                        Poland, founded by Mother Zofia Maciejowska-Czeska.
+
+                    </p> <a href="https://szkolyprezentekkrakow.pl/english/" target="_blank" rel="noopener noreferrer"
+                        style="color: #ff8c42; text-decoration: none;">Learn more</a>
+
                 </div>
             </div>
-            <div class="card">
+            <div class="cardlogo">
                 <img src="images/logos/Düzce Milli Egemenlik Bilim ve Sanat Merkezi_TÜRKİYE.jpg"
                     alt="Düzce Milli Egemenlik" />
                 <div class="card-content">
-                    <h3>Düzce Milli Egemenlik (Türkiye)</h3>
+                    <h3><a href="https://milliegemenlikbilsem.meb.k12.tr/" target="_blank" rel="noopener noreferrer"
+                            style="color: #ff8c42; text-decoration: none;">Düzce Milli Egemenlik (Türkiye)</a></h3>
+
                     <p>Public institution for gifted students, specializing in research, teacher training, and AI
-                        project testing.</p>
+                        project testing. Provides support and education for gifted students. The center carries out
+                        numerous national and international project activities, including intelligence game tournaments,
+                        coding and robotics activities, digital design workshops, eTwinning projects, and math
+                        olympiads.</p>
+                    <a href="https://milliegemenlikbilsem.meb.k12.tr/" target="_blank" rel="noopener noreferrer"
+                        style="color: #ff8c42; text-decoration: none;">Learn more</a>
                 </div>
             </div>
-            <div class="card">
+            <div class="cardlogo">
                 <img src="images/logos/fcc-logo.jpg" alt="France Culture Connection" />
                 <div class="card-content">
-                    <h3>France Culture Connection (France)</h3>
+                    <h3><a href="https://francecultureconnection.netlify.app/" target="_blank" rel="noopener noreferrer"
+                            style="color: #ff8c42; text-decoration: none;">France Culture Connection (France)</a></h3>
                     <p>NGO supporting disadvantaged groups through educational, cultural, and digital projects, with AI
-                        and ethics expertise.</p>
+                        and ethics expertise.Offers training on technology planning models, technology integration
+                        models, and digital tools (e.g., Web 2.0, augmented/virtual reality, generative AI). France
+                        Culture Connection was
+                        chosen for its work on AI education and its track record in developing advanced educational
+                        materials.</p>
+                    <a href="https://francecultureconnection.netlify.app/" target="_blank" rel="noopener noreferrer"
+                        style="color: #ff8c42; text-decoration: none;">Learn more</a>
                 </div>
             </div>
-            <div class="card">
+            <div class="cardlogo">
                 <img src="images/logos/novo-logo-cpiocruce.png" alt="Centro Público Integrado O Cruce" />
                 <div class="card-content">
                     <h3>Centro Público Integrado O Cruce (Spain)</h3>
                     <p>Multilingual public center recognized for innovative teaching, focusing on disadvantaged students
-                        and AI impact analysis.</p>
+                        and AI impact analysis.A public integrated multilingual center (kindergarten, primary, and
+                        secondary) with about 400 students. It is recognized as one of the most innovative schools and
+                        is part of the Galician digital education network. It participates in multiple educational
+                        innovation projects (reading club, science club, robotics).</p>
+                    <a href="https://www.edu.xunta.gal/centros/cpicruce/" target="_blank" rel="noopener noreferrer"
+                        style="color: #ff8c42; text-decoration: none;">Learn more</a>
                 </div>
             </div>
         </div>
@@ -238,7 +305,7 @@
         <h2>Core Objectives</h2>
         <div class="cards">
             <div class="card">
-                <img src="images/objective1.jpg" alt="Student-Centered AI" />
+                <img src="images/core/origin.jpg" alt="Student-Centered AI" />
                 <div class="card-content">
                     <h3>Using Student-Centered AI Applications</h3>
                     <p>Personalized learning experiences tailored to individual learning styles and paces. Adaptive AI
@@ -246,7 +313,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="images/objective2.jpg" alt="AI Training for Teachers" />
+                <img src="images/core/aitraining.jpg" alt="AI Training for Teachers" />
                 <div class="card-content">
                     <h3>AI Training for Teachers</h3>
                     <p>Improving educators' digital skills for more effective and personalized teaching. Addresses the
@@ -254,7 +321,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="images/objective3.jpg" alt="Learning Analysis" />
+                <img src="images/core/ai-for-data-analysis.avif" alt="Learning Analysis" />
                 <div class="card-content">
                     <h3>Learning Analysis & Feedback</h3>
                     <p>AI-based data analysis to identify student strengths and weaknesses, allowing tailored teaching
@@ -262,7 +329,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="images/objective4.jpg" alt="Equality in Education" />
+                <img src="images/core/equaloportunities.png" alt="Equality in Education" />
                 <div class="card-content">
                     <h3>Ensuring Equality of Opportunity</h3>
                     <p>Breaking down barriers for disadvantaged students through AI solutions, improving performance
@@ -277,7 +344,7 @@
         <h2>Key Activities Planned</h2>
         <div class="cards">
             <div class="card">
-                <img src="images/activity1.jpg" alt="France AI Training" />
+                <img src="images/flags/france.png" alt="France AI Training" />
                 <div class="card-content">
                     <h3>AI Training for Educators (France)</h3>
                     <p>7-day program covering AI integration in teaching, lesson plans, AI-based tools, performance
@@ -285,7 +352,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="images/activity2.jpg" alt="Spain AI Learning" />
+                <img src="images/flags/espagne.png" alt="Spain AI Learning" />
                 <div class="card-content">
                     <h3>Artificial Intelligences Combine (Spain)</h3>
                     <p>Focus on personalized learning for disadvantaged and migrant students aged 12-15 using AI for
@@ -293,7 +360,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="images/activity3.jpg" alt="Turkey AI Science Art" />
+                <img src="images/flags/turquie.png" alt="Turkey AI Science Art" />
                 <div class="card-content">
                     <h3>Art of Science with AI (Türkiye)</h3>
                     <p>AI-enhanced science experiments, music composition, and visual design activities fostering
@@ -301,7 +368,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="images/activity4.jpg" alt="Poland AI Environment" />
+                <img src="images/flags/poland.png" alt="Poland AI Environment" />
                 <div class="card-content">
                     <h3>AI & Environmental Protection (Poland)</h3>
                     <p>Using AI to raise environmental awareness, calculate carbon footprints, and design eco-friendly
@@ -313,8 +380,8 @@
 
     <footer>
         <p>&copy; 2025 Smart edu AI – Erasmus+ Project</p>
-        <img src="images/erasmus.png" alt="Erasmus+ Logo" />
-        <img src="images/eu.png" alt="EU Flag" />
+        <img src="images/logos/eu_funded_en.jpg" alt="Erasmus+ Logo" />
+
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
