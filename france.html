@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Smart edu AI</title>
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="images/logos/smartaiedu-logo.jpg">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Smart Edu AI – 5-Day Training Program</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logos/smartaiedu-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -22,13 +21,77 @@
             line-height: 1.6;
         }
 
+        /* Navbar */
+        nav {
+            background: linear-gradient(135deg, #ff8c42, #ffd23f);
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-container img {
+            height: 40px;
+            border-radius: 6px;
+        }
+
+        nav .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #333;
+        }
+
+        /* Responsive for smaller screens */
+        @media (max-width: 600px) {
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* Header */
         header {
             background: linear-gradient(135deg, #ff8c42, #ffd23f);
             color: white;
             padding: 15px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 10px;
+            text-align: center;
         }
 
         header img {
@@ -36,7 +99,7 @@
         }
 
         header h1 {
-            margin: 0;
+            margin: 10px 0 0;
             font-size: 1.5rem;
         }
 
@@ -88,9 +151,20 @@
 </head>
 
 <body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="images/logos/smartaiedu-logo.jpg" alt="Smart Edu AI Logo">
+                <a href="#about" class="logo">Smart Edu AI</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./index.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <header>
-        <img src="./images/logos/smartaiedu-logo.jpg" alt="Smart Edu AI Logo">
+
         <h1>Smart Edu AI: A 5-Day Training Program for Youth Workers</h1>
     </header>
 
@@ -116,9 +190,9 @@
                 Computer Vision. Discussions focus on why AI matters in education—enhancing accessibility, efficiency,
                 and engagement.</p>
             <div class="gallery">
-                <img src="/images/france/day1/day1-1.jpg" alt="Day 1 Image 1">
-                <img src="/images/france/day1/day1-2.jpg" alt="Day 1 Image 2">
-                <img src="/images/france/day1/day1-3.jpg" alt="Day 1 Image 3">
+                <img src="./images/france/day1/day1-1.jpg" alt="Day 1 Image 1">
+                <img src="./images/france/day1/day1-2.jpg" alt="Day 1 Image 2">
+                <img src="./images/france/day1/day1-3.jpg" alt="Day 1 Image 3">
                 <img src="./images/france/day1/day1-4.jpg" alt="Day 1 Image 4">
             </div>
         </section>
@@ -131,8 +205,8 @@
                 activities explore student-centered AI applications.</p>
             <div class="gallery">
                 <img src="./images/france/day2/day2-1.jpg" alt="Day 2 Image 1">
-                <img src="./images/france/day2/day2-2.jpg" alt="Day 2 Image 2>
-                <img src=" ./images/france/day2/day2-3.jpg" alt="Day 2 Image 3">
+                <img src="./images/france/day2/day2-2.jpg" alt="Day 2 Image 2">
+                <img src="./images/france/day2/day2-3.jpg" alt="Day 2 Image 3">
                 <img src="./images/france/day2/day2-4.jpg" alt="Day 2 Image 4">
             </div>
         </section>
@@ -146,8 +220,8 @@
             <div class="gallery">
                 <img src="./images/france/day3/day3-1.jpg" alt="Day 3 Image 1">
                 <img src="./images/france/day3/day3-2.jpg" alt="Day 3 Image 2">
-                <img src=" ./images/france/day3/day3-3.jpg" alt="Day 3 Image 3">
-                <img src=" ./images/france/day3/day3-4.jpg" alt="Day 3 Image 4">
+                <img src="./images/france/day3/day3-3.jpg" alt="Day 3 Image 3">
+                <img src="./images/france/day3/day3-4.jpg" alt="Day 3 Image 4">
             </div>
         </section>
 
@@ -171,24 +245,23 @@
                 analytics, sustainable technology, and the future role of educators in an AI-powered world.</p>
             <div class="gallery">
                 <img src="./images/france/day5/foto1.jpg" alt="Day 5 Image 1">
-                <img src="./images/france/day5/foto2.jpg">
-                <img src="./images/france/day5/foto3.jpg">
+                <img src="./images/france/day5/foto2.jpg" alt="Day 5 Image 2">
+                <img src="./images/france/day5/foto3.jpg" alt="Day 5 Image 3">
                 <img src="./images/france/day5/foto4.jpg" alt="Day 5 Image 4">
             </div>
             <div class="gallery">
-                <img src="./images/france/day5/foto5.jpg" alt="Day 5 Image 1">
-                <img src="./images/france/day5/foto6.jpg" alt="Day 5 Image 2">
-                <img src="./images/france/day5/foto7.jpg" alt="Day 5 Image 3">
-                <img src="./images/france/day5/foto8.jpg" alt="Day 5 Image 4">
+                <img src="./images/france/day5/foto5.jpg" alt="Day 5 Image 5">
+                <img src="./images/france/day5/foto6.jpg" alt="Day 5 Image 6">
+                <img src="./images/france/day5/foto7.jpg" alt="Day 5 Image 7">
+                <img src="./images/france/day5/foto8.jpg" alt="Day 5 Image 8">
             </div>
         </section>
-        <footer>
-            <p>&copy; 2025 Smart edu AI – Erasmus+ Project</p>
-            <img src="images/logos/eu_funded_en.jpg" alt="Erasmus+ Logo" />
-
-        </footer>
     </main>
 
+    <footer>
+        <p>&copy; 2025 Smart Edu AI – Erasmus+ Project</p>
+        <img src="images/logos/eu_funded_en.jpg" alt="Erasmus+ Logo" />
+    </footer>
 </body>
 
 </html>
