@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smart Edu AI – 3-Day Turkish mobility Training Program</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logos/smartaiedu-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        nav {
+            background: linear-gradient(135deg, #ff8c42, #ffd23f);
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-container img {
+            height: 40px;
+            border-radius: 6px;
+        }
+
+        nav .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                gap: 15px;
+                background: linear-gradient(135deg, #ff8c42, #ffd23f);
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                border-radius: 8px;
+                padding: 10px 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+                flex-direction: column;
+                cursor: pointer;
+                gap: 6px;
+            }
+
+            .hamburger span {
+                height: 3px;
+                width: 25px;
+                background: white;
+                border-radius: 2px;
+            }
+        }
+
+        /* Responsive for smaller screens */
+        @media (max-width: 600px) {
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #ff8c42, #ffd23f);
+            color: white;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        header h1 {
+            margin: 10px 0 0;
+            font-size: 1.5rem;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #ff8c42;
+            margin-top: 40px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer img {
+            max-width: 250px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="images/logos/smartaiedu-logo.jpg" alt="Smart edu AI Logo" />
+                <a href="#about" class="logo">Smart edu AI</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#partners">Partners</a></li>
+                <li><a href="#objectives">Objectives</a></li>
+                <li><a href="#activities">Activities</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+
+        <h1>Exploring the Art of Science with Artificial Intelligence</h1>
+
+
+    </header>
+
+    <main>
+
+
+        <section>
+          
+
+            <p>Turkey Mobility – Smart Edu AI Program for Students and Teachers</p>
+
+            <h2>Overview & Key Topics</h2>
+            <p>Within the scope of the project titled “Exploring the Art of Science with Artificial
+Intelligence,” the “Smart Edu AI” training program was implemented as a 3-day
+intensive mobility activity held in Türkiye from 2 to 4 February, hosted by Milli
+Egemenlik Science and Art Center (BİLSEM). The program brought together students
+and teachers from Poland, Türkiye, France, and Spain to explore the integration of
+artificial intelligence into science education and creative learning processes. The
+main objective was to support the effective pedagogical use of AI-powered digital
+tools while strengthening a human-centered approach to learning.</p>
+        </section>
+
+        <!-- Day 1 -->
+        <section>
+            <h2>Day 1: Building Foundations</h2>
+            <p>The program started with ice-breaking activities and opening speeches to foster
+interaction among students and teachers. A pre-test was conducted on the first day to
+identify participants’ initial levels, and interactive questions were asked via
+Mentimeter. Expert sessions defined AI as systems that mimic human intelligence and
+presented examples of AI-supported applications that enhance science learning,
+including iNaturalist, Khan Academy, Brainscape, and VR tools. The host institution
+introduced the project objectives and expected learning outcomes to align
+participants’ expectations.</p>
+            <div class="gallery">
+                <img src="./images/turkey/day1/1..jpeg" alt="Day 1 Image 1">
+                <img src="./images/turkey/day1/brainspace.jpeg" alt="Day 1 Image 2">
+                <img src="./images/turkey/day1/i naturwork.jpeg" alt="Day 1 Image 3">
+                <img src="./images/turkey/day1/khanacademy.jpeg" alt="Day 1 Image 4">
+                <img src="./images/turkey/day1/menti.jpeg" alt="Day 1 Image 1">
+                <img src="./images/turkey/day1/vr cell work (1).jpeg" alt="Day 1 Image 2">
+                <img src="./images/turkey/day1/workshop.jpeg" alt="Day 1 Image 3">
+                <img src="./images/turkey/day1/WhatsApp Image 2026-02-07 at 21.19.51.jpeg" alt="Day 1 Image 4">
+            </div>
+        </section>
+
+        <!-- Day 2 -->
+        <section>
+            <h2>Day 2: Intercultural Interaction and Digital Production</h2>
+            <p>The second day focused on strengthening intercultural interaction and blending
+science with art through digital tools. A mini concert performed by the host team and
+participant groups created an environment for cultural sharing. Using tools such as
+Chrome Music Lab and BandLab, participants created rhythms inspired by scientific
+themes and engaged in hands-on workshops where cultural elements were blended
+
+with digital music production. Participants worked in mixed groups to produce
+collaborative digital outputs.</p>
+            <div class="gallery">
+                <img src="./images/turkey/Day2/2..jpeg" alt="Day 2 Image 1">
+                <img src="./images/turkey/Day2/blended music.jpeg" alt="Day 2 Image 2">
+                <img src="./images/turkey/Day2/musicai.jpeg" alt="Day 2 Image 3">
+                <img src="./images/turkey/Day2/work2.jpeg" alt="Day 2 Image 4">
+            </div>
+        </section>
+
+        <!-- Day 3 -->
+        <section>
+            <h2>Day 3: AI-Supported Digital Design and Evaluation</h2>
+            <p>The third day was dedicated to AI-supported digital design and production activities.
+Students and teachers created AI-assisted digital content and 3D visual designs
+
+reflecting their own cultures and scientific themes. At the end of the program, a post-
+test was conducted to assess learning outcomes, feedback sessions were held, and the
+
+mobility concluded with a certificate ceremony..</p>
+            <div class="gallery">
+                <img src="./images/turkey/Day3/art.jpeg" alt="Day 3 Image 1">
+                <img src="./images/turkey/Day3/artai...jpeg" alt="Day 3 Image 2">
+                <img src="./images/turkey/Day3/artai.jpeg" alt="Day 3 Image 3">
+                <img src="./images/turkey/Day3/daywork.jpeg" alt="Day 3 Image 4">
+                <img src="./images/turkey/Day3/polish team.jpeg" alt="Day 3 Image 1">
+                <img src="./images/turkey/Day3/spanish team.jpeg" alt="Day 3 Image 2">
+                <img src="./images/turkey/Day3/works.jpeg" alt="Day 3 Image 3">
+                <img src="./images/turkey/Day3/workshop.jpeg" alt="Day 3 Image 4">
+            </div>
+        </section>
+
+        <!-- Day 4 -->
+        <section>
+            <h2>Conclusion</h2>
+            <p>The mobility activity hosted by Milli Egemenlik Science and Art Center (BİLSEM) in
+Türkiye demonstrated the potential of AI to connect science and artistic creativity
+through practical applications. At the same time, it emphasized the essential role of
+
+teachers’ guidance, ethical awareness, and a human-centered approach in student-
+centered learning environments. Participants completed the program with concrete
+
+activity examples and a practical roadmap to implement in their own institutions.</p>
+           
+        </section>
+
+       
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Smart Edu AI – Erasmus+ Project</p>
+        <img src="images/logos/eu_funded_en.jpg" alt="Erasmus+ Logo" />
+    </footer>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
