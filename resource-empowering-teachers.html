@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resource – Empowering Teachers with AI: A New Era of Professional Development</title>
+    <link rel="icon" type="image/png" href="images/logos/smartaiedu-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        .chapter-hero { background: linear-gradient(135deg, #ff8c42, #ffd23f); color: white; text-align: center; padding: 60px 20px; }
+        .chapter-hero h1 { font-size: 2.2rem; margin-bottom: 15px; }
+        .chapter-hero p { max-width: 800px; margin: 0 auto 10px; font-size: 1.1rem; line-height: 1.6; }
+        .chapter-content { max-width: 1100px; margin: auto; padding: 40px 20px; }
+        .chapter-content h2 { color: #ff8c42; text-align: center; margin: 40px 0 20px; }
+        .chapter-content h3 { color: #333; margin-top: 30px; }
+        .chapter-content p, .chapter-content li { line-height: 1.7; font-size: 1.05rem; }
+        .chapter-content ul { padding-left: 25px; }
+        .chapter-card { background: white; border-radius: 16px; padding: 30px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); margin-bottom: 30px; }
+        .chapter-image { width: 100%; border-radius: 16px; height: 260px; object-fit: cover; margin: 20px 0; }
+        .chapter-download { display: inline-block; margin-top: 15px; padding: 10px 18px; background: #ff8c42; color: white; text-decoration: none; border-radius: 8px; font-size: 0.95rem; transition: background 0.3s ease; }
+        .chapter-download:hover { background: #e67625; }
+        .chapter-quote { background: #fff7e8; border-left: 5px solid #ffd23f; padding: 20px; margin: 25px 0; border-radius: 0 12px 12px 0; font-style: italic; }
+        .back-link { display: inline-block; margin: 20px 0; color: #ff8c42; text-decoration: none; font-weight: 500; }
+        .back-link:hover { text-decoration: underline; }
+        .resource-meta { display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; }
+        .badge-ai { background: #e3f2fd; color: #1976d2; }
+        .badge-level { background: #f3e5f5; color: #7b1fa2; }
+        .badge-duration { background: #fff3e0; color: #e65100; }
+        .badge-target { background: #e8f5e9; color: #2e7d32; }
+        .badge-prereq { background: #fce4ec; color: #c62828; }
+        .reflection-box { background: #f9f9f9; border-radius: 12px; padding: 22px; margin: 20px 0; border-left: 4px solid #ffd23f; }
+        .reflection-box h4 { color: #ff8c42; margin-top: 0; }
+        .activity-box { background: #f0f8ff; border-radius: 12px; padding: 22px; margin: 20px 0; }
+        .activity-box h4 { color: #1976d2; margin-top: 0; }
+        .pd-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 25px 0; }
+        .pd-card { background: #f9f9f9; border-radius: 12px; padding: 22px; border-left: 4px solid #ffd23f; }
+        .pd-card h4 { color: #ff8c42; margin-top: 0; }
+        .pd-card p { font-size: 0.95rem; line-height: 1.6; }
+        .related-resources { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px; }
+        .related-link { display: inline-block; padding: 8px 16px; background: #eeefff; border-radius: 6px; color: #333; text-decoration: none; font-size: 0.9rem; }
+        .related-link:hover { background: #ff8c42; color: white; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px; margin: 20px 0; }
+        .info-item { background: #fff; border: 1px solid #e0e0e0; border-radius: 10px; padding: 18px; }
+        .info-item h4 { color: #ff8c42; margin-top: 0; font-size: 1rem; }
+        .info-item p { font-size: 0.9rem; margin-bottom: 0; }
+        .checklist { list-style: none; padding-left: 0; }
+        .checklist li { padding: 6px 0; }
+        .checklist li::before { content: "✓ "; color: #4caf50; font-weight: bold; margin-right: 6px; }
+        .governance-box { background: #fff3e0; border-radius: 12px; padding: 22px; margin: 20px 0; border-left: 4px solid #ff8c42; }
+        .governance-box h4 { color: #e65100; margin-top: 0; }
+        .section-badge { display: inline-block; padding: 3px 10px; background: #ff8c42; color: white; border-radius: 10px; font-size: 0.75rem; font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="images/logos/smartaiedu-logo.jpg" alt="Smart edu AI Logo" />
+                <a href="index.html" class="logo">Smart edu AI</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="handbook.html">Handbook</a></li>
+                <li><a href="handbook-professional.html">Professional</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <header class="chapter-hero">
+        <h1>Empowering Teachers with AI</h1>
+        <p>A new era of professional development for educators</p>
+    </header>
+
+    <main class="chapter-content">
+        <a href="handbook-professional.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Chapter: Professional</a>
+
+        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1200&h=500&fit=crop" alt="Teachers in professional development with AI" class="chapter-image" data-aos="fade-up" />
+
+        <section class="chapter-card" data-aos="fade-up">
+            <div class="resource-meta">
+                <span class="badge badge-ai">Professional Dev</span>
+                <span class="badge badge-level">All Levels</span>
+                <span class="badge badge-duration">4–6 Hours</span>
+                <span class="badge badge-target">Educators / School Leaders</span>
+                <span class="badge badge-prereq">No prior AI expertise required</span>
+            </div>
+            <h2>Resource Overview</h2>
+            <p>This resource explores how AI is creating a new era of professional development for educators.
+                Rather than requiring teachers to become AI experts, it focuses on building confidence as
+                facilitators of AI-enhanced learning. The presentation covers the skills teachers need, the
+                mindset shifts required, and practical strategies for staying current with AI developments.</p>
+            <p>Developed as part of the Smart Edu AI partnership's 5-day training program, this resource helps
+                educators navigate the transition from traditional pedagogy to AI-augmented instruction while
+                maintaining their role as professional decision-makers.</p>
+
+            <div class="chapter-quote">
+                "Teachers do not need to become AI experts; they need to become confident facilitators of
+                AI-enhanced learning."
+            </div>
+
+            <h3>Measurable Learning Objectives</h3>
+            <p>By the end of this module, participants will be able to:</p>
+            <ul>
+                <li>Demonstrate confidence in evaluating at least 3 AI tools for instructional purposes (scored rubric ≥ 4/5).</li>
+                <li>Design a 12-month professional development plan identifying at least 5 concrete AI-integration milestones.</li>
+                <li>Distinguish between AI-assisted tasks and tasks requiring human professional judgement in at least 4 scenario evaluations.</li>
+                <li>Facilitate one peer coaching session on AI adoption with documented outcomes (participant satisfaction ≥ 80%).</li>
+                <li>Critically assess one AI-generated lesson plan against pedagogical standards, providing written justification of at least 3 modifications.</li>
+            </ul>
+
+            <h3>Target Audience, Level &amp; Prerequisites</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h4><i class="fas fa-users"></i> Audience</h4>
+                    <p>K-12 teachers, school leaders, instructional coaches, and education policymakers. Suitable for educators across all subject areas and grade levels.</p>
+                </div>
+                <div class="info-item">
+                    <h4><i class="fas fa-signal"></i> Level</h4>
+                    <p>All levels — from educators with no prior AI exposure to those with intermediate experience seeking structured professional growth.</p>
+                </div>
+                <div class="info-item">
+                    <h4><i class="fas fa-clock"></i> Duration</h4>
+                    <p>4–6 hours total: 2 hours guided session, 1 hour hands-on activity, 1–2 hours independent reflection and planning.</p>
+                </div>
+                <div class="info-item">
+                    <h4><i class="fas fa-book"></i> Prerequisites</h4>
+                    <p>No prior AI expertise required. Basic digital literacy expected (using email, web browsing, word processing). Access to at least one AI tool on a personal or school device.</p>
+                </div>
+            </div>
+
+            <h3>Detailed Pedagogical Sequence</h3>
+            <div class="pd-grid">
+                <div class="pd-card">
+                    <h4><i class="fas fa-1"></i> Phase 1 — Activate (45 min)</h4>
+                    <p>Facilitator introduces a real classroom scenario where AI could support teaching. Participants individually brainstorm challenges and opportunities, then share in pairs. A plenary discussion surfaces key themes. Pre-assessment: participants rate their AI confidence on a 1–5 scale.</p>
+                </div>
+                <div class="pd-card">
+                    <h4><i class="fas fa-2"></i> Phase 2 — Explore (60 min)</h4>
+                    <p>Guided exploration of 3 AI tools relevant to education (e.g., curriculum generators, accessibility tools, feedback assistants). Participants complete a structured observation worksheet comparing capabilities, accuracy, and limitations. Facilitator models verification techniques (fact-checking outputs, checking for bias).</p>
+                </div>
+                <div class="pd-card">
+                    <h4><i class="fas fa-3"></i> Phase 3 — Apply (60 min)</h4>
+                    <p>Participants design one AI-enhanced lesson segment using a provided template. They must specify: learning objective, AI tool used and why, student task, and teacher role at each stage. Peer review in groups of 3 using a structured rubric (clarity, relevance, equity).</p>
+                </div>
+                <div class="pd-card">
+                    <h4><i class="fas fa-4"></i> Phase 4 — Reflect (45 min)</h4>
+                    <p>Structured reflection on the teacher's role when AI is present: What decisions must remain human? How does AI change (not replace) professional judgement? Participants draft a personal AI usage charter for their classroom. Exit ticket: 3-2-1 reflection (3 things learned, 2 questions, 1 commitment).</p>
+                </div>
+            </div>
+
+            <h3>Assessment Strategy</h3>
+            <ul>
+                <li><strong>Formative:</strong> Observation checklist during Phase 3 peer review; facilitator notes on participation and emerging understanding.</li>
+                <li><strong>Portfolio:</strong> Each participant submits their 12-month PD plan, one AI-enhanced lesson segment, and a written AI usage charter.</li>
+                <li><strong>Rubric-based:</strong> Lesson segment scored on pedagogical alignment (25%), AI integration appropriateness (25%), accessibility considerations (20%), and clarity of teacher-role definition (30%). Minimum passing: 70/100.</li>
+                <li><strong>Peer evaluation:</strong> Each participant evaluates 2 peers' work using the same rubric, contributing to a moderated consensus score.</li>
+            </ul>
+
+            <h3>Differentiation</h3>
+            <ul>
+                <li><strong>Beginner pathway:</strong> Additional scaffolding with guided prompts for each phase; pre-selected AI tools with curated evaluation criteria; paired with an experienced peer.</li>
+                <li><strong>Intermediate pathway:</strong> Choice of AI tools; open-ended lesson design; peer coaching role.</li>
+                <li><strong>Advanced pathway:</strong> Participants lead a micro-workshop for peers on a specific AI tool; develop a department-level AI integration proposal.</li>
+                <li><strong>Language support:</strong> Materials available in project languages; visual aids and graphic organisers provided; multilingual glossaries for AI terminology.</li>
+            </ul>
+
+            <h3>Inclusion &amp; Accessibility</h3>
+            <ul>
+                <li>All materials meet WCAG 2.1 AA contrast standards; font size minimum 16px for body text.</li>
+                <li>Video content includes captions and transcripts; images include descriptive alt text.</li>
+                <li>Activities designed for participation without requiring a specific AI tool — alternatives provided for low-bandwidth or offline contexts.</li>
+                <li>Multiple means of expression: written, oral, or visual presentation formats accepted for assessments.</li>
+                <li>Session can be completed asynchronously; all materials downloadable and printable.</li>
+                <li>Neurodiversity considerations: chunked content, clear section headers, optional break-out spaces.</li>
+            </ul>
+
+            <h3>Data Protection &amp; GDPR</h3>
+            <ul>
+                <li>No student personal data is used in any activity or example. All case studies use anonymised, hypothetical data.</li>
+                <li>If AI tools are demonstrated live, only public/demo accounts are used; no login with school or personal credentials.</li>
+                <li>Any data generated during activities (e.g., AI outputs) remains on local devices; no automatic cloud sync without explicit consent.</li>
+                <li>Participants are informed of AI tool data processing policies before use; a Data Processing Agreement (DPA) review checklist is provided.</li>
+                <li>Assessment data is stored in compliance with applicable data protection regulations; participants may request deletion at any time.</li>
+                <li>Privacy Impact Assessment (PIA) template included for educators evaluating AI tools in their schools.</li>
+            </ul>
+
+            <h3>Limitations</h3>
+            <ul>
+                <li>AI tools evolve rapidly; specific tool references may become outdated within 6–12 months.</li>
+                <li>This module does not substitute for legal or data protection advice; institutions should consult their DPO.</li>
+                <li>Effectiveness depends on institutional support; individual teacher practice change cannot be guaranteed.</li>
+                <li>Cultural and curricular differences across regions may require adaptation of examples and activities.</li>
+                <li>AI output quality varies by tool, prompt, and context; the module teaches verification, not reliance.</li>
+            </ul>
+
+            <h3>Tools Are Supports, Not Guarantees — Governance &amp; Human Verification</h3>
+            <div class="governance-box">
+                <h4><i class="fas fa-shield-alt"></i> Governance Framework</h4>
+                <p>Trello, Slack, learning analytics dashboards, and all other digital tools referenced in this resource are <strong>supports for human decision-making</strong> — they are <strong>not guarantees</strong> of educational quality, data accuracy, or ethical compliance. The following governance principles apply:</p>
+                <ul class="checklist">
+                    <li><strong>Human-in-the-loop:</strong> Every AI-generated recommendation (lesson plan, assessment, report) must be reviewed and approved by a qualified educator before use.</li>
+                    <li><strong>Verification protocol:</strong> AI outputs must be cross-checked against at least one authoritative source (curriculum standards, subject-matter expertise, institutional policy).</li>
+                    <li><strong>Decision authority:</strong> Teachers retain full decision-making authority; AI tools may suggest but never decide on student assessment, grading, or pedagogical strategy.</li>
+                    <li><strong>Tool governance:</strong> Before adopting any tool, schools must verify the vendor's GDPR compliance, data residency, deletion policies, and security certifications.</li>
+                    <li><strong>Annual review:</strong> All AI tools in use must be reviewed at least annually by a team including a teacher, a data protection officer, and a student/parent representative.</li>
+                    <li><strong>Escalation path:</strong> Clear procedures for escalating concerns about AI tool outputs to school leadership and, where necessary, to data protection authorities.</li>
+                </ul>
+                <p><em>Clarification:</em> Trello and Slack are project coordination and communication platforms. They facilitate collaboration but do not guarantee project success, data security, or decision quality. Analytics dashboards provide data summaries but do not guarantee pedagogical improvement. All tools require human oversight, institutional governance, and ongoing verification.</p>
+            </div>
+
+            <h3>Critical Reflection Questions</h3>
+            <div class="reflection-box">
+                <h4>Discussion prompts:</h4>
+                <ul>
+                    <li>How can we ensure ongoing professional development in AI doesn't create a two-tier system among educators?</li>
+                    <li>What support do teachers need to feel comfortable experimenting with AI in their classrooms?</li>
+                    <li>How can schools create cultures that encourage AI experimentation without fear of failure?</li>
+                    <li>What role should teacher unions play in AI professional development?</li>
+                    <li>How do we evaluate whether AI professional development is actually improving student outcomes?</li>
+                    <li>Who bears responsibility when an AI tool provides incorrect pedagogical advice?</li>
+                    <li>How should schools govern AI tool selection to ensure equitable access for all teachers?</li>
+                </ul>
+            </div>
+
+            <h3>Downloadable Resource</h3>
+            <p><strong>Download the full presentation (PDF):</strong>
+                <a href="./pdf/france/10.Empowering-Teachers-with-AI-A-New-Era-of-Professional-Development.pptx%20%281%29.pdf" target="_blank" class="chapter-download">
+                    <i class="fas fa-file-pdf"></i> Empowering Teachers with AI (PDF)
+                </a>
+            </p>
+            <p><strong>Explore related resources:</strong>
+                <div class="related-resources">
+                    <a href="resource-ai-5-day-training.html" class="related-link">AI 5-Day Training Program →</a>
+                    <a href="resource-integrating-ai-design.html" class="related-link">Integrating AI into Instructional Design →</a>
+                    <a href="resource-project-management.html" class="related-link">Project Management Tools →</a>
+                    <a href="handbook-professional.html" class="related-link">Professional Chapter →</a>
+                </div>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Smart edu AI – Erasmus+ Project</p>
+        <img src="images/logos/eu_funded_en.jpg" alt="Erasmus+ Logo" />
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+    </script>
+</body>
+</html>

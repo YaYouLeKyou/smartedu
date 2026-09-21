@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Handbook – Foundations of AI in Education | Smart Edu AI</title>
+    <link rel="icon" type="image/png" href="images/logos/smartaiedu-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+                .chapter-hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chapter-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+                        background: radial-gradient(circle at 30% 70%, rgba(255, 140, 66, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(255, 210, 63, 0.1) 0%, transparent 50%);
+            animation: heroGlow 15s ease-in-out infinite alternate;
+        }
+
+        @keyframes heroGlow {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(2%, 2%) rotate(3deg); }
+        }
+
+        .chapter-hero h1 {
+            font-size: 2.6rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .chapter-hero .chapter-number {
+            display: inline-block;
+            background: rgba(255, 140, 66, 0.2);
+            color: #ffd23f;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .chapter-hero p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+        .chapter-content {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+        .chapter-content h2 {
+            color: #ff8c42;
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+        .chapter-content h3 {
+            color: #333;
+            margin-top: 30px;
+        }
+        .chapter-content p,
+        .chapter-content li {
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        .chapter-content ul {
+            padding-left: 25px;
+        }
+        .chapter-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+        .chapter-image {
+            width: 100%;
+            border-radius: 16px;
+            height: 260px;
+            object-fit: cover;
+            margin: 20px 0;
+        }
+        .chapter-download {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 18px;
+            background: #ff8c42;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: background 0.3s ease;
+        }
+        .chapter-download:hover {
+            background: #e67625;
+        }
+        .chapter-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: #ff8c42;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .chapter-link:hover {
+            text-decoration: underline;
+        }
+        .chapter-quote {
+            background: #fff7e8;
+            border-left: 5px solid #ffd23f;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+        }
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            color: #ff8c42;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .handbook-index {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        .handbook-index h3 {
+            color: #ff8c42;
+            margin-top: 0;
+        }
+        .handbook-index ul {
+            list-style: none;
+            padding: 0;
+        }
+        .handbook-index li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .handbook-index li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .handbook-index a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .handbook-index a:hover {
+            color: #ff8c42;
+        }
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .meta-table th,
+        .meta-table td {
+            text-align: left;
+            padding: 12px 16px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 0.95rem;
+        }
+        .meta-table th {
+            color: #ff8c42;
+            font-weight: 600;
+            width: 140px;
+            white-space: nowrap;
+        }
+        .meta-table td {
+            color: #444;
+        }
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        .concept-card {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 22px;
+            border-left: 4px solid #ff8c42;
+        }
+        .concept-card h4 {
+            color: #ff8c42;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+        .concept-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+        .activity-block {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid #e8e8e8;
+        }
+        .activity-block h4 {
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        .activity-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .activity-meta span {
+            background: #fff;
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+        .activity-steps ol {
+            padding-left: 22px;
+        }
+        .activity-steps ol li {
+            margin-bottom: 8px;
+        }
+        .differentiation-box {
+            background: #fff;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 12px;
+            border-left: 4px solid #ffd23f;
+        }
+        .differentiation-box h5 {
+            margin-top: 0;
+            color: #555;
+            font-size: 0.95rem;
+        }
+        .checklist-item {
+            padding: 8px 0;
+        }
+        .reflection-question {
+            background: #fff7e8;
+            padding: 12px 18px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        .tag {
+            display: inline-block;
+            background: #ff8c42;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-right: 6px;
+            margin-bottom: 6px;
+        }
+        @media (max-width: 600px) {
+            .meta-table th,
+            .meta-table td {
+                display: block;
+                width: 100%;
+            }
+            .meta-table th {
+                padding-bottom: 2px;
+                border-bottom: none;
+            }
+            .meta-table td {
+                padding-top: 2px;
+            }
+            .concept-grid {
+                grid-template-columns: 1fr;
+            }
+            .activity-meta {
+                flex-direction: column;
+                gap: 6px;
+            }
+            .chapter-hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+    <nav aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="images/logos/smartaiedu-logo.jpg" alt="Smart edu AI Logo" />
+                <a href="index.html" class="logo">Smart edu AI</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="handbook.html">Handbook</a></li>
+                <li><a href="handbook-foundations.html" class="active" aria-current="page">Foundations</a></li>
+                <li><a href="handbook-teaching.html">Teaching</a></li>
+                <li><a href="handbook-ethics.html">Ethics</a></li>
+                <li><a href="handbook-language.html">Language</a></li>
+                <li><a href="handbook-creative.html">Creative</a></li>
+                <li><a href="handbook-professional.html">Professional</a></li>
+            </ul>
+            <div class="hamburger" role="button" aria-label="Toggle navigation menu" aria-expanded="false" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+        <header class="chapter-hero">
+        <span class="chapter-number">Chapter 1</span>
+        <h1>Foundations of AI in Education</h1>
+        <p>Building shared understanding before exploring tools and classroom practice</p>
+    </header>
+
+    <main id="main-content" class="chapter-content">
+        <a href="handbook.html" class="back-link"><i class="fas fa-arrow-left" aria-hidden="true"></i> <span>Back to Handbook</span></a>
+
+        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&h=500&fit=crop" alt="Students collaborating around a laptop in a classroom learning about artificial intelligence" class="chapter-image" data-aos="fade-up" />
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>In this chapter</h2>
+            <p>This chapter establishes the conceptual foundations for understanding and evaluating AI in education. Before introducing any AI tool into the classroom, educators need a shared vocabulary, a clear understanding of what each technology does and does not do, and a critical stance toward claims about personalisation and effectiveness. Each section below links to a dedicated resource page with deeper pedagogical content, learning objectives, classroom activities, and reflection points.</p>
+
+            <table class="meta-table" aria-label="Chapter metadata">
+                <tbody>
+                    <tr>
+                        <th scope="row">Audience</th>
+                        <td>Teachers, instructional designers, school leaders, and education professionals seeking foundational AI literacy</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Level</th>
+                        <td>Beginner / Foundational — no prior technical knowledge required</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Duration</th>
+                        <td>45–60 minutes self-paced; adaptable for a 90-minute workshop</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Prerequisites</th>
+                        <td>None. Open to all education professionals regardless of technical background</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Measurable learning objectives</h3>
+            <ul>
+                <li>Define AI, machine learning, NLP, computer vision, generative AI, automation, and data in education-specific terms</li>
+                <li>Distinguish between a technology category and its subset or application with at least 80% accuracy in a classification exercise</li>
+                <li>Evaluate at least two claims about AI personalisation using a critical framework</li>
+                <li>Identify at least three data privacy considerations when selecting an AI tool</li>
+                <li>Articulate why human oversight remains essential in every educational AI application</li>
+            </ul>
+
+            <div class="handbook-index">
+                <h3>Key concepts in this chapter</h3>
+                <ul>
+                    <li><a href="#concepts">Artificial Intelligence vs. subsets and applications</a></li>
+                    <li><a href="#objectives">Measurable learning objectives</a></li>
+                    <li><a href="#activities">Structured learning activities</a></li>
+                    <li><a href="#reflection">Critical reflection</a></li>
+                    <li><a href="#inclusion">Inclusion and accessibility</a></li>
+                    <li><a href="#data">Data safety and GDPR</a></li>
+                    <li><a href="#limits">Limitations and human verification</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="chapter-card" id="concepts" data-aos="fade-up">
+            <h2>1. Key Concepts: Distinguishing AI Technologies</h2>
+            <p>A common source of confusion in education is the conflation of related but distinct AI concepts. Understanding each term precisely prevents overgeneralisation and supports informed decision-making. The table below clarifies what each concept is, what it is not, and how it appears in educational contexts.</p>
+
+            <div class="concept-grid">
+                <article class="concept-card">
+                    <h4><i class="fas fa-brain" aria-hidden="true"></i> Artificial Intelligence (AI)</h4>
+                    <p><strong>Is:</strong> A broad field of computer science focused on creating systems that simulate human cognitive functions such as reasoning, learning, and problem-solving.</p>
+                    <p><strong>Is not:</strong> A single algorithm or a sentient system. AI is an umbrella term covering many approaches.</p>
+                    <p><strong>In education:</strong> Adaptive learning platforms, intelligent tutoring systems, and automated grading systems all fall under AI.</p>
+                    <p><strong>Caution:</strong> The term is often used in marketing to imply capabilities the system does not possess. Always ask what specific techniques the system uses.</p>
+                </article>
+                <article class="concept-card">
+                    <h4><i class="fas fa-code" aria-hidden="true"></i> Machine Learning (ML)</h4>
+                    <p><strong>Is:</strong> A subset of AI in which algorithms learn patterns from data and improve performance with experience, without being explicitly programmed for each task.</p>
+                    <p><strong>Is not:</strong> A rule-based system. ML does not follow fixed instructions; it infers patterns from examples.</p>
+                    <p><strong>In education:</strong> Recommender systems that suggest learning resources, or models that predict dropout risk based on historical data.</p>
+                    <p><strong>Caution:</strong> ML models reflect biases present in training data. Outcomes may not generalise to populations underrepresented in the data.</p>
+                </article>
+                <article class="concept-card">
+                    <h4><i class="fas fa-language" aria-hidden="true"></i> Natural Language Processing (NLP)</h4>
+                    <p><strong>Is:</strong> A subset of AI focused on enabling computers to understand, interpret, and generate human language — including text and speech.</p>
+                    <p><strong>Is not:</strong> Perfect language understanding. NLP systems process patterns statistically; they do not "comprehend" meaning as humans do.</p>
+                    <p><strong>In education:</strong> Grammar checkers, chatbots for practice, automated essay scoring, and translation tools.</p>
+                    <p><strong>Caution:</strong> NLP outputs can contain subtle errors, cultural biases, and inappropriate suggestions. Always review before sharing with learners.</p>
+                </article>
+                <article class="concept-card">
+                    <h4><i class="fas fa-eye" aria-hidden="true"></i> Computer Vision (CV)</h4>
+                    <p><strong>Is:</strong> A subset of AI that enables machines to interpret and analyse visual information — images, videos, and diagrams.</p>
+                    <p><strong>Is not:</strong> Human-level visual reasoning. CV systems excel at pattern recognition within trained categories but fail on out-of-distribution inputs.</p>
+                    <p><strong>In education:</strong> Document scanning, science experiment analysis, accessibility tools for visual impairments, and diagram recognition.</p>
+                    <p><strong>Caution:</strong> CV systems may misclassify or produce false positives, particularly with diverse populations and contexts not represented in training data.</p>
+                </article>
+                <article class="concept-card">
+                    <h4><i class="fas fa-magic" aria-hidden="true"></i> Generative AI</h4>
+                    <p><strong>Is:</strong> AI systems that create new content — text, images, audio, code — based on patterns learned from existing data, typically using large language models or diffusion models.</p>
+                    <p><strong>Is not:</strong> A reliable source of factual information. Generative AI can produce plausible-sounding but incorrect content (hallucinations).</p>
+                    <p><strong>In education:</strong> Content creation, lesson planning assistance, creative project support, and brainstorming activities.</p>
+                    <p><strong>Caution:</strong> Outputs require verification for accuracy, originality, and cultural sensitivity before use in any educational setting.</p>
+                </article>
+                <article class="concept-card">
+                    <h4><i class="fas fa-tasks" aria-hidden="true"></i> Automation</h4>
+                    <p><strong>Is:</strong> The use of technology to perform repetitive tasks with minimal human intervention — a capability enabled by AI but not equivalent to it.</p>
+                    <p><strong>Is not:</strong> A cognitive technology. Automation executes predefined or learned procedures; it does not reason about educational purpose.</p>
+                    <p><strong>In education:</strong> Automated attendance tracking, gradebook calculations, scheduling, and notification systems.</p>
+                    <p><strong>Caution:</strong> Automating decisions without human review can embed errors and remove professional judgement from critical processes.</p>
+                </article>
+                <article class="concept-card">
+                    <h4><i class="fas fa-database" aria-hidden="true"></i> Data</h4>
+                    <p><strong>Is:</strong> The raw material that powers AI systems — learner interactions, assessment results, behavioural patterns, and demographic information collected and processed to train or inform models.</p>
+                    <p><strong>Is not:</strong> A technology itself. Data is a resource that requires ethical collection, storage, and use.</p>
+                    <p><strong>In education:</strong> Learning analytics dashboards, progress tracking, and personalised pathway recommendations.</p>
+                    <p><strong>Caution:</strong> Data collection raises privacy, consent, and equity concerns. GDPR and institutional policies must govern all educational data practices.</p>
+                </article>
+            </div>
+
+            <h3>Critical note on claims about personalisation</h3>
+            <p>Many AI products assert that they "personalise learning" in a deterministic sense — that the system will reliably match each student to an optimal path. Current evidence does not support this claim unconditionally. Personalisation outcomes depend on data quality, model design, learner engagement, and contextual fit. Treat personalisation claims as hypotheses to be tested in your specific context, not as guaranteed results. Monitor learner progress and gather student feedback to assess whether personalisation features are genuinely beneficial or merely apparent.</p>
+
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/2.What-is-AI-and-How-is-it-Used-in-Education.pptx%20%281%29.pdf" target="_blank" class="chapter-download" rel="noopener noreferrer">
+                    <i class="fas fa-file-pdf" aria-hidden="true"></i> What is AI and How is it Used in Education? (PDF)
+                </a>
+            </p>
+            <a href="resource-what-is-ai.html" class="chapter-link"><i class="fas fa-book" aria-hidden="true"></i> Read the full pedagogical page →</a>
+        </section>
+
+        <section class="chapter-card" id="activities" data-aos="fade-up">
+            <h2>2. Structured Learning Activities</h2>
+            <p>The following activities are designed for different learning contexts and provide concrete practice in applying foundational AI concepts. Each activity includes duration, materials, step-by-step guidance, differentiation strategies, and assessment criteria.</p>
+
+            <article class="activity-block">
+                <h4>Activity 1: AI Concept Mapping and Classification</h4>
+                <div class="activity-meta">
+                    <span><i class="fas fa-clock" aria-hidden="true"></i> 45 minutes</span>
+                    <span><i class="fas fa-users" aria-hidden="true"></i> Individuals or pairs</span>
+                    <span><i class="fas fa-school" aria-hidden="true"></i> Secondary / Higher Education</span>
+                </div>
+                <p><strong>Materials:</strong> Large sheets of paper or whiteboards, coloured markers, printed concept cards (one set per group), printed category labels (AI, ML, NLP, CV, Generative AI, Automation, Data).</p>
+                <div class="activity-steps">
+                    <ol>
+                        <li><strong>Introduction (5 min):</strong> Present the seven concept categories and ask participants to predict how they relate to each other.</li>
+                        <li><strong>Sorting task (20 min):</strong> In pairs, participants sort concept cards into the correct categories and draw connections between related concepts. They must justify each placement.</li>
+                        <li><strong>Gallery walk (10 min):</strong> Pairs visit other groups' maps, adding sticky notes with agreements or challenges.</li>
+                        <li><strong>Debrief (10 min):</strong> Facilitator leads a whole-group discussion clarifying any misclassifications and emphasising the distinction between subsets, applications, and enabling technologies.</li>
+                    </ol>
+                </div>
+                <div class="differentiation-box">
+                    <h5><i class="fas fa-layer-group" aria-hidden="true"></i> Differentiation</h5>
+                    <p><strong>Support:</strong> Provide a reference sheet with definitions and examples for each concept. Pair participants with stronger literacy skills with those who need assistance.</p>
+                    <p><strong>Extension:</strong> Ask advanced participants to add a sub-category or identify which concepts appear in a specific AI product, explaining the chain of dependencies.</p>
+                </div>
+                <p><strong>Assessment:</strong> Evaluate each pair's classification accuracy against the reference key. Aim for at least 80% correct classification as the measurable threshold. Collect concept maps for review.</p>
+            </article>
+
+            <article class="activity-block">
+                <h4>Activity 2: Evaluating Personalisation Claims</h4>
+                <div class="activity-meta">
+                    <span><i class="fas fa-clock" aria-hidden="true"></i> 40 minutes</span>
+                    <span><i class="fas fa-users" aria-hidden="true"></i> Small groups (3–4)</span>
+                    <span><i class="fas fa-school" aria-hidden="true"></i> All levels</span>
+                </div>
+                <p><strong>Materials:</strong> Printed or projected case studies of AI product claims (2–3 examples), evaluation worksheet per group, markers.</p>
+                <div class="activity-steps">
+                    <ol>
+                        <li><strong>Introduction (5 min):</strong> Present two conflicting claims about AI personalisation — one from a vendor, one from an independent researcher.</li>
+                        <li><strong>Analysis task (20 min):</strong> Groups use a structured worksheet to identify: (a) what evidence is provided, (b) what context the claim applies to, (c) what assumptions are made, (d) what could go wrong.</li>
+                        <li><strong>Group presentations (10 min):</strong> Each group presents its analysis in 2 minutes.</li>
+                        <li><strong>Synthesis (5 min):</strong> Facilitator summarises common critical lenses and reinforces that personalisation is context-dependent and never guaranteed.</li>
+                    </ol>
+                </div>
+                <div class="differentiation-box">
+                    <h5><i class="fas fa-layer-group" aria-hidden="true"></i> Differentiation</h5>
+                    <p><strong>Support:</strong> Provide the evaluation worksheet with guided prompts and sentence starters ("The claim assumes…", "Evidence for this would be…").</p>
+                    <p><strong>Extension:</strong> Ask groups to design a small-scale test that could verify the personalisation claim in their own institution.</p>
+                </div>
+                <p><strong>Assessment:</strong> Review completed worksheets for depth of analysis. Use a rubric assessing: evidence identification (0–3 points), assumption recognition (0–3 points), risk identification (0–3 points), and clarity of argument (0–3 points). A score of 8/12 or above indicates achievement.</p>
+            </article>
+
+            <article class="activity-block">
+                <h4>Activity 3: Data Privacy Mini-Audit</h4>
+                <div class="activity-meta">
+                    <span><i class="fas fa-clock" aria-hidden="true"></i> 30 minutes</span>
+                    <span><i class="fas fa-users" aria-hidden="true"></i> Individuals</span>
+                    <span><i class="fas fa-shield-halved" aria-hidden="true"></i> All levels</span>
+                </div>
+                <p><strong>Materials:</strong> Printed checklist template, a sample AI tool privacy policy (or a real one from a well-known educational tool), highlighters.</p>
+                <div class="activity-steps">
+                    <ol>
+                        <li><strong>Introduction (5 min):</strong> Explain that GDPR requires transparency, purpose limitation, data minimisation, and consent in educational data processing.</li>
+                        <li><strong>Audit task (18 min):</strong> Participants work individually through a privacy checklist, examining a sample tool's policy for: data collection scope, storage location, sharing with third parties, deletion rights, and consent mechanisms.</li>
+                        <li><strong>Peer review (7 min):</strong> Participants swap findings with a partner and discuss discrepancies.</li>
+                    </ol>
+                </div>
+                <div class="differentiation-box">
+                    <h5><i class="fas fa-layer-group" aria-hidden="true"></i> Differentiation</h5>
+                    <p><strong>Support:</strong> Provide the checklist with plain-language explanations for each item and a reference sheet explaining key GDPR terms.</p>
+                    <p><strong>Extension:</strong> Ask participants to draft a brief recommendation to a school leader about whether to adopt the tool, citing specific privacy findings.</p>
+                </div>
+                <p><strong>Assessment:</strong> Count the number of correctly identified privacy issues on the checklist (minimum 5 out of 8 for achievement). Review recommendation drafts for specificity and accuracy.</p>
+            </article>
+        </section>
+
+        <section class="chapter-card" id="reflection" data-aos="fade-up">
+            <h2>3. Critical Reflection</h2>
+            <p>Before adopting any AI tool, educators should reflect on the following questions individually or with colleagues:</p>
+            <div class="reflection-question">"If this AI tool disappeared tomorrow, would the learning objective still be achievable? If not, is the dependency justified?"</div>
+            <div class="reflection-question">"Whose voices are missing from the data that trains this model, and how might that affect my students?"</div>
+            <div class="reflection-question">"Am I adopting this tool because it genuinely improves learning, or because it is the current trend?"</div>
+            <div class="reflection-question">"How will I verify the accuracy and fairness of this tool's outputs for my specific student population?"</div>
+            <div class="reflection-question">"What will I tell students and families about how their data is used by this tool?"</div>
+        </section>
+
+        <section class="chapter-card" id="inclusion" data-aos="fade-up">
+            <h2>4. Inclusion and Accessibility</h2>
+            <p>AI tools must be designed and selected with all learners in mind. The following principles should guide practice:</p>
+            <ul>
+                <li><strong>Multi-modal access:</strong> Ensure tools offer text, audio, and visual output options so learners with different needs can engage meaningfully.</li>
+                <li><strong>Language equity:</strong> Tools should support the home languages of learners, not only the language of instruction. Verify translation quality before relying on it for critical communications.</li>
+                <li><strong>Cognitive load:</strong> AI interfaces should not overwhelm users with information. Evaluate whether tool outputs are comprehensible at the intended reading level.</li>
+                <li><strong>Device and connectivity independence:</strong> Consider how learners without reliable internet or modern devices will access AI-enhanced content. Always provide a non-digital alternative.</li>
+                <li><strong>Disability inclusion:</strong> Verify that tools are compatible with screen readers, captioning, and other assistive technologies before adoption.</li>
+                <li><strong>Cultural responsiveness:</strong> Test whether AI outputs reflect the cultural contexts of your learners or default to a narrow cultural perspective.</li>
+            </ul>
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/8.2Essential-Measures-for-Student-Data-Security-and-Confidentiality.pptx%20%281%29.pdf" target="_blank" class="chapter-download" rel="noopener noreferrer">
+                    <i class="fas fa-file-pdf" aria-hidden="true"></i> Essential Measures for Student Data Security (PDF)
+                </a>
+            </p>
+        </section>
+
+        <section class="chapter-card" id="data" data-aos="fade-up">
+            <h2>5. Data Safety and GDPR</h2>
+            <p>Educational data is among the most sensitive categories of personal information. The following principles are essential:</p>
+            <ul>
+                <li><strong>Lawful basis:</strong> Ensure there is a clear legal basis for processing learner data — typically consent or legitimate interest, with consent preferred for minors.</li>
+                <li><strong>Data minimisation:</strong> Only collect data that is strictly necessary for the stated educational purpose. Resist vendor pressure to share additional data.</li>
+                <li><strong>Transparency:</strong> Learners and families must be informed about what data is collected, how it is used, how long it is stored, and who has access.</li>
+                <li><strong>Right to access and deletion:</strong> Learners and families should be able to request a copy of their data or its deletion, in accordance with GDPR Articles 15 and 17.</li>
+                <li><strong>Security measures:</strong> Verify that tools use encryption, access controls, and regular security audits. Do not accept tools that store data without clear security certifications.</li>
+                <li><strong>Third-party sharing:</strong> Understand whether learner data is shared with subprocessors or other third parties, and verify that adequate protections exist downstream.</li>
+                <li><strong>Data Protection Impact Assessment (DPIA):</strong> For new AI tools processing sensitive data at scale, conduct a DPIA before deployment, involving relevant stakeholders.</li>
+            </ul>
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/8.2Essential-Measures-for-Student-Data-Security-and-Confidentiality.pptx%20%281%29.pdf" target="_blank" class="chapter-download" rel="noopener noreferrer">
+                    <i class="fas fa-file-pdf" aria-hidden="true"></i> Essential Measures for Student Data Security (PDF)
+                </a>
+            </p>
+            <a href="resource-student-data-security.html" class="chapter-link"><i class="fas fa-book" aria-hidden="true"></i> Read the full pedagogical page →</a>
+        </section>
+
+        <section class="chapter-card" id="limits" data-aos="fade-up">
+            <h2>6. Limitations and Human Verification</h2>
+            <p>Every AI system has limitations that educators must understand and communicate. Key limitations include:</p>
+            <ul>
+                <li><strong>Accuracy gaps:</strong> AI outputs can contain errors, especially in domain-specific or edge-case scenarios. Always verify before using in assessment or feedback.</li>
+                <li><strong>Bias and fairness:</strong> Models may produce systematically different outcomes for different demographic groups. Audit outputs for equity, not just accuracy.</li>
+                <li><strong>Context blindness:</strong> AI lacks the contextual understanding that experienced educators bring — knowledge of individual student histories, classroom dynamics, and institutional culture.</li>
+                <li><strong>Temporal currency:</strong> Many models are trained on data with a cut-off date. Current events, emerging research, and recent policy changes may not be reflected.</li>
+                <li><strong>Over-reliance risk:</strong> When educators defer to AI outputs without verification, errors propagate and professional judgement atrophies.</li>
+                <li><strong>Emotional and social dimensions:</strong> AI cannot genuinely understand or respond to emotions, motivation, or social dynamics in the way a human educator can.</li>
+            </ul>
+            <p>Human verification is not optional — it is a core professional responsibility. Every AI-assisted decision in education should involve a human review step, documented and accountable.</p>
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/9.Technology-is-fundamentally-transforming-education.pptx%20%281%29.pdf" target="_blank" class="chapter-download" rel="noopener noreferrer">
+                    <i class="fas fa-file-pdf" aria-hidden="true"></i> Technology is Fundamentally Transforming Education (PDF)
+                </a>
+            </p>
+        </section>
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>7. Resources</h2>
+            <h3>Downloadable resources</h3>
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/2.What-is-AI-and-How-is-it-Used-in-Education.pptx%20%281%29.pdf" target="_blank" class="chapter-download" rel="noopener noreferrer">
+                    <i class="fas fa-file-pdf" aria-hidden="true"></i> What is AI and How is it Used in Education? (PDF)
+                </a>
+            </p>
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/9.Technology-is-fundamentally-transforming-education.pptx%20%281%29.pdf" target="_blank" class="chapter-download" rel="noopener noreferrer">
+                    <i class="fas fa-file-pdf" aria-hidden="true"></i> Technology is Fundamentally Transforming Education (PDF)
+                </a>
+            </p>
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/4.AI-Tools-Transforming-Education-A-Practical-Guide-for-Educators.pptx%20%281%29.pdf" target="_blank" class="chapter-download" rel="noopener noreferrer">
+                    <i class="fas fa-file-pdf" aria-hidden="true"></i> AI Tools Transforming Education – Practical Guide (PDF)
+                </a>
+            </p>
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/1.AI-in-Education-A-5-Day-Training-Program-for-Youth-Workers.pptx%20%281%29.pdf" target="_blank" class="chapter-download" rel="noopener noreferrer">
+                    <i class="fas fa-file-pdf" aria-hidden="true"></i> AI in Education – 5-Day Training Program (PDF)
+                </a>
+            </p>
+            <h3>Related pedagogical resources</h3>
+            <ul>
+                <li><a href="resource-what-is-ai.html"><i class="fas fa-book" aria-hidden="true"></i> What is AI and How is it Used in Education?</a></li>
+                <li><a href="resource-technology-transforming-education.html"><i class="fas fa-book" aria-hidden="true"></i> Technology is Fundamentally Transforming Education</a></li>
+                <li><a href="resource-ai-tools-practical-guide.html"><i class="fas fa-book" aria-hidden="true"></i> AI Tools Transforming Education: A Practical Guide</a></li>
+                <li><a href="resource-ai-5-day-training.html"><i class="fas fa-book" aria-hidden="true"></i> AI in Education: A 5-Day Training Program</a></li>
+                <li><a href="resource-student-data-security.html"><i class="fas fa-book" aria-hidden="true"></i> Student Data Security</a></li>
+                <li><a href="resource-ethics-ai-education.html"><i class="fas fa-book" aria-hidden="true"></i> Ethics in AI Education</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Smart edu AI – Erasmus+ Project</p>
+        <img src="images/logos/eu_funded_en.jpg" alt="Erasmus+ Logo" />
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', String(!expanded));
+        });
+    </script>
+</body>
+</html>

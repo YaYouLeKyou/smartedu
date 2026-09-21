@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resource – Integrating AI into Instructional Design</title>
+    <link rel="icon" type="image/png" href="images/logos/smartaiedu-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        .chapter-hero { background: linear-gradient(135deg, #ff8c42, #ffd23f); color: white; text-align: center; padding: 60px 20px; }
+        .chapter-hero h1 { font-size: 2.2rem; margin-bottom: 15px; }
+        .chapter-hero p { max-width: 800px; margin: 0 auto 10px; font-size: 1.1rem; line-height: 1.6; }
+        .chapter-content { max-width: 1100px; margin: auto; padding: 40px 20px; }
+        .chapter-content h2 { color: #ff8c42; text-align: center; margin: 40px 0 20px; }
+        .chapter-content h3 { color: #333; margin-top: 30px; }
+        .chapter-content p, .chapter-content li { line-height: 1.7; font-size: 1.05rem; }
+        .chapter-content ul { padding-left: 25px; }
+        .chapter-card { background: white; border-radius: 16px; padding: 30px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); margin-bottom: 30px; }
+        .chapter-image { width: 100%; border-radius: 16px; height: 260px; object-fit: cover; margin: 20px 0; }
+        .chapter-download { display: inline-block; margin-top: 15px; padding: 10px 18px; background: #ff8c42; color: white; text-decoration: none; border-radius: 8px; font-size: 0.95rem; transition: background 0.3s ease; }
+        .chapter-download:hover { background: #e67625; }
+        .chapter-quote { background: #fff7e8; border-left: 5px solid #ffd23f; padding: 20px; margin: 25px 0; border-radius: 0 12px 12px 0; font-style: italic; }
+        .back-link { display: inline-block; margin: 20px 0; color: #ff8c42; text-decoration: none; font-weight: 500; }
+        .back-link:hover { text-decoration: underline; }
+        .resource-meta { display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; }
+        .badge-ai { background: #e3f2fd; color: #1976d2; }
+        .badge-level { background: #f3e5f5; color: #7b1fa2; }
+        .badge-duration { background: #fff3e0; color: #e65100; }
+        .reflection-box { background: #f9f9f9; border-radius: 12px; padding: 22px; margin: 20px 0; border-left: 4px solid #ffd23f; }
+        .reflection-box h4 { color: #ff8c42; margin-top: 0; }
+        .activity-box { background: #f0f8ff; border-radius: 12px; padding: 22px; margin: 20px 0; }
+        .activity-box h4 { color: #1976d2; margin-top: 0; }
+        .pd-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 25px 0; }
+        .pd-card { background: #f9f9f9; border-radius: 12px; padding: 22px; border-left: 4px solid #ffd23f; }
+        .pd-card h4 { color: #ff8c42; margin-top: 0; }
+        .pd-card p { font-size: 0.95rem; line-height: 1.6; }
+        .related-resources { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px; }
+        .related-link { display: inline-block; padding: 8px 16px; background: #eeefff; border-radius: 6px; color: #333; text-decoration: none; font-size: 0.9rem; }
+        .related-link:hover { background: #ff8c42; color: white; }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="images/logos/smartaiedu-logo.jpg" alt="Smart edu AI Logo" />
+                <a href="index.html" class="logo">Smart edu AI</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="handbook.html">Handbook</a></li>
+                <li><a href="handbook-teaching.html">Teaching</a></li>
+                <li><a href="handbook-professional.html">Professional</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <header class="chapter-hero">
+        <h1>Integrating AI into Instructional Design</h1>
+        <p>Enhancing youth work through AI-powered pedagogical design</p>
+    </header>
+
+    <main class="chapter-content">
+        <a href="handbook-teaching.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Chapter: Teaching</a>
+
+        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&h=500&fit=crop" alt="Teacher planning with AI tools" class="chapter-image" data-aos="fade-up" />
+
+        <section class="chapter-card" data-aos="fade-up">
+            <div class="resource-meta">
+                <span class="badge badge-ai">Instructional Design</span>
+                <span class="badge badge-level">Intermediate</span>
+                <span class="badge badge-duration">2–3 hours (self-study or workshop)</span>
+            </div>
+            <h2>Resource Overview</h2>
+            <p>AI can accelerate instructional design by helping teachers plan lessons, generate activities,
+                differentiate materials, assess learning outcomes, and design engaging multimedia content. This
+                resource teaches educators how to use AI as a creative assistant while maintaining professional
+                pedagogical reasoning. It does <em>not</em> claim that AI can design lessons autonomously or replace
+                the teacher's expertise — the educator remains the author of every learning experience.</p>
+            <p>The resource is particularly relevant for youth workers who need to create engaging, accessible,
+                and culturally sensitive content for diverse groups of young people.</p>
+
+            <div class="chapter-quote">
+                "Use AI to amplify your creativity and expertise, not to replace your professional judgement as
+                an educator."
+            </div>
+
+            <h3>Audience, Level &amp; Prerequisites</h3>
+            <ul>
+                <li><strong>Target audience:</strong> Teachers, youth workers, curriculum designers, and instructional designers.</li>
+                <li><strong>Level:</strong> Intermediate — participants should already be familiar with basic lesson planning and some digital tools.</li>
+                <li><strong>Prerequisites:</strong> Experience designing lessons or learning activities. Basic familiarity with AI tools (e.g., chatbots, image generators) is helpful but not required; the framework will introduce key concepts.</li>
+                <li><strong>Estimated duration:</strong> 90–120 minutes for the core activities; extendable to a half-day design sprint.</li>
+            </ul>
+
+            <h3>Measurable Learning Objectives</h3>
+            <p>By the end of this resource, educators will be able to:</p>
+            <ul>
+                <li>Use AI to brainstorm lesson hooks and cross-curricular connections. <em>(Target: generate 3 hook ideas and 1 cross-curricular link for a given topic.)</em></li>
+                <li>Generate differentiated activities for diverse learner levels using AI assistance. <em>(Target: produce beginner, intermediate, and advanced versions of one activity with clear rationales.)</em></li>
+                <li>Design inclusive assessment rubrics and formative checks with AI support. <em>(Target: draft a rubric with 3–4 criteria and justify each criterion for fairness and clarity.)</em></li>
+                <li>Apply AI-generated content ethically and with proper attribution. <em>(Target: include an attribution statement and a verification checklist in their final submission.)</em></li>
+                <li>Evaluate AI-generated materials for cultural relevance and bias. <em>(Target: identify at least 2 potential biases or cultural gaps in a sample AI output and propose revisions.)</em></li>
+            </ul>
+
+            <h3>AI-Powered Instructional Design Framework</h3>
+            <div class="pd-grid">
+                <div class="pd-card">
+                    <h4><i class="fas fa-lightbulb"></i> Plan with AI</h4>
+                    <p>Define learning objectives first. Then use AI to brainstorm engaging hooks, entry
+                        questions, and real-world connections. Always adapt AI suggestions to your local context
+                        and student needs.</p>
+                </div>
+                <div class="pd-card">
+                    <h4><i class="fas fa-cogs"></i> Differentiate</h4>
+                    <p>Ask AI to create tiered activities for different learner levels. Request multiple formats
+                        (visual, auditory, kinesthetic) and vary complexity. Verify quality and cultural
+                        appropriateness.</p>
+                </div>
+                <div class="pd-card">
+                    <h4><i class="fas fa-chalkboard-teacher"></i> Engage</h4>
+                    <p>Use AI to design interactive elements — polls, gamified quizzes, collaborative activities.
+                        Balance digital engagement with meaningful human interaction.</p>
+                </div>
+                <div class="pd-card">
+                    <h4><i class="fas fa-clipboard-check"></i> Assess</h4>
+                    <p>Generate rubrics, quiz questions, and formative checks. Ensure they align with learning
+                        objectives and include higher-order thinking skills.</p>
+                </div>
+            </div>
+
+            <h3>Suggested Classroom Activities</h3>
+            <div class="activity-box">
+                <h4><i class="fas fa-check-circle"></i> Activity 1: Lesson Planning with AI</h4>
+                <p><strong>Duration:</strong> 35 minutes &nbsp;|&nbsp; <strong>Materials:</strong> AI text tool, lesson plan template, sample topic, comparison checklist.</p>
+                <p><strong>Steps:</strong></p>
+                <ol>
+                    <li>Participants use AI to generate a lesson plan outline for a chosen topic.</li>
+                    <li>They critically review the AI output: Are the objectives clear? Is the sequence logical? Is the content culturally appropriate?</li>
+                    <li>Participants compare the AI-generated plan with a teacher-designed plan (provided), noting strengths and gaps.</li>
+                    <li>They revise the AI plan, incorporating their own expertise and local context.</li>
+                </ol>
+                <p><strong>Differentiation:</strong> Provide a worked example and guiding questions for participants new to AI; challenge experienced users to add assessment and differentiation elements.</p>
+                <p><strong>Evaluation:</strong> Revised lesson plan rubric (clarity, alignment with objectives, cultural sensitivity, feasibility).</p>
+            </div>
+            <div class="activity-box">
+                <h4><i class="fas fa-check-circle"></i> Activity 2: Differentiation Generator</h4>
+                <p><strong>Duration:</strong> 30 minutes &nbsp;|&nbsp; <strong>Materials:</strong> AI tool, differentiation request template, sample complex topic, peer feedback sheets.</p>
+                <p><strong>Steps:</strong></p>
+                <ol>
+                    <li>Participants use AI to create three versions of the same activity (beginner, intermediate, advanced) for a complex topic.</li>
+                    <li>For each version, they note: learning goal, supports provided, challenge level, and format (visual, auditory, kinesthetic).</li>
+                    <li>Participants discuss in pairs: How does each version address different learner needs? What is still missing?</li>
+                </ol>
+                <p><strong>Differentiation:</strong> Provide a model differentiation request and guiding questions for struggling participants; challenge advanced participants to include accessibility features (e.g., screen-reader-friendly text, captioned videos).</p>
+                <p><strong>Evaluation:</strong> Differentiation sheet (completeness, variety of formats, clarity of progression, realism).</p>
+            </div>
+            <div class="activity-box">
+                <h4><i class="fas fa-check-circle"></i> Activity 3: Assessment Rubric Workshop</h4>
+                <p><strong>Duration:</strong> 30 minutes &nbsp;|&nbsp; <strong>Materials:</strong> AI tool, sample creative project brief, rubric criteria list, peer review sheets.</p>
+                <p><strong>Steps:</strong></p>
+                <ol>
+                    <li>Participants use AI to draft a rubric for a creative project (e.g., a poster, a short video, a podcast).</li>
+                    <li>They critique the draft in small groups, focusing on: Are criteria clear? Are they fair? Do they include higher-order thinking?</li>
+                    <li>Groups refine the rubric and present it, explaining their changes.</li>
+                </ol>
+                <p><strong>Differentiation:</strong> Provide a criteria checklist and exemplar rubric for groups that need support; challenge advanced groups to include a self-assessment column and a peer-assessment column.</p>
+                <p><strong>Evaluation:</strong> Final rubric (clarity, fairness, alignment with project goals, inclusion of student voice).</p>
+            </div>
+
+            <h3>Inclusion &amp; Accessibility</h3>
+            <ul>
+                <li>When generating content with AI, always review it for accessibility: add alt text to images, captions to videos, and transcripts to audio.</li>
+                <li>Ensure differentiated materials include multiple formats (visual, auditory, kinesthetic) to support diverse learning styles.</li>
+                <li>Use plain language and avoid cultural references that may not be familiar to all students.</li>
+                <li>Provide templates and scaffolds for students who need structured guidance, while allowing open-ended exploration for those who do not.</li>
+            </ul>
+
+            <h3>Privacy, Data &amp; GDPR</h3>
+            <ul>
+                <li>When using AI to generate content based on student work or classroom data, ensure that no personal or sensitive data is entered into public AI tools.</li>
+                <li>Use anonymised or synthetic examples when testing AI prompts related to student assessment or behaviour.</li>
+                <li>Under GDPR, any student data used in AI-assisted design must be processed lawfully, with clear purpose limitation and data minimisation.</li>
+                <li>Teachers should obtain parental consent where student work is used for AI training or demonstration purposes.</li>
+            </ul>
+
+            <h3>Limitations &amp; Human Verification</h3>
+            <ul>
+                <li>AI-generated lesson plans and materials are drafts, not final products. The teacher is the author who adapts, verifies, and contextualises every element.</li>
+                <li>AI may produce content that is culturally insensitive, biased, or factually incorrect. Always review against reliable sources and student context.</li>
+                <li>AI cannot understand classroom dynamics, individual student needs, or school policies the way an experienced teacher does.</li>
+                <li>Over-reliance on AI for instructional design can reduce teacher creativity and professional autonomy over time.</li>
+                <li>AI tools may have accessibility limitations that are not obvious; test with screen readers and mobile devices before recommending to students.</li>
+            </ul>
+        </section>
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>Critical Reflection Questions</h2>
+            <div class="reflection-box">
+                <h4>Discussion prompts for educators and students:</h4>
+                <ul>
+                    <li>If AI helps design lessons, who is the "author" of the learning experience?</li>
+                    <li>How can we ensure AI-generated content reflects our students' diverse backgrounds?</li>
+                    <li>Should AI-generated materials require attribution? If so, how?</li>
+                    <li>What pedagogical expertise cannot be replicated by AI?</li>
+                    <li>How do we prevent over-reliance on AI for instructional design?</li>
+                </ul>
+            </div>
+
+            <h3>Downloadable Resource</h3>
+            <p><strong>Download the full guide (PDF):</strong>
+                <a href="./pdf/france/3.Integrating-AI-into-Instructional-Design-Enhancing-Youth-Work.pptx%20%281%29.pdf" target="_blank" class="chapter-download">
+                    <i class="fas fa-file-pdf"></i> Integrating AI into Instructional Design (PDF)
+                </a>
+            </p>
+            <p><strong>Explore related resources:</strong>
+                <div class="related-resources">
+                    <a href="resource-digital-pedagogy.html" class="related-link">Developing Digital Pedagogy →</a>
+                    <a href="resource-ai-teaching-methods.html" class="related-link">AI-Supported Teaching Methods →</a>
+                    <a href="resource-ai-tools-practical-guide.html" class="related-link">AI Tools Practical Guide →</a>
+                    <a href="handbook-professional.html" class="related-link">Professional Chapter →</a>
+                </div>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Smart edu AI – Erasmus+ Project</p>
+        <img src="images/logos/eu_funded_en.jpg" alt="Erasmus+ Logo" />
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+    </script>
+</body>
+
+</html>

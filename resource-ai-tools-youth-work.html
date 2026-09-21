@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resource – AI Tools for Youth Work: Enhancing Engagement and Development</title>
+    <link rel="icon" type="image/png" href="images/logos/smartaiedu-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        .chapter-hero { background: linear-gradient(135deg, #ff8c42, #ffd23f); color: white; text-align: center; padding: 60px 20px; }
+        .chapter-hero h1 { font-size: 2.2rem; margin-bottom: 15px; }
+        .chapter-hero p { max-width: 800px; margin: 0 auto 10px; font-size: 1.1rem; line-height: 1.6; }
+        .chapter-content { max-width: 1100px; margin: auto; padding: 40px 20px; }
+        .chapter-content h2 { color: #ff8c42; text-align: center; margin: 40px 0 20px; }
+        .chapter-content h3 { color: #333; margin-top: 30px; }
+        .chapter-content p, .chapter-content li { line-height: 1.7; font-size: 1.05rem; }
+        .chapter-content ul { padding-left: 25px; }
+        .chapter-card { background: white; border-radius: 16px; padding: 30px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); margin-bottom: 30px; }
+        .chapter-image { width: 100%; border-radius: 16px; height: 260px; object-fit: cover; margin: 20px 0; }
+        .chapter-download { display: inline-block; margin-top: 15px; padding: 10px 18px; background: #ff8c42; color: white; text-decoration: none; border-radius: 8px; font-size: 0.95rem; transition: background 0.3s ease; }
+        .chapter-download:hover { background: #e67625; }
+        .chapter-quote { background: #fff7e8; border-left: 5px solid #ffd23f; padding: 20px; margin: 25px 0; border-radius: 0 12px 12px 0; font-style: italic; }
+        .back-link { display: inline-block; margin: 20px 0; color: #ff8c42; text-decoration: none; font-weight: 500; }
+        .back-link:hover { text-decoration: underline; }
+        .resource-meta { display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; }
+        .badge-ai { background: #e3f2fd; color: #1976d2; }
+        .badge-level { background: #f3e5f5; color: #7b1fa2; }
+        .badge-duration { background: #fff3e0; color: #e65100; }
+        .badge-target { background: #e8f5e9; color: #2e7d32; }
+        .badge-prereq { background: #fce4ec; color: #c62828; }
+        .reflection-box { background: #f9f9f9; border-radius: 12px; padding: 22px; margin: 20px 0; border-left: 4px solid #ffd23f; }
+        .reflection-box h4 { color: #ff8c42; margin-top: 0; }
+        .activity-box { background: #f0f8ff; border-radius: 12px; padding: 22px; margin: 20px 0; }
+        .activity-box h4 { color: #1976d2; margin-top: 0; }
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 25px 0; }
+        .tool-card { background: #f9f9f9; border-radius: 12px; padding: 22px; border-left: 4px solid #ffd23f; }
+        .tool-card h4 { color: #ff8c42; margin-top: 0; margin-bottom: 8px; }
+        .tool-card p { font-size: 0.95rem; line-height: 1.6; }
+        .related-resources { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px; }
+        .related-link { display: inline-block; padding: 8px 16px; background: #eeefff; border-radius: 6px; color: #333; text-decoration: none; font-size: 0.9rem; }
+        .related-link:hover { background: #ff8c42; color: white; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px; margin: 20px 0; }
+        .info-item { background: #fff; border: 1px solid #e0e0e0; border-radius: 10px; padding: 18px; }
+        .info-item h4 { color: #ff8c42; margin-top: 0; font-size: 1rem; }
+        .info-item p { font-size: 0.9rem; margin-bottom: 0; }
+        .checklist { list-style: none; padding-left: 0; }
+        .checklist li { padding: 6px 0; }
+        .checklist li::before { content: "✓ "; color: #4caf50; font-weight: bold; margin-right: 6px; }
+        .governance-box { background: #fff3e0; border-radius: 12px; padding: 22px; margin: 20px 0; border-left: 4px solid #ff8c42; }
+        .governance-box h4 { color: #e65100; margin-top: 0; }
+        .section-badge { display: inline-block; padding: 3px 10px; background: #ff8c42; color: white; border-radius: 10px; font-size: 0.75rem; font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="images/logos/smartaiedu-logo.jpg" alt="Smart edu AI Logo" />
+                <a href="index.html" class="logo">Smart edu AI</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="handbook.html">Handbook</a></li>
+                <li><a href="handbook-teaching.html">Teaching</a></li>
+                <li><a href="handbook-professional.html">Professional</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <header class="chapter-hero">
+        <h1>AI Tools for Youth Work: Enhancing Engagement and Development</h1>
+        <p>Tools and strategies for youth workers to improve engagement and development</p>
+    </header>
+
+    <main class="chapter-content">
+        <a href="handbook-teaching.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Chapter: Teaching</a>
+
+        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&h=500&fit=crop" alt="Youth workers using AI tools for engagement" class="chapter-image" data-aos="fade-up" />
+
+        <section class="chapter-card" data-aos="fade-up">
+            <div class="resource-meta">
+                <span class="badge badge-ai">Youth Work</span>
+                <span class="badge badge-level">Intermediate</span>
+                <span class="badge badge-duration">6–8 Hours</span>
+                <span class="badge badge-target">Youth Workers / Facilitators</span>
+                <span class="badge badge-prereq">Basic AI literacy recommended</span>
+            </div>
+            <h2>Resource Overview</h2>
+            <p>This resource provides a catalogue of AI tools specifically designed to enhance engagement and
+                development among young people in youth work settings. It covers tools for creative projects,
+                peer support, skill assessment, and social connection — all with a critical lens on privacy,
+                inclusion, and youth empowerment.</p>
+
+            <div class="chapter-quote">
+                "The best AI tool for youth work is the one that the young people want to use and can
+                understand."
+            </div>
+
+            <h3>Measurable Learning Objectives</h3>
+            <p>By the end of this module, participants will be able to:</p>
+            <ul>
+                <li>Evaluate at least 5 AI tools against a privacy, inclusion, and engagement audit framework (minimum score: 7/10 on each criterion).</li>
+                <li>Match 3+ AI tools to specific youth development goals, with written justification linking tool capabilities to developmental outcomes.</li>
+                <li>Conduct a documented privacy and consent audit for one AI tool used with young people, identifying at least 3 risk areas and mitigations.</li>
+                <li>Design and deliver a peer-to-peer AI training session rated ≥ 4/5 on satisfaction by at least 80% of participants.</li>
+                <li>Compare engagement metrics with and without AI support across at least 2 activity types, presenting findings in a structured report.</li>
+            </ul>
+
+            <h3>Target Audience, Level &amp; Prerequisites</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h4><i class="fas fa-users"></i> Audience</h4>
+                    <p>Youth workers, facilitators, educators, and programme coordinators working with young people in non-formal educational settings.</p>
+                </div>
+                <div class="info-item">
+                    <h4><i class="fas fa-signal"></i> Level</h4>
+                    <p>Intermediate — requires familiarity with youth work methods and basic digital competency.</p>
+                </div>
+                <div class="info-item">
+                    <h4><i class="fas fa-clock"></i> Duration</h4>
+                    <p>6–8 hours: 2 hours tool exploration, 2 hours audit and evaluation, 2 hours activity design, 1–2 hours peer training preparation.</p>
+                </div>
+                <div class="info-item">
+                    <h4><i class="fas fa-book"></i> Prerequisites</h4>
+                    <p>Basic AI literacy recommended. Access to at least 2 AI tools. Experience working with young people in a structured setting.</p>
+                </div>
+            </div>
+
+            <h3>Detailed Pedagogical Sequence</h3>
+            <div class="pd-grid">
+                <div class="pd-card">
+                    <h4><i class="fas fa-1"></i> Phase 1 — Catalogue &amp; Categorise (60 min)</h4>
+                    <p>Participants explore a curated catalogue of 10+ AI tools across categories: creative, social, analytical, and communication. Each tool is tested against the audit framework. Participants create a personal tool catalogue with ratings. Pre-assessment: participants list current AI tools they know and rate their familiarity.</p>
+                </div>
+                <div class="pd-card">
+                    <h4><i class="fas fa-2"></i> Phase 2 — Audit &amp; Evaluate (60 min)</h4>
+                    <p>Each participant selects one tool and conducts a full audit using the privacy, inclusion, and engagement checklist. They identify strengths, risks, and accessibility concerns. Findings are shared in small groups for cross-validation. Groups produce a comparative tool recommendation report.</p>
+                </div>
+                <div class="pd-card">
+                    <h4><i class="fas fa-3"></i> Phase 3 — Experiment &amp; Compare (60 min)</h4>
+                    <p>Participants design a mini-experiment: deliver the same activity with and without AI assistance to a test group. They define metrics (engagement, completion, quality, satisfaction) and collect baseline data. Results are documented for peer review.</p>
+                </div>
+                <div class="pd-card">
+                    <h4><i class="fas fa-4"></i> Phase 4 — Showcase &amp; Share (60–90 min)</h4>
+                    <p>Young people (where possible) present AI-powered projects. Participants create a peer training resource: a 15-minute presentation on one tool, covering capabilities, limitations, and their recommendation. Open discussion on governance and verification.</p>
+                </div>
+            </div>
+
+            <h3>Assessment Strategy</h3>
+            <ul>
+                <li><strong>Formative:</strong> Facilitator review of audit reports during Phase 2; peer feedback during Phase 3 experiments.</li>
+                <li><strong>Portfolio:</strong> Each participant submits: tool catalogue (5+ tools rated), completed audit report, experiment comparison report, and peer training resource.</li>
+                <li><strong>Rubric-based:</strong> Audit report scored on thoroughness (25%), critical analysis (25%), practical recommendations (20%), data accuracy (15%), and presentation clarity (15%). Minimum passing: 70/100.</li>
+                <li><strong>Peer validation:</strong> At least 2 peers validate each audit report against the checklist criteria.</li>
+            </ul>
+
+            <h3>Differentiation</h3>
+            <ul>
+                <li><strong>Beginner pathway:</strong> Pre-vetted tool list; guided audit template with example entries; paired work.</li>
+                <li><strong>Intermediate pathway:</strong> Self-selected tools; independent audit; group discussion of findings.</li>
+                <li><strong>Advanced pathway:</strong> Participants develop their own audit framework; conduct institutional tool review; present policy recommendations.</li>
+                <li><strong>Language support:</strong> Glossary of AI terms in project languages; multilingual audit templates.</li>
+                <li><strong>Accessibility:</strong> Audit framework available in accessible formats; tool demonstrations with multiple input modalities.</li>
+            </ul>
+
+            <h3>Inclusion &amp; Accessibility</h3>
+            <ul>
+                <li>Tool catalogue includes accessibility ratings for each tool (screen reader compatibility, language support, device requirements).</li>
+                <li>Activities designed for participation without requiring high-end devices or fast internet.</li>
+                <li>Multiple expression formats accepted for assessments (written, oral, visual, video).</li>
+                <li>Inclusive design principles applied: clear navigation, consistent layout, adjustable text size.</li>
+                <li>Cultural sensitivity: tools and examples reviewed for cultural appropriateness across partner countries.</li>
+                <li>Sign language interpretation and assistive technology support available upon request.</li>
+            </ul>
+
+            <h3>Data Protection &amp; GDPR</h3>
+            <ul>
+                <li>Tool catalogue includes a data processing summary for each tool (data types collected, storage location, third-party sharing).</li>
+                <li>Youth data must not be used in tool demonstrations or audits without explicit consent.</li>
+                <li>Audit findings about tools are shared with youth workers but not with tool vendors unless through formal feedback channels.</li>
+                <li>All data collected during assessments is anonymised and stored securely with defined retention periods.</li>
+                <li>Participants receive a GDPR compliance checklist for selecting AI tools in their organisations.</li>
+                <li>Right to erasure: all personal assessment data can be deleted upon request within 30 days.</li>
+            </ul>
+
+            <h3>Limitations</h3>
+            <ul>
+                <li>Tool catalogue cannot cover all available AI tools; new tools emerge continuously.</li>
+                <li>Audit framework may not capture all privacy risks, especially emerging ones.</li>
+                <li>Engagement experiments may have small sample sizes, limiting statistical validity.</li>
+                <li>Tool suitability varies by context, age group, and cultural setting.</li>
+                <li>Some tools may require paid accounts not accessible to all organisations.</li>
+            </ul>
+
+            <h3>Tools Are Supports, Not Guarantees — Governance &amp; Human Verification</h3>
+            <div class="governance-box">
+                <h4><i class="fas fa-shield-alt"></i> Governance Framework</h4>
+                <p>All AI tools, analytics platforms, and engagement dashboards referenced in this resource are <strong>supports for youth work</strong> — they are <strong>not guarantees</strong> of engagement, development outcomes, or data protection. The following governance principles apply:</p>
+                <ul class="checklist">
+                    <li><strong>Human verification required:</strong> Every tool evaluation and engagement metric must be verified by at least 2 human reviewers before being used for decision-making.</li>
+                    <li><strong>Youth consent:</strong> Young people must give informed consent before any AI tool processes their data; consent can be withdrawn at any time.</li>
+                    <li><strong>Tool governance board:</strong> Each organisation should establish a small tool governance committee (teacher, youth worker, data officer, youth representative).</li>
+                    <li><strong>Regular audit cycle:</strong> All AI tools in active use must be audited at least every 6 months using the privacy, inclusion, and engagement framework.</li>
+                    <li><strong>Analytics are descriptive, not prescriptive:</strong> Engagement dashboards show what happened; human judgement determines what should be done about it.</li>
+                    <li><strong>Vendor accountability:</strong> Tool vendors must provide clear data processing agreements, security certifications, and incident notification procedures.</li>
+                </ul>
+                <p><em>Clarification:</em> Trello and Slack support project coordination and team communication. Analytics tools provide engagement data summaries. Neither guarantees youth engagement, data security, or programme success. All tools require human governance, regular verification, and institutional oversight.</p>
+            </div>
+
+            <h3>Critical Reflection Questions</h3>
+            <div class="reflection-box">
+                <h4>Discussion prompts:</h4>
+                <ul>
+                    <li>How do AI recommendation algorithms affect what young people discover and engage with?</li>
+                    <li>What are the risks of AI creating "filter bubbles" in youth programming?</li>
+                    <li>How can we ensure AI tools enhance rather than replace face-to-face mentoring?</li>
+                    <li>What data rights should young people have when using AI tools in youth programs?</li>
+                    <li>How do we measure the "human" impact of AI-assisted youth activities?</li>
+                    <li>Who is accountable when an AI tool provides misleading information to young people?</li>
+                </ul>
+            </div>
+
+            <h3>Downloadable Resource</h3>
+            <p><strong>Download the full presentation (PDF):</strong>
+                <a href="./pdf/france/8.0AI-Tools-for-Youth-Work-Enhancing-Engagement-and-Development.pptx%20%281%29.pdf" target="_blank" class="chapter-download">
+                    <i class="fas fa-file-pdf"></i> AI Tools for Youth Work (PDF)
+                </a>
+            </p>
+            <p><strong>Explore related resources:</strong>
+                <div class="related-resources">
+                    <a href="resource-empowering-youth-work.html" class="related-link">Empowering Youth Work →</a>
+                    <a href="resource-ai-student-success.html" class="related-link">AI-Powered Student Success →</a>
+                    <a href="handbook-professional.html" class="related-link">Professional Chapter →</a>
+                </div>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Smart edu AI – Erasmus+ Project</p>
+        <img src="images/logos/eu_funded_en.jpg" alt="Erasmus+ Logo" />
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+    </script>
+</body>
+</html>

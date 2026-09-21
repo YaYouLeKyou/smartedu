@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resource – AI Tools Transforming Education: A Practical Guide</title>
+    <link rel="icon" type="image/png" href="images/logos/smartaiedu-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        .chapter-hero {
+            background: linear-gradient(135deg, #ff8c42, #ffd23f);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .chapter-hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .chapter-hero p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .chapter-content {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .chapter-content h2 {
+            color: #ff8c42;
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        .chapter-content h3 {
+            color: #333;
+            margin-top: 30px;
+        }
+
+        .chapter-content p,
+        .chapter-content li {
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .chapter-content ul {
+            padding-left: 25px;
+        }
+
+        .chapter-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+
+        .chapter-image {
+            width: 100%;
+            border-radius: 16px;
+            height: 260px;
+            object-fit: cover;
+            margin: 20px 0;
+        }
+
+        .chapter-download {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 18px;
+            background: #ff8c42;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: background 0.3s ease;
+        }
+
+        .chapter-download:hover {
+            background: #e67625;
+        }
+
+        .chapter-quote {
+            background: #fff7e8;
+            border-left: 5px solid #ffd23f;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            color: #ff8c42;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .resource-meta {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .badge-ai {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .badge-level {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .badge-duration {
+            background: #fff3e0;
+            color: #e65100;
+        }
+
+        .reflection-box {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 22px;
+            margin: 20px 0;
+            border-left: 4px solid #ffd23f;
+        }
+
+        .reflection-box h4 {
+            color: #ff8c42;
+            margin-top: 0;
+        }
+
+        .activity-box {
+            background: #f0f8ff;
+            border-radius: 12px;
+            padding: 22px;
+            margin: 20px 0;
+        }
+
+        .activity-box h4 {
+            color: #1976d2;
+            margin-top: 0;
+        }
+
+        .tool-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .tool-table th,
+        .tool-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .tool-table th {
+            background: #fff7e8;
+            color: #ff8c42;
+        }
+
+        .related-resources {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .related-link {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #eeefff;
+            border-radius: 6px;
+            color: #333;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .related-link:hover {
+            background: #ff8c42;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="images/logos/smartaiedu-logo.jpg" alt="Smart edu AI Logo" />
+                <a href="index.html" class="logo">Smart edu AI</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="handbook.html">Handbook</a></li>
+                <li><a href="handbook-foundations.html">Foundations</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="chapter-hero">
+        <h1>AI Tools Transforming Education: A Practical Guide</h1>
+        <p>A step-by-step guide for educators to select, evaluate, and integrate AI tools responsibly</p>
+    </header>
+
+    <main class="chapter-content">
+        <a href="handbook-foundations.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Chapter: Foundations</a>
+
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=500&fit=crop" alt="Educator working with AI tools on laptop" class="chapter-image" data-aos="fade-up" />
+
+        <section class="chapter-card" data-aos="fade-up">
+            <div class="resource-meta">
+                <span class="badge badge-ai">AI Tools</span>
+                <span class="badge badge-level">All Levels</span>
+                <span class="badge badge-duration">2–3 hours (self-study or workshop)</span>
+            </div>
+            <h2>Resource Overview</h2>
+            <p>Choosing the right AI tool for the classroom is not a technological decision — it is a pedagogical
+                one. This practical guide walks educators through a structured process for evaluating, selecting,
+                testing, and integrating AI tools into their teaching practice.</p>
+            <p>The guide emphasises the importance of keeping teachers as the professional decision-maker,
+                verifying AI outputs before use, protecting student data, and ensuring accessibility for all
+                learners. It does <em>not</em> claim that AI tools automatically personalise learning or replace
+                the teacher; instead, it teaches how to use AI as a supportive assistant within a teacher-led
+                classroom.</p>
+
+            <div class="chapter-quote">
+                "The best AI tool is not the most powerful one, but the one that serves your learning objectives
+                best."
+            </div>
+
+            <h3>Audience, Level &amp; Prerequisites</h3>
+            <ul>
+                <li><strong>Target audience:</strong> Teachers, youth workers, school leaders, and curriculum designers.</li>
+                <li><strong>Level:</strong> All levels — from complete beginners to experienced ed-tech users.</li>
+                <li><strong>Prerequisites:</strong> Basic digital literacy (using a web browser, opening applications). No prior AI experience required.</li>
+                <li><strong>Estimated duration:</strong> 90–120 minutes for the core activities; self-paced learners may spread activities across several days.</li>
+            </ul>
+
+            <h3>Measurable Learning Objectives</h3>
+            <p>By the end of this guide, educators will be able to:</p>
+            <ul>
+                <li>Develop a framework for evaluating AI tools in education. <em>(Target: complete the evaluation table for 2 tools with at least 4 of 5 criteria scored.)</em></li>
+                <li>Identify key criteria: pedagogy, privacy, accessibility, transparency, cost, and sustainability. <em>(Target: list all 6 criteria without prompts.)</em></li>
+                <li>Learn how to prompt AI tools effectively and verify outputs. <em>(Target: produce 3 improved prompts and verify 2 outputs against reliable sources.)</em></li>
+                <li>Understand GDPR compliance and data protection requirements. <em>(Target: identify 3 GDPR rights relevant to AI use in schools.)</em></li>
+                <li>Create an action plan for responsible AI integration in their classroom. <em>(Target: submit a one-page plan with goals, tools, safeguards, and evaluation methods.)</em></li>
+            </ul>
+
+            <h3>The AI Tool Evaluation Framework</h3>
+            <table class="tool-table">
+                <thead>
+                    <tr>
+                        <th>Criterion</th>
+                        <th>Key Questions</th>
+                        <th>Rated</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pedagogy</td>
+                        <td>Does it serve a clear learning objective? Does it reduce workload or improve outcomes?</td>
+                        <td>☐☐☐☐☐</td>
+                    </tr>
+                    <tr>
+                        <td>Privacy</td>
+                        <td>Is data collection transparent? Does it comply with GDPR? Are students' data protected?</td>
+                        <td>☐☐☐☐☐</td>
+                    </tr>
+                    <tr>
+                        <td>Accessibility</td>
+                        <td>Is it available on all devices? Does it support screen readers and assistive tech?</td>
+                        <td>☐☐☐☐☐</td>
+                    </tr>
+                    <tr>
+                        <td>Transparency</td>
+                        <td>Can users understand how outputs are generated? Can students question the results?</td>
+                        <td>☐☐☐☐☐</td>
+                    </tr>
+                    <tr>
+                        <td>Cost &amp; Sustainability</td>
+                        <td>Is it free or affordable? What is its environmental impact?</td>
+                        <td>☐☐☐☐☐</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Suggested Classroom Activities</h3>
+            <div class="activity-box">
+                <h4><i class="fas fa-check-circle"></i> Activity 1: Tool Evaluation Workshop</h4>
+                <p><strong>Duration:</strong> 35 minutes &nbsp;|&nbsp; <strong>Materials:</strong> printed evaluation table, 2 sample AI tools (e.g., a text generator and a quiz maker), access to the tools, scoring stickers.</p>
+                <p><strong>Steps:</strong></p>
+                <ol>
+                    <li>Divide educators or students into pairs.</li>
+                    <li>Each pair tests one tool using the evaluation framework (pedagogy, privacy, accessibility, transparency, cost &amp; sustainability).</li>
+                    <li>Pairs document pros, cons, and potential risks, then score each criterion on a 1–5 scale.</li>
+                    <li>Pairs present findings; the class discusses patterns and trade-offs.</li>
+                </ol>
+                <p><strong>Differentiation:</strong> Provide a pre-filled example for groups that need it; challenge advanced groups to include a data-protection checklist.</p>
+                <p><strong>Evaluation:</strong> Completed evaluation sheet (scores justified with evidence); peer feedback on clarity.</p>
+            </div>
+            <div class="activity-box">
+                <h4><i class="fas fa-check-circle"></i> Activity 2: Prompt Engineering Challenge</h4>
+                <p><strong>Duration:</strong> 25 minutes &nbsp;|&nbsp; <strong>Materials:</strong> AI text tool with a shared account, prompt task cards, reflection sheets.</p>
+                <p><strong>Steps:</strong></p>
+                <ol>
+                    <li>Students compete to craft the best prompt for a given AI task (e.g., "explain photosynthesis at a 6th-grade level").</li>
+                    <li>Each student runs their prompt and shares the output.</li>
+                    <li>Class discusses how small changes in wording, audience specification, and format requests affect output quality.</li>
+                    <li>Students complete a reflection: "What did I learn about controlling AI output?"</li>
+                </ol>
+                <p><strong>Differentiation:</strong> Provide sentence starters and a model prompt for struggling learners; challenge advanced learners to include constraints (tone, length, vocabulary limit).</p>
+                <p><strong>Evaluation:</strong> Reflection sheet (insight, application of learning); peer voting on most effective prompt (with reasons).</p>
+            </div>
+            <div class="activity-box">
+                <h4><i class="fas fa-check-circle"></i> Activity 3: AI Output Fact-Check</h4>
+                <p><strong>Duration:</strong> 30 minutes &nbsp;|&nbsp; <strong>Materials:</strong> pre-generated AI content (text, image, or data), reliable source list, fact-check checklist, highlighters.</p>
+                <p><strong>Steps:</strong></p>
+                <ol>
+                    <li>Students receive AI-generated content and must verify its accuracy using multiple reliable sources.</li>
+                    <li>Students use a checklist: Are claims supported? Are sources credible? Are there biases or omissions? Is the language balanced?</li>
+                    <li>Students annotate the content with corrections and present their findings.</li>
+                </ol>
+                <p><strong>Differentiation:</strong> Provide a simplified checklist and 2 pre-approved sources for struggling groups; challenge advanced groups to identify subtle bias or missing perspectives.</p>
+                <p><strong>Evaluation:</strong> Fact-check sheet (number of claims verified, quality of corrections, use of sources).</p>
+            </div>
+
+            <h3>Inclusion &amp; Accessibility</h3>
+            <ul>
+                <li>When testing tools, verify compatibility with screen readers, keyboard navigation, and mobile devices.</li>
+                <li>Provide transcripts and captions for any video or audio examples used in the guide.</li>
+                <li>Offer a printed version of the evaluation table for offline use.</li>
+                <li>Ensure activities can be completed individually, in pairs, or in groups to accommodate different learning preferences.</li>
+            </ul>
+
+            <h3>Privacy, Data &amp; GDPR</h3>
+            <ul>
+                <li>Before adopting any AI tool, schools must review the vendor's data processing agreement, privacy policy, and data retention practices.</li>
+                <li>Under GDPR, educators must ensure that any personal data processed by AI tools is lawful, fair, and transparent. Student data must never be entered into public AI chatbots without safeguards.</li>
+                <li>Tools that collect learning analytics must allow students and parents to access their data and opt out where appropriate.</li>
+                <li>Teachers should use anonymous or synthetic data when testing AI tools with student-related tasks.</li>
+            </ul>
+
+            <h3>Limitations &amp; Human Verification</h3>
+            <ul>
+                <li>AI tools can produce incorrect, outdated, or biased content. All outputs must be verified by a human before use in teaching or assessment.</li>
+                <li>Free tools may change their terms of service, introduce paywalls, or discontinue services — always have a backup plan.</li>
+                <li>AI tools do not understand context, nuance, or classroom culture the way an experienced teacher does.</li>
+                <li>Over-reliance on AI for lesson planning or grading can erode teacher professional judgement over time.</li>
+                <li>Environmental impact: large AI models consume significant energy; consider this in cost-benefit analyses.</li>
+            </ul>
+        </section>
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>Critical Reflection Questions</h2>
+            <div class="reflection-box">
+                <h4>Discussion prompts for educators and students:</h4>
+                <ul>
+                    <li>Is it acceptable for an AI tool to make a mistake when it helps students learn?</li>
+                    <li>How do we balance efficiency gains with privacy risks?</li>
+                    <li>What happens when a tool that was free becomes paid or is discontinued?</li>
+                    <li>Should schools have a preferred vendor list for AI tools, or should each teacher choose
+                        independently?</li>
+                    <li>How can we ensure that all students benefit equally from AI-enhanced learning?</li>
+                </ul>
+            </div>
+
+            <h3>Downloadable Resource</h3>
+            <p><strong>Download the full guide (PDF):</strong>
+                <a href="./pdf/france/4.AI-Tools-Transforming-Education-A-Practical-Guide-for-Educators.pptx%20%281%29.pdf" target="_blank" class="chapter-download">
+                    <i class="fas fa-file-pdf"></i> AI Tools Transforming Education (PDF)
+                </a>
+            </p>
+            <p><strong>Explore related resources:</strong>
+                <div class="related-resources">
+                    <a href="resource-what-is-ai.html" class="related-link">What is AI? →</a>
+                    <a href="resource-technology-transforming-education.html" class="related-link">Technology Transforming Education →</a>
+                    <a href="resource-integrating-ai-design.html" class="related-link">Integrating AI into Design →</a>
+                    <a href="handbook-ethics.html" class="related-link">Ethics Chapter →</a>
+                    <a href="resource-ai-5-day-training.html" class="related-link">5-Day Training Program →</a>
+                </div>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Smart edu AI – Erasmus+ Project</p>
+        <img src="images/logos/eu_funded_en.jpg" alt="Erasmus+ Logo" />
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

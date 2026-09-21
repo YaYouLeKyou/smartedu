@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Handbook – AI-Powered Teaching &amp; Learning</title>
+    <link rel="icon" type="image/png" href="images/logos/smartaiedu-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        .chapter-hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chapter-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255, 140, 66, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(255, 210, 63, 0.1) 0%, transparent 50%);
+            animation: heroGlow 15s ease-in-out infinite alternate;
+        }
+
+        @keyframes heroGlow {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(2%, 2%) rotate(3deg); }
+        }
+
+        .chapter-hero h1 {
+            font-size: 2.6rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .chapter-hero .chapter-number {
+            display: inline-block;
+            background: rgba(255, 140, 66, 0.2);
+            color: #ffd23f;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .chapter-hero p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+
+        .chapter-content {
+        .chapter-content {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+        .chapter-content h2 {
+            color: #ff8c42;
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+        .chapter-content h3 {
+            color: #333;
+            margin-top: 30px;
+        }
+        .chapter-content p,
+        .chapter-content li {
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        .chapter-content ul {
+            padding-left: 25px;
+        }
+        .chapter-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+        .chapter-image {
+            width: 100%;
+            border-radius: 16px;
+            height: 260px;
+            object-fit: cover;
+            margin: 20px 0;
+        }
+        .chapter-download {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 18px;
+            background: #ff8c42;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: background 0.3s ease;
+        }
+        .chapter-download:hover {
+            background: #e67625;
+        }
+        .chapter-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: #ff8c42;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .chapter-link:hover {
+            text-decoration: underline;
+        }
+        .chapter-quote {
+            background: #fff7e8;
+            border-left: 5px solid #ffd23f;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+        }
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            color: #ff8c42;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .handbook-index {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        .handbook-index h3 {
+            color: #ff8c42;
+            margin-top: 0;
+        }
+        .handbook-index ul {
+            list-style: none;
+            padding: 0;
+        }
+        .handbook-index li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .handbook-index li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .handbook-index a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .handbook-index a:hover {
+            color: #ff8c42;
+        }
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .meta-table th,
+        .meta-table td {
+            text-align: left;
+            padding: 12px 16px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 0.95rem;
+        }
+        .meta-table th {
+            color: #ff8c42;
+            font-weight: 600;
+            width: 140px;
+            white-space: nowrap;
+        }
+        .meta-table td {
+            color: #444;
+        }
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        .concept-card {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 22px;
+            border-left: 4px solid #ff8c42;
+        }
+        .concept-card h4 {
+            color: #ff8c42;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+        .concept-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+        .activity-block {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid #e8e8e8;
+        }
+        .activity-block h4 {
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        .activity-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .activity-meta span {
+            background: #fff;
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+        .activity-steps ol {
+            padding-left: 22px;
+        }
+        .activity-steps ol li {
+            margin-bottom: 8px;
+        }
+        .differentiation-box {
+            background: #fff;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 12px;
+            border-left: 4px solid #ffd23f;
+        }
+        .differentiation-box h5 {
+            margin-top: 0;
+            color: #555;
+            font-size: 0.95rem;
+        }
+        .reflection-question {
+            background: #fff7e8;
+            padding: 12px 18px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        .analytics-note {
+            background: #e8f4fd;
+            border-left: 5px solid #3498db;
+            padding: 18px;
+            margin: 20px 0;
+            border-radius: 0 12px 12px 0;
+        }
+        .analytics-note strong {
+            color: #2471a3;
+        }
+        @media (max-width: 600px) {
+            .meta-table th,
+            .meta-table td {
+                display: block;
+                width: 100%;
+            }
+            .meta-table th {
+                padding-bottom: 2px;
+                border-bottom: none;
+            }
+            .meta-table td {
+                padding-top: 2px;
+            }
+            .concept-grid {
+                grid-template-columns: 1fr;
+            }
+            .activity-meta {
+                flex-direction: column;
+                gap: 6px;
+            }
+            .chapter-hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+    <nav aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="images/logos/smartaiedu-logo.jpg" alt="Smart edu AI Logo" />
+                <a href="index.html" class="logo">Smart edu AI</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="handbook.html">Handbook</a></li>
+                <li><a href="handbook-foundations.html">Foundations</a></li>
+                <li><a href="handbook-teaching.html" class="active" aria-current="page">Teaching</a></li>
+                <li><a href="handbook-ethics.html">Ethics</a></li>
+                <li><a href="handbook-language.html">Language</a></li>
+                <li><a href="handbook-creative.html">Creative</a></li>
+                <li><a href="handbook-professional.html">Professional</a></li>
+            </ul>
+            <div class="hamburger" role="button" aria-label="Toggle navigation menu" aria-expanded="false" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="chapter-hero">
+        <span class="chapter-number">Chapter 2</span>
+        <h1>AI-Powered Teaching &amp; Learning</h1>
+        <p>Pedagogical strategies for intentional, human-centred AI integration</p>
+    </header>
+
+    <main id="main-content" class="chapter-content">
+        <a href="handbook.html" class="back-link"><i class="fas fa-arrow-left" aria-hidden="true"></i> <span>Back to Handbook</span></a>
+
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=500&fit=crop" alt="Students working together on a collaborative learning task in a modern classroom" class="chapter-image" data-aos="fade-up" />
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>In this chapter</h2>
+            <p>This chapter organises AI usage around pedagogical objectives rather than tools. Each activity is designed around a specific teaching goal — lesson design, critical literacy, assessment, and data-informed discussion — so that AI serves the curriculum rather than driving it. Each section links to a dedicated resource page with learning objectives, classroom activities, and critical reflection points.</p>
+
+            <table class="meta-table" aria-label="Chapter metadata">
+                <tbody>
+                    <tr>
+                        <th scope="row">Audience</th>
+                        <td>K-12 teachers, higher education lecturers, vocational trainers, and instructional designers</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Level</th>
+                        <td>Intermediate — assumes foundational AI literacy (see Handbook – Foundations)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Duration</th>
+                        <td>Self-paced: 60–90 minutes; workshop format: 3 hours across four activities</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Prerequisites</th>
+                        <td>Completion of Handbook – Foundations or equivalent AI literacy. Familiarity with basic lesson planning.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Measurable learning objectives</h3>
+            <ul>
+                <li>Design at least one lesson that integrates AI intentionally aligned to a defined learning objective</li>
+                <li>Facilitate a classroom discussion in which students critically evaluate AI outputs using evidence</li>
+                <li>Create an assessment rubric that fairly evaluates AI-assisted student work</li>
+                <li>Interpret learning analytics as discussion indicators, not as labels or predictions about individual learners</li>
+                <li>Justify pedagogical choices about AI use in a written reflection of at least 250 words</li>
+            </ul>
+
+            <div class="handbook-index">
+                <h3>Pedagogical objectives in this chapter</h3>
+                <ul>
+                    <li><a href="#objective-design">Design AI-aligned lessons</a></li>
+                    <li><a href="#objective-literacy">Facilitate critical AI literacy</a></li>
+                    <li><a href="#objective-assessment">Assess AI-assisted work fairly</a></li>
+                    <li><a href="#objective-analytics">Use analytics as discussion indicators</a></li>
+                    <li><a href="#reflection">Critical reflection</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="chapter-card" id="objective-design" data-aos="fade-up">
+            <h2>1. Pedagogical Objective: Design AI-Aligned Lessons</h2>
+            <p>Effective AI integration begins with the learning objective, not the tool. This activity guides educators through designing a lesson where AI enhances — rather than replaces — pedagogical reasoning.</p>
+
+            <article class="activity-block">
+                <h4>Activity: Intentional AI Lesson Design</h4>
+                <div class="activity-meta">
+                    <span><i class="fas fa-clock" aria-hidden="true"></i> 60 minutes</span>
+                    <span><i class="fas fa-users" aria-hidden="true"></i> Individuals or pairs</span>
+                    <span><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> All subject areas</span>
+                </div>
+                <p><strong>Materials:</strong> Lesson plan template, subject curriculum documents, access to one AI tool of choice, sticky notes or digital board.</p>
+                <div class="activity-steps">
+                    <ol>
+                        <li><strong>Identify objective (10 min):</strong> Select one learning objective from your curriculum. Write it in measurable terms (e.g., "Students will compare two historical perspectives using evidence" rather than "Students will learn about history").</li>
+                        <li><strong>Evaluate AI fit (15 min):</strong> Determine whether AI genuinely serves this objective or merely digitises an existing task. Use the question: "What can the learner do now that they could not do without AI, and is that gain worth the dependency?"</li>
+                        <li><strong>Design the activity (25 min):</strong> Draft a lesson segment where AI plays a defined role — research assistant, draft generator, feedback provider — with clear boundaries on what learners must do independently.</li>
+                        <li><strong>Peer review (10 min):</strong> Exchange lesson plans with a partner. Partner evaluates using the checklist: objective clarity, AI role definition, independent work component, and assessment alignment.</li>
+                    </ol>
+                </div>
+                <div class="differentiation-box">
+                    <h5><i class="fas fa-layer-group" aria-hidden="true"></i> Differentiation</h5>
+                    <p><strong>Support:</strong> Provide a completed example lesson plan showing an AI-aligned lesson vs. a tool-centric lesson. Use a structured template with guiding prompts.</p>
+                    <p><strong>Extension:</strong> Design a two-session sequence where AI use increases in complexity across sessions, with explicit reflection after each.</p>
+                </div>
+                <p><strong>Assessment:</strong> Lesson plan evaluated on a 12-point rubric: objective measurability (0–3), pedagogical alignment (0–3), AI role clarity (0–3), and independent thinking component (0–3). Score of 9/12 or above indicates achievement.</p>
+            </article>
+        </section>
+
+        <section class="chapter-card" id="objective-literacy" data-aos="fade-up">
+            <h2>2. Pedagogical Objective: Facilitate Critical AI Literacy</h2>
+            <p>Students need to understand AI's strengths and limitations as users, not just consumers. This activity develops classroom facilitation skills for AI literacy discussions.</p>
+
+            <article class="activity-block">
+                <h4>Activity: Structured AI Output Analysis</h4>
+                <div class="activity-meta">
+                    <span><i class="fas fa-clock" aria-hidden="true"></i> 45 minutes</span>
+                    <span><i class="fas fa-users" aria-hidden="true"></i> Small groups (3–4)</span>
+                    <span><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> Secondary / Higher Education</span>
+                </div>
+                <p><strong>Materials:</strong> Printed AI-generated texts or images (2–3 examples on the same topic), analysis worksheet per group, markers, access to verification tools (search engines, fact-checking sites).</p>
+                <div class="activity-steps">
+                    <ol>
+                        <li><strong>Present outputs (5 min):</strong> Display three AI-generated texts on the same topic. Ask students: "What do you notice?"</li>
+                        <li><strong>Group analysis (20 min):</strong> Each group analyses one text using the worksheet: identify factual claims, assess verifiability, detect bias or omission, and rate confidence in the output (high/medium/low with justification).</li>
+                        <li><strong>Verification (10 min):</strong> Groups use search engines and fact-checking tools to verify their assessments.</li>
+                        <li><strong>Class discussion (10 min):</strong> Groups share findings. Facilitator guides discussion toward: "When is AI output trustworthy enough to use, and when does it need human verification?"</li>
+                    </ol>
+                </div>
+                <div class="differentiation-box">
+                    <h5><i class="fas fa-layer-group" aria-hidden="true"></i> Differentiation</h5>
+                    <p><strong>Support:</strong> Provide the analysis worksheet with guided prompts and sentence starters. Pair students strategically.</p>
+                    <p><strong>Extension:</strong> Ask students to generate their own AI output on a topic, then write a critical evaluation that could be shared with other students as a model.</p>
+                </div>
+                <p><strong>Assessment:</strong> Review completed worksheets for depth of analysis. Use a rubric: factual claim identification (0–3), verifiability assessment (0–3), bias detection (0–3), and justification quality (0–3). Score of 8/12 or above indicates achievement.</p>
+            </article>
+        </section>
+
+        <section class="chapter-card" id="objective-assessment" data-aos="fade-up">
+            <h2>3. Pedagogical Objective: Assess AI-Assisted Work Fairly</h2>
+            <p>When students use AI as part of their workflow, assessment must distinguish between process and product, and between original and AI-generated contributions.</p>
+
+            <article class="activity-block">
+                <h4>Activity: Assessment Redesign Workshop</h4>
+                <div class="activity-meta">
+                    <span><i class="fas fa-clock" aria-hidden="true"></i> 40 minutes</span>
+                    <span><i class="fas fa-users" aria-hidden="true"></i> Small groups (3–4)</span>
+                    <span><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> All levels</span>
+                </div>
+                <p><strong>Materials:</strong> Existing assessment rubric (from your own practice), printed "AI contribution declaration" template, markers.</p>
+                <div class="activity-steps">
+                    <ol>
+                        <li><strong>Review current rubric (10 min):</strong> Groups examine their own assessment rubric and identify criteria that could be met equally by AI-generated or human-generated work.</li>
+                        <li><strong>Redesign criteria (15 min):</strong> Rewrite criteria to differentiate between process (how the student worked) and product (what was produced). Add criteria for originality and critical engagement.</li>
+                        <li><strong>Declaration design (10 min):</strong> Create a brief "AI contribution declaration" template where students disclose how they used AI, what they modified, and what they learned.</li>
+                        <li><strong>Gallery walk (5 min):</strong> Groups display redesigned rubrics and declarations; others add sticky-note feedback.</li>
+                    </ol>
+                </div>
+                <div class="differentiation-box">
+                    <h5><i class="fas fa-layer-group" aria-hidden="true"></i> Differentiation</h5>
+                    <p><strong>Support:</strong> Provide a sample rubric with pre-identified AI-vulnerable criteria. Offer a partially completed declaration template.</p>
+                    <p><strong>Extension:</strong> Draft a whole-class policy on AI use in assessments, including provisions for different types of tasks (creative vs. analytical vs. procedural).</p>
+                </div>
+                <p><strong>Assessment:</strong> Groups' redesigned rubrics evaluated on: process-product distinction (0–3), originality criteria (0–3), student disclosure mechanism (0–3), and clarity (0–3). Score of 9/12 or above indicates achievement.</p>
+            </article>
+        </section>
+
+        <section class="chapter-card" id="objective-analytics" data-aos="fade-up">
+            <h2>4. Pedagogical Objective: Use Analytics as Discussion Indicators</h2>
+            <div class="analytics-note">
+                <strong>Important principle:</strong> Learning analytics should be treated as indicators for discussion — never as labels, verdicts, or predictions about individual learners. Analytics show patterns in data; they do not define a student's ability, potential, or future outcomes. Always discuss analytics with the learner present, in a collaborative and non-judgemental manner.
+            </div>
+
+            <article class="activity-block">
+                <h4>Activity: Analytics Dialogue Protocol</h4>
+                <div class="activity-meta">
+                    <span><i class="fas fa-clock" aria-hidden="true"></i> 30 minutes</span>
+                    <span><i class="fas fa-users" aria-hidden="true"></i> Pairs (educator-learner role-play)</span>
+                    <span><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> All levels</span>
+                </div>
+                <p><strong>Materials:</strong> Sample analytics dashboard screenshots (anonymised), dialogue protocol cards, reflection journal.</p>
+                <div class="activity-steps">
+                    <ol>
+                        <li><strong>Introduce protocol (5 min):</strong> Explain the dialogue protocol: (a) Present data without interpretation, (b) Ask the learner what they notice, (c) Share observations as questions, not conclusions, (d) Co-decide on next steps together.</li>
+                        <li><strong>Role-play (15 min):</strong> In pairs, one participant plays a teacher, the other a learner. The "teacher" presents anonymised analytics data using the protocol. The "learner" responds naturally. Switch roles after 7 minutes.</li>
+                        <li><strong>Debrief (10 min):</strong> Whole-group discussion: What was difficult about presenting data as questions? When might data be misleading? How does this approach change the power dynamic?</li>
+                    </ol>
+                </div>
+                <div class="differentiation-box">
+                    <h5><i class="fas fa-layer-group" aria-hidden="true"></i> Differentiation</h5>
+                    <p><strong>Support:</strong> Provide scripted dialogue prompts on the protocol cards. Pair less experienced participants with a facilitator for the role-play.</p>
+                    <p><strong>Extension:</strong> Have participants design an analytics-informed learning plan for a hypothetical student, explicitly avoiding any label-based language in their plan.</p>
+                </div>
+                <p><strong>Assessment:</strong> Reflection journal evaluated for: understanding of analytics as indicators (0–4), recognition of limitations and risks (0–4), evidence of critical stance (0–4). Score of 10/12 or above indicates achievement.</p>
+            </article>
+
+            <div class="analytics-note">
+                <strong>Analytics are not verdicts:</strong> A dashboard showing low engagement does not mean a student is disengaged — it may reflect the tool's design, the student's access circumstances, or cultural differences in platform use. Analytics should open conversations, not close them. Treat any analytics-based "score" or "risk indicator" as a starting point for dialogue, never as a final judgement.
+            </div>
+        </section>
+
+        <section class="chapter-card" id="reflection" data-aos="fade-up">
+            <h2>5. Critical Reflection</h2>
+            <p>After completing the activities, reflect individually or with colleagues:</p>
+            <div class="reflection-question">"What learning objective did I serve by using AI, and would the same objective be achievable without it?"</div>
+            <div class="reflection-question">"When I use analytics dashboards, do I discuss the data with learners, or do I act on it privately?"</div>
+            <div class="reflection-question">"How do I ensure that AI does not narrow the range of perspectives or voices in my classroom?"</div>
+            <div class="reflection-question">"What would I do differently if my institution had no access to this particular AI tool?"</div>
+            <div class="reflection-question">"How do I communicate to students and families that AI outputs require human verification?"</div>
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/12.AI-Supported-Teaching-Methods-Strategies-Enhanced-by-AI-and-Their-Classroom-Impact.pptx%20%281%29.pdf" target="_blank" class="chapter-download" rel="noopener noreferrer">
+                    <i class="fas fa-file-pdf" aria-hidden="true"></i> AI-Supported Teaching Methods (PDF)
+                </a>
+            </p>
+        </section>
+
+        <section class="chapter-card" id="inclusion" data-aos="fade-up">
+            <h2>6. Inclusion and Accessibility</h2>
+            <p>AI-enhanced teaching must be designed for all learners from the outset. Key principles for classroom practice:</p>
+            <ul>
+                <li><strong>Multi-modal representation:</strong> Present AI-generated content in multiple formats (text, audio, visual) so learners with different needs can engage meaningfully.</li>
+                <li><strong>Equitable access:</strong> Ensure no learner is disadvantaged by lack of device, internet, or prior AI experience. Provide non-digital alternatives for every AI-enhanced activity.</li>
+                <li><strong>Language support:</strong> AI tools should accommodate multilingual classrooms. Verify translation quality before relying on it for important communications. Note: Language-specific practices are covered in the Languages &amp; Communication chapter.</li>
+                <li><strong>Cognitive accessibility:</strong> AI interfaces and outputs should be comprehensible at the intended reading level. Avoid tools that increase cognitive load without clear pedagogical benefit.</li>
+                <li><strong>Assistive technology compatibility:</strong> Verify that AI tools work with screen readers, captioning tools, and other assistive technologies before adoption.</li>
+                <li><strong>Representation in content:</strong> Test whether AI outputs reflect the cultural and social diversity of your learners or default to a narrow perspective.</li>
+            </ul>
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/8.2Essential-Measures-for-Student-Data-Security-and-Confidentiality.pptx%20%281%29.pdf" target="_blank" class="chapter-download" rel="noopener noreferrer">
+                    <i class="fas fa-file-pdf" aria-hidden="true"></i> Essential Measures for Student Data Security (PDF)
+                </a>
+            </p>
+            <a href="resource-student-data-security.html" class="chapter-link"><i class="fas fa-book" aria-hidden="true"></i> Read the full pedagogical page →</a>
+        </section>
+
+        <section class="chapter-card" id="data" data-aos="fade-up">
+            <h2>7. Data Safety and GDPR</h2>
+            <p>When using AI in teaching, educators handle learner data that is protected by law and institutional policy. Key principles:</p>
+            <ul>
+                <li><strong>Lawful basis:</strong> Ensure a clear legal basis for processing learner data — consent is preferred, especially for minors.</li>
+                <li><strong>Data minimisation:</strong> Only share data with AI tools that is strictly necessary for the educational purpose.</li>
+                <li><strong>Transparency to families:</strong> Inform parents and guardians about which AI tools are used, what data is processed, and how long it is retained.</li>
+                <li><strong>Learner rights:</strong> Learners should know they can refuse AI-assisted activities and request data access or deletion.</li>
+                <li><strong>Security verification:</strong> Confirm tools use encryption, access controls, and security certifications before adoption.</li>
+                <li><strong>Third-party chains:</strong> Understand whether AI tools share data with subprocessors, and verify downstream protections.</li>
+            </ul>
+            <p><strong>Downloadable resources:</strong>
+                <a href="./pdf/france/8.2Essential-Measures-for-Student-Data-Security-and-Confidentiality.pptx%20%281%29.pdf" target="_blank" class="chapter-download" rel="noopener noreferrer">
+                    <i class="fas fa-file-pdf" aria-hidden="true"></i> Essential Measures for Student Data Security (PDF)
+                </a>
+            </p>
+            <a href="resource-student-data-security.html" class="chapter-link"><i class="fas fa-book" aria-hidden="true"></i> Read the full pedagogical page →</a>
+        </section>
+
+        <section class="chapter-card" id="limits" data-aos="fade-up">
+            <h2>8. Limitations and Human Verification</h2>
+            <p>AI tools in teaching have well-documented limitations that educators must understand and communicate:</p>
+            <ul>
+                <li><strong>Accuracy varies:</strong> AI outputs can contain factual errors, especially in specialized domains. Verify all outputs before sharing with learners.</li>
+                <li><strong>Bias persists:</strong> AI models may produce systematically different quality or perspective for different cultural, linguistic, or demographic contexts. Audit outputs for equity.</li>
+                <li><strong>Context blindness:</strong> AI cannot understand individual student histories, classroom dynamics, or institutional culture. Professional judgement remains irreplaceable.</li>
+                <li><strong>Currency limitations:</strong> Many models have training data cut-offs. Current events, recent research, and new policy developments may not be reflected.</li>
+                <li><strong>Over-reliance risk:</strong> When teachers defer to AI for planning or assessment without verification, errors propagate and professional judgement weakens.</li>
+                <li><strong>Feedback depth:</strong> AI-generated feedback often addresses surface features (grammar, structure) but misses deeper conceptual misunderstandings or emotional needs.</li>
+            </ul>
+            <p>Every AI-assisted teaching decision should involve a human review step. This is not optional — it is a core professional responsibility in education.</p>
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/3.Integrating-AI-into-Instructional-Design-Enhancing-Youth-Work.pptx%20%281%29.pdf" target="_blank" class="chapter-download" rel="noopener noreferrer">
+                    <i class="fas fa-file-pdf" aria-hidden="true"></i> Integrating AI into Instructional Design (PDF)
+                </a>
+            </p>
+        </section>
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>9. Resources</h2>
+            <h3>Downloadable resources</h3>
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/4.AI-Tools-Transforming-Education-A-Practical-Guide-for-Educators.pptx%20%281%29.pdf" target="_blank" class="chapter-download" rel="noopener noreferrer">
+                    <i class="fas fa-file-pdf" aria-hidden="true"></i> AI Tools Transforming Education – Practical Guide (PDF)
+                </a>
+            </p>
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/6.AI-Powered-Tools-for-Student-Success.pptx%20%281%29.pdf" target="_blank" class="chapter-download" rel="noopener noreferrer">
+                    <i class="fas fa-file-pdf" aria-hidden="true"></i> AI-Powered Tools for Student Success (PDF)
+                </a>
+            </p>
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/8.0AI-Tools-for-Youth-Work-Enhancing-Engagement-and-Development.pptx%20%281%29.pdf" target="_blank" class="chapter-download" rel="noopener noreferrer">
+                    <i class="fas fa-file-pdf" aria-hidden="true"></i> AI Tools for Youth Work (PDF)
+                </a>
+            </p>
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/3.Integrating-AI-into-Instructional-Design-Enhancing-Youth-Work.pptx%20%281%29.pdf" target="_blank" class="chapter-download" rel="noopener noreferrer">
+                    <i class="fas fa-file-pdf" aria-hidden="true"></i> Integrating AI into Instructional Design (PDF)
+                </a>
+            </p>
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/12.AI-Supported-Teaching-Methods-Strategies-Enhanced-by-AI-and-Their-Classroom-Impact.pptx%20%281%29.pdf" target="_blank" class="chapter-download" rel="noopener noreferrer">
+                    <i class="fas fa-file-pdf" aria-hidden="true"></i> AI-Supported Teaching Methods (PDF)
+                </a>
+            </p>
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/8.2Essential-Measures-for-Student-Data-Security-and-Confidentiality.pptx%20%281%29.pdf" target="_blank" class="chapter-download" rel="noopener noreferrer">
+                    <i class="fas fa-file-pdf" aria-hidden="true"></i> Essential Measures for Student Data Security (PDF)
+                </a>
+            </p>
+            <h3>Related pedagogical resources</h3>
+            <ul>
+                <li><a href="resource-ai-tools-practical-guide.html"><i class="fas fa-book" aria-hidden="true"></i> AI Tools Transforming Education: A Practical Guide</a></li>
+                <li><a href="resource-integrating-ai-design.html"><i class="fas fa-book" aria-hidden="true"></i> Integrating AI into Instructional Design</a></li>
+                <li><a href="resource-ai-student-success.html"><i class="fas fa-book" aria-hidden="true"></i> AI-Powered Tools for Student Success</a></li>
+                <li><a href="resource-empowering-youth-work.html"><i class="fas fa-book" aria-hidden="true"></i> Empowering Youth Work with AI and Digital Tools</a></li>
+                <li><a href="resource-ai-teaching-methods.html"><i class="fas fa-book" aria-hidden="true"></i> AI-Supported Teaching Methods</a></li>
+                <li><a href="resource-digital-pedagogy.html"><i class="fas fa-book" aria-hidden="true"></i> Developing Digital Pedagogy with AI</a></li>
+                <li><a href="resource-student-data-security.html"><i class="fas fa-book" aria-hidden="true"></i> Student Data Security</a></li>
+                <li><a href="resource-ethics-ai-education.html"><i class="fas fa-book" aria-hidden="true"></i> Ethics in AI Education</a></li>
+                <li><a href="resource-empowering-teachers.html"><i class="fas fa-book" aria-hidden="true"></i> Empowering Teachers with AI</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Smart edu AI – Erasmus+ Project</p>
+        <img src="images/logos/eu_funded_en.jpg" alt="Erasmus+ Logo" />
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', String(!expanded));
+        });
+    </script>
+</body>
+</html>

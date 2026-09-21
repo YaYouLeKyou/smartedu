@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resource – AI Image Generation Tools for Education and Creation</title>
+    <link rel="icon" type="image/png" href="images/logos/smartaiedu-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        .chapter-hero { background: linear-gradient(135deg, #ff8c42, #ffd23f); color: white; text-align: center; padding: 60px 20px; }
+        .chapter-hero h1 { font-size: 2.2rem; margin-bottom: 15px; }
+        .chapter-hero p { max-width: 800px; margin: 0 auto 10px; font-size: 1.1rem; line-height: 1.6; }
+        .chapter-content { max-width: 1100px; margin: auto; padding: 40px 20px; }
+        .chapter-content h2 { color: #ff8c42; text-align: center; margin: 40px 0 20px; }
+        .chapter-content h3 { color: #333; margin-top: 30px; }
+        .chapter-content p, .chapter-content li { line-height: 1.7; font-size: 1.05rem; }
+        .chapter-content ul { padding-left: 25px; }
+        .chapter-card { background: white; border-radius: 16px; padding: 30px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); margin-bottom: 30px; }
+        .chapter-image { width: 100%; border-radius: 16px; height: 260px; object-fit: cover; margin: 20px 0; }
+        .chapter-download { display: inline-block; margin-top: 15px; padding: 10px 18px; background: #ff8c42; color: white; text-decoration: none; border-radius: 8px; font-size: 0.95rem; transition: background 0.3s ease; }
+        .chapter-download:hover { background: #e67625; }
+        .chapter-quote { background: #fff7e8; border-left: 5px solid #ffd23f; padding: 20px; margin: 25px 0; border-radius: 0 12px 12px 0; font-style: italic; }
+        .back-link { display: inline-block; margin: 20px 0; color: #ff8c42; text-decoration: none; font-weight: 500; }
+        .back-link:hover { text-decoration: underline; }
+        .resource-meta { display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; }
+        .badge-ai { background: #e3f2fd; color: #1976d2; }
+        .badge-level { background: #f3e5f5; color: #7b1fa2; }
+        .badge-duration { background: #fff3e0; color: #e65100; }
+        .reflection-box { background: #f9f9f9; border-radius: 12px; padding: 22px; margin: 20px 0; border-left: 4px solid #ffd23f; }
+        .reflection-box h4 { color: #ff8c42; margin-top: 0; }
+        .activity-box { background: #f0f8ff; border-radius: 12px; padding: 22px; margin: 20px 0; }
+        .activity-box h4 { color: #1976d2; margin-top: 0; }
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 25px 0; }
+        .tool-card { background: #f9f9f9; border-radius: 12px; padding: 22px; border-left: 4px solid #ffd23f; }
+        .tool-card h4 { color: #ff8c42; margin-top: 0; margin-bottom: 8px; }
+        .tool-card p { font-size: 0.95rem; line-height: 1.6; }
+        .related-resources { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px; }
+        .related-link { display: inline-block; padding: 8px 16px; background: #eeefff; border-radius: 6px; color: #333; text-decoration: none; font-size: 0.9rem; }
+        .related-link:hover { background: #ff8c42; color: white; }
+        .resource-details { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 24px 0; }
+        .detail-item { background: #fafafa; border: 1px solid #eee; border-radius: 12px; padding: 16px; }
+        .detail-item dt { color: #ff8c42; font-weight: 600; margin-bottom: 4px; }
+        .detail-item dd { margin: 0; }
+        .project-brief { background: #fff7e8; border-left: 5px solid #ffd23f; border-radius: 0 12px 12px 0; padding: 20px; margin: 20px 0; }
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 20px 0; }
+        .project-step { background: #f9fbff; border-radius: 12px; padding: 18px; border-top: 4px solid #1976d2; }
+        .project-step h4 { color: #1976d2; margin-top: 0; }
+        .timeline { list-style: none; padding: 0; margin: 20px 0; }
+        .timeline li { border-left: 3px solid #ffd23f; padding: 8px 16px; margin: 10px 0; }
+        .timeline strong { color: #ff8c42; }
+        .assessment-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .table-scroll { overflow-x: auto; }
+        .assessment-table th, .assessment-table td { border: 1px solid #ddd; padding: 12px; text-align: left; vertical-align: top; }
+        .assessment-table th { background: #fff7e8; color: #333; }
+        .checklist { background: #f4fff8; border: 1px solid #b7e4c7; border-radius: 12px; padding: 20px; margin: 20px 0; }
+        .checklist ul { margin-bottom: 0; }
+        .related-resources a { text-decoration: none; }
+        @media (max-width: 600px) {
+            .assessment-table { font-size: 0.9rem; }
+            .chapter-card { padding: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="images/logos/smartaiedu-logo.jpg" alt="Smart edu AI Logo" />
+                <a href="index.html" class="logo">Smart edu AI</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="handbook.html">Handbook</a></li>
+                <li><a href="handbook-creative.html">Creative</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <header class="chapter-hero">
+        <h1>AI Image Generation Tools for Education and Creation</h1>
+        <p>Using AI image generation as a creative and instructional tool in the classroom</p>
+    </header>
+
+    <main class="chapter-content">
+        <a href="handbook-creative.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Chapter: Creative</a>
+
+        <img src="https://images.unsplash.com/photo-1620641788421-7a8c3b6f2a28?w=1200&h=500&fit=crop" alt="AI-generated artistic images" class="chapter-image" data-aos="fade-up" />
+
+        <section class="chapter-card" data-aos="fade-up">
+            <div class="resource-meta">
+                <span class="badge badge-ai">Creative AI &amp; Visual Literacy</span>
+                <span class="badge badge-level">Secondary &amp; Adult Learners</span>
+                <span class="badge badge-duration">4 × 60 min + 30 min showcase</span>
+            </div>
+            <h2>Resource Overview</h2>
+            <p>Generative AI image tools — including DALL-E, Midjourney, Stable Diffusion, and Leonardo.Ai — are
+                powerful creative instruments when students learn to <strong>prompt, critique, and remix</strong>
+                AI outputs rather than accept them passively. This resource provides educators with guidance on
+                integrating AI image generation into the curriculum across subjects — from art and design to
+                history and science.</p>
+            <p>The resource includes practical activity ideas, prompt engineering tips, and critical discussion
+                points around copyright, bias, privacy, and creative authenticity.</p>
+
+            <div class="chapter-quote">
+                "The goal is not to replace the artist's eye, but to give every student an imagination amplifier."
+            </div>
+
+            <h3>At a Glance</h3>
+            <dl class="resource-details">
+                <div class="detail-item">
+                    <dt>Audience</dt>
+                    <dd>Secondary students (approximately ages 14–18), vocational learners, and adult learners.</dd>
+                </div>
+                <div class="detail-item">
+                    <dt>Level</dt>
+                    <dd>Beginner to intermediate; no prior generative-AI experience required.</dd>
+                </div>
+                <div class="detail-item">
+                    <dt>Duration</dt>
+                    <dd>Four 60-minute sessions plus a 30-minute showcase; activities can be split into shorter workshops.</dd>
+                </div>
+                <div class="detail-item">
+                    <dt>Prerequisites</dt>
+                    <dd>Basic digital literacy, ability to evaluate a short text or image source, and awareness of classroom technology rules.</dd>
+                </div>
+            </dl>
+
+            <h3>Measurable Learning Objectives</h3>
+            <p>By the end of the sequence, learners will be able to:</p>
+            <ul>
+                <li>Write a prompt that names a purpose, audience, subject, visual constraints, and at least one accessibility consideration, then explain how each choice supports the intended message.</li>
+                <li>Generate and compare at least three image variants, recording the prompt, tool, date, and changes made between iterations in a process log.</li>
+                <li>Verify at least two factual or contextual claims in a selected image against reliable sources and label any unsupported or uncertain details.</li>
+                <li>Identify at least two representation or bias risks in AI-generated imagery and propose a specific revision or alternative approach.</li>
+                <li>Produce a final educational image with a source and licence note, an AI-use disclosure, and a short human-created explanation of the design decisions.</li>
+                <li>Give and use peer feedback against the project rubric, making at least one documented improvement before submission.</li>
+            </ul>
+
+            <h3>Recommended AI Image Generation Tools</h3>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h4><i class="fas fa-magic"></i> DALL-E 3</h4>
+                    <p>OpenAI's image generation model integrated with ChatGPT. Excels at creating detailed,
+                        conceptually complex images from text descriptions.</p>
+                </div>
+                <div class="tool-card">
+                    <h4><i class="fas fa-palette"></i> Midjourney</h4>
+                    <p>Discord-based image generator known for artistic, high-quality outputs. Great for
+                        creative and design projects.</p>
+                </div>
+                <div class="tool-card">
+                    <h4><i class="fas fa-layer-group"></i> Stable Diffusion</h4>
+                    <p>Open-source model with fine-grained control over generation parameters. Can be run
+                        locally for privacy-sensitive environments.</p>
+                </div>
+                <div class="tool-card">
+                    <h4><i class="fas fa-cube"></i> Leonardo.Ai</h4>
+                    <p>Focuses on game asset and concept art generation with community models and style
+                        presets suitable for educational projects.</p>
+                </div>
+            </div>
+
+            <h3>Structured Pedagogical Project: Visual Evidence Story</h3>
+            <div class="project-brief">
+                <h4>Project challenge</h4>
+                <p>In small teams, learners create one educational image and a short caption that explain a curriculum
+                    concept for a defined audience. The submission must include a prompt-and-process log, at least
+                    two verified factual claims, an AI-use disclosure, a source and licence note, and an accessibility
+                    description. AI imagery is treated as a draft to be questioned and revised, not as automatic
+                    evidence.</p>
+            </div>
+
+            <div class="project-grid">
+                <div class="detail-item">
+                    <h4>Duration</h4>
+                    <p>Four 60-minute sessions plus a 30-minute showcase. Teachers may run each session as two
+                        shorter workshops.</p>
+                </div>
+                <div class="detail-item">
+                    <h4>Group size</h4>
+                    <p>Teams of three or four, with individual process logs and reflection.</p>
+                </div>
+                <div class="detail-item">
+                    <h4>Final product</h4>
+                    <p>One accessible educational image, a 100–150 word caption, a process log, and a source and
+                        licence record.</p>
+                </div>
+            </div>
+
+            <h4>Materials and preparation</h4>
+            <ul>
+                <li>Teacher-approved image-generation tool or a teacher-prepared set of sample outputs; devices and a shared display.</li>
+                <li>Project brief, prompt planner, process-log template, source-verification checklist, accessibility checklist, and assessment rubric.</li>
+                <li>Reliable subject sources and reference images that learners own, have licensed, or can legally reuse.</li>
+                <li>An offline or low-connectivity alternative: printed reference images, paper storyboards, and a non-generative digital collage activity.</li>
+                <li>Before class, check the tool's age requirements, account settings, data-retention terms, accessibility features, and school policy.</li>
+            </ul>
+
+            <h4>Team roles</h4>
+            <p><strong>Researcher:</strong> selects and checks sources. <strong>Prompt designer:</strong> drafts and
+                revises prompts. <strong>Visual editor:</strong> makes human edits and checks composition.
+                <strong>Verification and accessibility lead:</strong> records uncertainties, writes alt text, and
+                checks the rubric. Rotate roles so that technical control and decision-making are shared.</p>
+
+            <h4>Sequence, timing, and steps</h4>
+            <ol class="timeline">
+                <li><strong>Session 1 — Frame the problem (60 min):</strong> analyse a teacher-selected image,
+                    identify its purpose and audience, discuss risks, choose a curriculum concept, and write a
+                    source-backed creative brief. <em>Output:</em> brief and source list.</li>
+                <li><strong>Session 2 — Prompt, generate, and compare (60 min):</strong> draft a prompt with
+                    subject, context, constraints, and accessibility requirements; generate at least three
+                    variants; record tool, date, prompt, and observations; select one candidate without assuming
+                    it is accurate. <em>Output:</em> comparison table and process log.</li>
+                <li><strong>Session 3 — Verify, revise, and make accessible (60 min):</strong> verify at least two
+                    claims with reliable sources, mark unsupported details, revise the prompt or edit the image
+                    by hand, test the image with the accessibility checklist, and write alt text. <em>Output:</em>
+                    revised image, verification notes, and accessibility description.</li>
+                <li><strong>Session 4 — Compose, cite, and peer review (60 min):</strong> add a concise caption,
+                    AI-use disclosure, source and licence note, and a 100–150 word design rationale; exchange
+                    feedback using the rubric and make one documented improvement. <em>Output:</em> submission
+                    ready for showcase.</li>
+                <li><strong>Showcase (30 min):</strong> present the image and explain one human decision, one
+                    verified claim, one limitation, and one next revision. Peers ask evidence-based questions.</li>
+            </ol>
+
+            <h4>Differentiation</h4>
+            <ul>
+                <li><strong>Support:</strong> provide a prompt frame, visual vocabulary bank, worked example, paired tool operation, sentence starters, and additional time.</li>
+                <li><strong>Extension:</strong> compare two tools or models, test a constrained brief, create a provenance ledger, or remix only assets with confirmed licences.</li>
+                <li><strong>Language and communication:</strong> allow bilingual planning, oral rehearsal, labelled sketches, and a spoken or recorded rationale.</li>
+                <li><strong>Participation:</strong> offer a non-generative image-analysis pathway and let learners contribute through research, scripting, editing, accessibility testing, or presentation.</li>
+            </ul>
+
+            <h4>Assessment</h4>
+            <div class="table-scroll">
+                <table class="assessment-table">
+                    <thead>
+                        <tr>
+                            <th>Criterion</th>
+                            <th>Evidence of success</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Subject accuracy</td>
+                            <td>At least two claims are supported by reliable sources; uncertainties are labelled rather than hidden.</td>
+                        </tr>
+                        <tr>
+                            <td>Visual communication</td>
+                            <td>The image and caption are appropriate for the stated audience and purpose; composition choices are explained.</td>
+                        </tr>
+                        <tr>
+                            <td>Responsible AI process</td>
+                            <td>The log records prompts, iterations, tool use, human edits, disclosure, sources, and licence status.</td>
+                        </tr>
+                        <tr>
+                            <td>Representation and accessibility</td>
+                            <td>The team identifies a bias risk, takes a concrete response, and supplies usable alt text or an equivalent description.</td>
+                        </tr>
+                        <tr>
+                            <td>Collaboration and reflection</td>
+                            <td>Roles are shared, peer feedback is used, and the learner identifies one limitation and one specific revision.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Optional Practice Activities</h3>
+            <div class="activity-box">
+                <h4><i class="fas fa-landmark"></i> Activity 1: Historical Reconstruction</h4>
+                <p>Students create a visual interpretation of an event, artefact, or daily-life scene, then separate
+                    source-supported details from AI inventions in an annotation log.</p>
+            </div>
+            <div class="activity-box">
+                <h4><i class="fas fa-flask"></i> Activity 2: Concept Visualisation</h4>
+                <p>For science or literature, learners visualise an abstract concept and critique scientific,
+                    metaphorical, and cultural accuracy with a subject expert or reliable text.</p>
+            </div>
+            <div class="activity-box">
+                <h4><i class="fas fa-keyboard"></i> Activity 3: Prompt Engineering Workshop</h4>
+                <p>Students change one variable at a time—context, constraint, style, or audience—and explain how
+                    each change affects relevance, inclusion, and accessibility.</p>
+            </div>
+            <div class="activity-box">
+                <h4><i class="fas fa-people-arrows"></i> Activity 4: Bias and Representation Audit</h4>
+                <p>Students compare outputs for roles such as “scientist”, “leader”, or “caregiver”, identify
+                    patterns of stereotyping or exclusion, and redesign the brief without treating any group as a
+                    visual shortcut.</p>
+            </div>
+
+            <h3>Inclusion and Accessibility</h3>
+            <p>Plan for access before the tool is opened. Offer a text-first brief, a paper storyboard, or a
+                teacher-prepared image set for learners who cannot or do not wish to use a generative service.
+                Allow oral, signed, written, or recorded responses, and let learners choose a role that values
+                research, scripting, editing, accessibility testing, or presentation as well as prompt writing.</p>
+            <div class="checklist">
+                <h4>Accessibility checklist for the final image</h4>
+                <ul>
+                    <li>Provide concise alt text and a longer description when the image conveys complex information.</li>
+                    <li>Do not communicate meaning through color alone; check contrast, text size, and reading order.</li>
+                    <li>Use a keyboard-accessible, screen-reader-compatible workflow where possible and provide captions or transcripts for any accompanying audio or video.</li>
+                    <li>Avoid flashing, overwhelming motion, or unnecessary visual clutter; test the output at different zoom levels.</li>
+                    <li>Do not require a learner to disclose a disability, identity, trauma, or personal experience to participate.</li>
+                    <li>Invite learners to flag harmful or inaccessible content and provide a clear route to request a revision or alternative format.</li>
+                </ul>
+            </div>
+
+            <h3>Data Protection and GDPR</h3>
+            <ul>
+                <li>Use only institution-approved accounts and tools. Do not enter names, faces, contact details, precise locations, health information, ethnicity, biometric data, or other personal or sensitive information into prompts or uploads.</li>
+                <li>Use fictional, aggregated, or properly anonymised examples. Obtain the required consent or parental permission before sharing identifiable learner work, and never publish a student's image or name without the institution's approval process.</li>
+                <li>Minimise data: upload only what the task needs, disable public sharing where possible, and delete working files when they are no longer required under school policy.</li>
+                <li>Review the provider's privacy notice, retention period, deletion options, model-training settings, subprocessors, and international-transfer information before use. Record the date and version checked because terms can change.</li>
+                <li>Follow the institution's lawful-basis, safeguarding, records, and data-breach procedures. Consult the school's data protection officer when a task involves children, sensitive data, or a new provider.</li>
+            </ul>
+
+            <h3>Copyright, Licences, and Attribution</h3>
+            <p>An AI-generated image is <strong>not automatically copyright-free, royalty-free, public domain, or
+                cleared for reuse</strong>. Rights and permitted uses depend on the tool's current terms, the
+                input materials, the output, the jurisdiction, and the intended audience. Treat this section as a
+                classroom checklist, not legal advice.</p>
+            <ul>
+                <li>Start with images, textures, fonts, and references that learners own, have licensed, or can verify as public domain or openly licensed. Record creator, title, source URL, licence, access date, and modifications.</li>
+                <li>Do not assume that a prompt, a style name, a living artist's name, a character, a logo, or a trademark can be copied. Avoid requests intended to imitate a identifiable artist or protected work; use descriptive visual qualities instead.</li>
+                <li>Check the provider's terms for ownership, attribution, commercial use, redistribution, and educational display. A tool's marketing language is not a substitute for the current licence or terms of service.</li>
+                <li>Include an AI-use disclosure and a source and licence note with the final image. Seek permission when the intended reuse is uncertain, and follow local copyright exceptions or fair-dealing guidance only after institutional review.</li>
+            </ul>
+
+            <h3>Representation, Bias, and Human Verification</h3>
+            <p>Generative systems can reproduce stereotypes, omit communities, invent details, or present a
+                plausible image as factual evidence. Human judgement remains responsible for the final educational
+                claim.</p>
+            <div class="project-grid">
+                <div class="detail-item">
+                    <h4>Representation audit</h4>
+                    <p>Ask who is present, absent, central, marginalised, or reduced to a stereotype. Check gender,
+                        race and ethnicity, disability, age, body type, language, culture, religion, and
+                        socioeconomic context without treating any identity as a visual shortcut.</p>
+                </div>
+                <div class="detail-item">
+                    <h4>Human verification</h4>
+                    <p>Check factual details against at least two reliable sources or a subject expert. Inspect
+                        text, anatomy, objects, spatial relationships, historical details, scientific labels, and
+                        provenance. Mark uncertainty and revise rather than silently correcting the record.</p>
+                </div>
+                <div class="detail-item">
+                    <h4>Known limits</h4>
+                    <p>Expect inaccurate labels, impossible geometry, distorted hands or faces, invented sources,
+                        style drift, inaccessible contrast, and changing model behaviour. AI output is a creative
+                        draft or hypothesis, not proof, consent, attribution, or a substitute for lived experience.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>Critical Reflection Questions</h2>
+            <div class="reflection-box">
+                <h4>Discussion prompts:</h4>
+                <ul>
+                    <li>What evidence supports the factual or contextual claims in an AI-generated image, and which details remain uncertain?</li>
+                    <li>Whose perspectives, identities, and experiences are represented or absent, and how might prompt choices reinforce stereotypes?</li>
+                    <li>What personal data or third-party works were entered into the tool, and were consent, minimisation, and school procedures followed?</li>
+                    <li>Which copyright, licence, attribution, and provider terms apply to the inputs, output, and intended reuse, and why is an AI output not automatically free to use?</li>
+                    <li>Which human decisions improved accuracy, representation, and accessibility, and when should a subject expert review the work?</li>
+                    <li>When would a non-AI method, a licensed reference image, or no image at all be the more ethical and effective choice?</li>
+                </ul>
+            </div>
+
+            <h3>Downloadable Resource</h3>
+            <p><strong>Download the full guide (PDF):</strong>
+                <a href="./pdf/france/3.1AI-Image-Generation-Tools-for-Education-and-Creation.pptx%20%281%29.pdf" target="_blank" class="chapter-download">
+                    <i class="fas fa-file-pdf"></i> AI Image Generation for Education (PDF)
+                </a>
+            </p>
+            <p><strong>Explore related resources:</strong>
+                <div class="related-resources">
+                    <a href="resource-ai-3d-design.html" class="related-link">AI 3D Design →</a>
+                    <a href="resource-ai-video-tools.html" class="related_link">AI Video Creation →</a>
+                    <a href="resource-ai-teaching-methods.html" class="related_link">AI-Supported Teaching Methods →</a>
+                    <a href="handbook-creative.html" class="related-link">Creative Chapter →</a>
+                </div>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Smart edu AI – Erasmus+ Project</p>
+        <img src="images/logos/eu_funded_en.jpg" alt="Erasmus+ Logo" />
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+    </script>
+</body>
+</html>

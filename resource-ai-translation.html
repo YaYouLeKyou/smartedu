@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resource – AI for Translation in Multilingual Classrooms</title>
+    <link rel="icon" type="image/png" href="images/logos/smartaiedu-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        .chapter-hero { background: linear-gradient(135deg, #ff8c42, #ffd23f); color: white; text-align: center; padding: 60px 20px; }
+        .chapter-hero h1 { font-size: 2.2rem; margin-bottom: 15px; }
+        .chapter-hero p { max-width: 800px; margin: 0 auto 10px; font-size: 1.1rem; line-height: 1.6; }
+        .chapter-content { max-width: 1100px; margin: auto; padding: 40px 20px; }
+        .chapter-content h2 { color: #ff8c42; text-align: center; margin: 40px 0 20px; }
+        .chapter-content h3 { color: #333; margin-top: 30px; }
+        .chapter-content p, .chapter-content li { line-height: 1.7; font-size: 1.05rem; }
+        .chapter-content ul { padding-left: 25px; }
+        .chapter-card { background: white; border-radius: 16px; padding: 30px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); margin-bottom: 30px; }
+        .chapter-image { width: 100%; border-radius: 16px; height: 260px; object-fit: cover; margin: 20px 0; }
+        .chapter-download { display: inline-block; margin-top: 15px; padding: 10px 18px; background: #ff8c42; color: white; text-decoration: none; border-radius: 8px; font-size: 0.95rem; transition: background 0.3s ease; }
+        .chapter-download:hover { background: #e67625; }
+        .chapter-quote { background: #fff7e8; border-left: 5px solid #ffd23f; padding: 20px; margin: 25px 0; border-radius: 0 12px 12px 0; font-style: italic; }
+        .back-link { display: inline-block; margin: 20px 0; color: #ff8c42; text-decoration: none; font-weight: 500; }
+        .back-link:hover { text-decoration: underline; }
+        .resource-meta { display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; }
+        .badge-ai { background: #e3f2fd; color: #1976d2; }
+        .badge-level { background: #f3e5f5; color: #7b1fa2; }
+        .badge-duration { background: #fff3e0; color: #e65100; }
+        .reflection-box { background: #f9f9f9; border-radius: 12px; padding: 22px; margin: 20px 0; border-left: 4px solid #ffd23f; }
+        .reflection-box h4 { color: #ff8c42; margin-top: 0; }
+        .activity-box { background: #f0f8ff; border-radius: 12px; padding: 22px; margin: 20px 0; }
+        .activity-box h4 { color: #1976d2; margin-top: 0; }
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 25px 0; }
+        .tool-card { background: #f9f9f9; border-radius: 12px; padding: 22px; border-left: 4px solid #ffd23f; }
+        .tool-card h4 { color: #ff8c42; margin-top: 0; margin-bottom: 8px; }
+        .tool-card p { font-size: 0.95rem; line-height: 1.6; }
+        .context-note { background: #fffbeef; border-left: 4px solid #ffd23f; padding: 14px 18px; border-radius: 8px; margin: 15px 0; font-size: 0.9rem; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .info-card { background: #fff7e8; border-radius: 12px; padding: 18px; border-left: 4px solid #ffd23f; }
+        .info-card h4 { color: #ff8c42; margin-top: 0; font-size: 0.95rem; }
+        .info-card p { margin: 5px 0 0; font-size: 1rem; font-weight: 500; }
+        .security-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin: 25px 0; }
+        .security-item { background: #f9f9f9; border-radius: 12px; padding: 20px; border-left: 4px solid #ff8c42; }
+        .security-item i { font-size: 2rem; color: #ff8c42; margin-bottom: 10px; }
+        .security-item h4 { color: #333; margin-top: 0; }
+        .security-item p { font-size: 0.95rem; line-height: 1.6; }
+        .related-resources { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px; }
+        .related-link { display: inline-block; padding: 8px 16px; background: #eeefff; border-radius: 6px; color: #333; text-decoration: none; font-size: 0.9rem; }
+        .related-link:hover { background: #ff8c42; color: white; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="images/logos/smartaiedu-logo.jpg" alt="Smart edu AI Logo" />
+                <a href="index.html" class="logo">Smart edu AI</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="handbook.html">Handbook</a></li>
+                <li><a href="handbook-language.html">Language</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <header class="chapter-hero">
+        <h1>AI for Translation in Multilingual Classrooms</h1>
+        <p>Using AI translation tools to support multilingual classrooms with human oversight and cultural adaptation</p>
+    </header>
+
+    <main class="chapter-content">
+        <a href="handbook-language.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Chapter: Languages</a>
+
+        <img src="https://images.unsplash.com/photo-1512633616410-2867818d6659?w=1200&h=500&fit=crop" alt="Multilingual translation and communication" class="chapter-image" data-aos="fade-up" />
+
+        <section class="chapter-card" data-aos="fade-up">
+            <div class="resource-meta">
+                <span class="badge badge-ai">Translation</span>
+                <span class="badge badge-level">Beginner to Intermediate</span>
+                <span class="badge badge-duration">Module</span>
+            </div>
+            <h2>Resource Overview</h2>
+            <p>AI translation tools are powerful allies in multilingual classrooms. With over 7,000 languages
+                spoken worldwide, multilingual education presents unique challenges that AI can help address. This
+                resource explores how tools like Google Translate, DeepL, and Microsoft Translator can support
+                language learning, content comprehension, and cross-cultural communication — while also examining
+                their limitations and the importance of human oversight.</p>
+
+            <div class="chapter-quote">
+                "Translation tools should support human understanding, not replace it. Always verify and adapt
+                to local context."
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4><i class="fas fa-user-friends"></i> Target Audience</h4>
+                    <p>Language teachers, multilingual educators, and instructional coordinators working in diverse classrooms</p>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fas fa-layer-group"></i> Proficiency Level</h4>
+                    <p>Beginner to Intermediate learners; adaptable for advanced users</p>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fas fa-clock"></i> Duration</h4>
+                    <p>One module (~2–3 hours of instruction) or 5 class sessions</p>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fas fa-globe"></i> Languages Covered</h4>
+                    <p>100+ languages supported by Google Translate; 28+ by DeepL</p>
+                </div>
+            </div>
+
+            <h3>Measurable Learning Objectives</h3>
+            <p>By the end of this module, learners will be able to:</p>
+            <ul>
+                <li>Compare at least 3 major AI translation tools and justify the choice for a specific educational purpose with 80% accuracy.</li>
+                <li>Use an AI translation tool to translate a 200-word educational text and identify 3–5 accuracy issues.</li>
+                <li>Explain 2 cultural or contextual errors that AI translation commonly produces and how to correct them.</li>
+                <li>Design a classroom activity that combines AI translation output with human post-editing and cultural adaptation.</li>
+                <li>Evaluate student use of AI translation tools by applying a 5-point quality rubric.</li>
+            </ul>
+
+            <h3>Recommended AI Translation Tools</h3>
+            <p class="context-note"><strong>Historical context:</strong> The capabilities described below were current
+                as of late 2025. AI translation tools evolve rapidly — before adopting any tool, verify the current
+                feature set, pricing model, data-handling policy, and supported languages on the provider's official
+                website.</p>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h4><i class="fas fa-globe"></i> Google Translate</h4>
+                    <p>Supports 100+ languages with text, voice, and image translation. Includes conversation
+                        mode and instant camera translation.</p>
+                </div>
+                <div class="tool-card">
+                    <h4><i class="fas fa-brain"></i> DeepL</h4>
+                    <p>Known for higher translation quality, especially for European languages. Offers
+                        tone adjustment and glossary features.</p>
+                </div>
+                <div class="tool-card">
+                    <h4><i class="fas fa-comments"></i> Microsoft Translator</h4>
+                    <p>Features real-time multilingual conversation mode and integration with Microsoft
+                        Office products.</p>
+                </div>
+                <div class="tool-card">
+                    <h4><i class="fas fa-book-open"></i> Reverso</h4>
+                    <p>Provides context-aware translations with grammar explanations, useful for language
+                        learners.</p>
+                </div>
+            </div>
+
+            <h3>Detailed Classroom Activity: Translation Comparison Lab</h3>
+            <div class="activity-box">
+                <h4>Activity 1: Translation Comparison and Post-Editing Workshop</h4>
+                <p><strong>Step 1 — Preparation (10 min):</strong> Divide students into groups of 3–4. Provide each group with the same 200-word source text in the target language (e.g., a short news article or curriculum excerpt).</p>
+                <p><strong>Step 2 — Tool Testing (20 min):</strong> Each group translates the text using Google Translate, DeepL, and Microsoft Translator. They record each output in a comparison table.</p>
+                <p><strong>Step 3 — Human Review (15 min):</strong> Groups compare AI outputs against a human reference translation. They highlight 3–5 differences, categorising them as grammar, vocabulary, cultural context, or omission errors.</p>
+                <p><strong>Step 4 — Post-Editing (15 min):</strong> Groups select the best AI output and perform human post-editing, adapting cultural references and correcting errors.</p>
+                <p><strong>Step 5 — Debrief (10 min):</strong> The class discusses which tool performed best for their language pair and why.</p>
+                <p><strong>Total time:</strong> 70 minutes</p>
+                <ul>
+                    <li><strong>Materials:</strong> Printed or digital copies of the source text, access to 3 AI translation tools, comparison worksheet.</li>
+                    <li><strong>Tech required:</strong> Internet access, computers or tablets, projector for debrief.</li>
+                    <li><strong>Group size:</strong> 3–4 students per group.</li>
+                </ul>
+            </div>
+            <div class="activity-box">
+                <h4>Activity 2: Cultural Contextualisation Workshop</h4>
+                <p><strong>Step 1 — Source material selection (10 min):</strong> Students choose a short text containing
+                    an idiom or cultural reference from their home language.</p>
+                <p><strong>Step 2 — AI translation (10 min):</strong> Run the text through an AI translator and
+                    compare the output with the original meaning.</p>
+                <p><strong>Step 3 — Human adaptation (15 min):</strong> Students rewrite the AI output to preserve
+                    cultural meaning, adding footnotes or glossary entries for untranslatable terms.</p>
+                <p><strong>Step 4 — Peer review and debrief (10 min):</strong> Groups share examples of successful
+                    and failed cultural adaptations, discussing what AI missed.</p>
+                <ul>
+                    <li><strong>Materials:</strong> Access to an AI translation tool, cultural reference worksheet,
+                        glossary template.</li>
+                    <li><strong>Tech required:</strong> Internet access and devices for each group.</li>
+                    <li><strong>Total time:</strong> 45 minutes.</li>
+                </ul>
+            </div>
+            <div class="activity-box">
+                <h4>Activity 3: Multilingual Class Discussion with Real-Time Translation</h4>
+                <p><strong>Step 1 — Discussion prompt (5 min):</strong> Pose an open-ended question related to a
+                    current topic (e.g., "What makes a good friend?").</p>
+                <p><strong>Step 2 — Small-group conversation (15 min):</strong> Students who share a language form
+                    a group and discuss. A third student acts as a "translation note-taker" using an AI
+                    translator app.</p>
+                <p><strong>Step 3 — Cross-language sharing (15 min):</strong> Translation note-takers present their
+                    group's key points to the wider class. The class compares the original-language responses with
+                    the translated summaries.</p>
+                <p><strong>Step 4 — Reflection (10 min):</strong> Students note what was lost or gained in
+                    translation — nuance, tone, or emotional content — and record observations in a shared reflection
+                    log.</p>
+                <ul>
+                    <li><strong>Materials:</strong> Real-time translation app (e.g., Google Translate Conversation
+                        mode), reflection log template.</li>
+                    <li><strong>Group size:</strong> Pairs or trios with mixed language backgrounds.</li>
+                    <li><strong>Total time:</strong> 45 minutes.</li>
+                </ul>
+            </div>
+
+            <h3>Assessment and Evaluation</h3>
+            <div class="activity-box">
+                <h4>Formative Assessment</h4>
+                <ul>
+                    <li><strong>Observation checklist:</strong> Monitor group discussions during the comparison lab for collaborative problem-solving and error identification.</li>
+                    <li><strong>Peer review:</strong> Groups exchange their post-edited translations and provide feedback using a structured rubric.</li>
+                </ul>
+            </div>
+            <div class="activity-box">
+                <h4>Sumative Assessment</h4>
+                <ul>
+                    <li><strong>Rubric criteria (5 points):</strong> Accuracy (2 points), cultural adaptation (1 point), explanation of errors (1 point), tool justification (1 point).</li>
+                    <li><strong>Exit ticket:</strong> Each student writes one insight about a translation challenge and one tool preference with reasoning.</li>
+                </ul>
+            </div>
+
+            <h3>Inclusion and Differentiation</h3>
+            <div class="activity-box">
+                <ul>
+                    <li><strong>Scaffolding:</strong> Provide bilingual glossaries and sentence starters for lower-proficiency learners.</li>
+                    <li><strong>Extension:</strong> Advanced students can investigate less-common language pairs (e.g., Arabic to Vietnamese) and report on tool limitations.</li>
+                    <li><strong>Multiple modalities:</strong> Offer text, image, and voice translation options to support different learning preferences.</li>
+                    <li><strong>Cultural sensitivity:</strong> Encourage students to share idiomatic expressions from their own languages for group translation experiments.</li>
+                </ul>
+            </div>
+
+            <h3>Accessibility Considerations</h3>
+            <ul>
+                <li>Ensure screen-reader compatibility: AI tools with text-to-speech output benefit visually impaired learners.</li>
+                <li>Provide transcripts of spoken translations for deaf or hard-of-hearing students.</li>
+                <li>Use browser zoom-compatible layouts (avoid fixed-width tables in tool interfaces).</li>
+                <li>Offer offline alternatives (printed bilingual dictionaries) where internet access is limited.</li>
+            </ul>
+
+            <h3>Student Data Protection and GDPR</h3>
+            <div class="security-grid">
+                <div class="security-item">
+                    <i class="fas fa-locks"></i>
+                    <h4>Data Minimisation</h4>
+                    <p>Translate only anonymised text. Avoid uploading student writing that contains names,
+                        addresses, or other personal identifiers to free AI translation services.</p>
+                </div>
+                <div class="security-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Consent &amp; Transparency</h4>
+                    <p>Inform students and parents that text is sent to external servers. Obtain parental
+                        consent for students under 13, as required by GDPR and COPPA.</p>
+                </div>
+                <div class="security-item">
+                    <i class="fas fa-user-lock"></i>
+                    <h4>Encrypted Transmission</h4>
+                    <p>Verify that the translation tool uses HTTPS. For sensitive institutional content,
+                        consider enterprise-grade tools with signed data-processing agreements.</p>
+                </div>
+            </div>
+            <p><strong>Note:</strong> AI translation providers are data controllers. Consult your school's Data Protection Officer (DPO) and local regulations before deploying these tools with student data. This resource provides general guidance, not legal advice.</p>
+
+            <h3>Limitations and Caveats</h3>
+            <ul>
+                <li>AI translation accuracy varies dramatically by language pair; low-resource languages often produce unreliable output.</li>
+                <li>Idiomatic expressions, sarcasm, and cultural references are frequently mistranslated.</li>
+                <li>Free tools may store or reuse submitted text for model training.</li>
+                <li>Real-time voice translation can fail in noisy classroom environments.</li>
+                <li>Always verify translations of factual or technical content before publication.</li>
+            </ul>
+        </section>
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>Critical Reflection Questions</h2>
+            <div class="reflection-box">
+                <h4>Discussion prompts:</h4>
+                <ul>
+                    <li>Can a machine ever truly capture the cultural and emotional nuances of human language?</li>
+                    <li>How does AI translation affect the preservation of minority languages?</li>
+                    <li>When should students rely on AI translation versus dictionaries or human help?</li>
+                    <li>What are the privacy implications of using AI translation tools with student writing?</li>
+                    <li>How can teachers verify that AI translations are educationally appropriate?</li>
+                </ul>
+            </div>
+
+            <h3>Downloadable Resource</h3>
+            <p><strong>Download the full resource (PDF):</strong>
+                <a href="./pdf/france/AI-for-Translation.pptx.pdf" target="_blank" class="chapter-download">
+                    <i class="fas fa-file-pdf"></i> AI for Translation (PDF)
+                </a>
+            </p>
+            <p><strong>Explore related resources:</strong>
+                <div class="related-resources">
+                    <a href="resource-language-tools-2025.html" class="related-link">Best Language Learning Tools →</a>
+                    <a href="resource-ai-subtitling.html" class="related-link">AI Subtitling →</a>
+                    <a href="resource-ai-video-tools.html" class="related-link">AI Video Creation →</a>
+                    <a href="handbook-language.html" class="related-link">Languages Chapter →</a>
+                </div>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Smart edu AI – Erasmus+ Project</p>
+        <img src="images/logos/eu_funded_en.jpg" alt="Erasmus+ Logo" />
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+    </script>
+</body>
+</html>

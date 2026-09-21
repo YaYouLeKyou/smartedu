@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resource – Developing Digital Pedagogy with AI</title>
+    <link rel="icon" type="image/png" href="images/logos/smartaiedu-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        .chapter-hero { background: linear-gradient(135deg, #ff8c42, #ffd23f); color: white; text-align: center; padding: 60px 20px; }
+        .chapter-hero h1 { font-size: 2.2rem; margin-bottom: 15px; }
+        .chapter-hero p { max-width: 800px; margin: 0 auto 10px; font-size: 1.1rem; line-height: 1.6; }
+        .chapter-content { max-width: 1100px; margin: auto; padding: 40px 20px; }
+        .chapter-content h2 { color: #ff8c42; text-align: center; margin: 40px 0 20px; }
+        .chapter-content h3 { color: #333; margin-top: 30px; }
+        .chapter-content p, .chapter-content li { line-height: 1.7; font-size: 1.05rem; }
+        .chapter-content ul { padding-left: 25px; }
+        .chapter-card { background: white; border-radius: 16px; padding: 30px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); margin-bottom: 30px; }
+        .chapter-image { width: 100%; border-radius: 16px; height: 260px; object-fit: cover; margin: 20px 0; }
+        .chapter-download { display: inline-block; margin-top: 15px; padding: 10px 18px; background: #ff8c42; color: white; text-decoration: none; border-radius: 8px; font-size: 0.95rem; transition: background 0.3s ease; }
+        .chapter-download:hover { background: #e67625; }
+        .chapter-quote { background: #fff7e8; border-left: 5px solid #ffd23f; padding: 20px; margin: 25px 0; border-radius: 0 12px 12px 0; font-style: italic; }
+        .back-link { display: inline-block; margin: 20px 0; color: #ff8c42; text-decoration: none; font-weight: 500; }
+        .back-link:hover { text-decoration: underline; }
+        .resource-meta { display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; }
+        .badge-ai { background: #e3f2fd; color: #1976d2; }
+        .badge-level { background: #f3e5f5; color: #7b1fa2; }
+        .badge-duration { background: #fff3e0; color: #e65100; }
+        .badge-target { background: #e8f5e9; color: #2e7d32; }
+        .badge-prereq { background: #fce4ec; color: #c62828; }
+        .reflection-box { background: #f9f9f9; border-radius: 12px; padding: 22px; margin: 20px 0; border-left: 4px solid #ffd23f; }
+        .reflection-box h4 { color: #ff8c42; margin-top: 0; }
+        .activity-box { background: #f0f8ff; border-radius: 12px; padding: 22px; margin: 20px 0; }
+        .activity-box h4 { color: #1976d2; margin-top: 0; }
+        .pd-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 25px 0; }
+        .pd-card { background: #f9f9f9; border-radius: 12px; padding: 22px; border-left: 4px solid #ffd23f; }
+        .pd-card h4 { color: #ff8c42; margin-top: 0; }
+        .pd-card p { font-size: 0.95rem; line-height: 1.6; }
+        .related-resources { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px; }
+        .related-link { display: inline-block; padding: 8px 16px; background: #eeefff; border-radius: 6px; color: #333; text-decoration: none; font-size: 0.9rem; }
+        .related-link:hover { background: #ff8c42; color: white; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px; margin: 20px 0; }
+        .info-item { background: #fff; border: 1px solid #e0e0e0; border-radius: 10px; padding: 18px; }
+        .info-item h4 { color: #ff8c42; margin-top: 0; font-size: 1rem; }
+        .info-item p { font-size: 0.9rem; margin-bottom: 0; }
+        .checklist { list-style: none; padding-left: 0; }
+        .checklist li { padding: 6px 0; }
+        .checklist li::before { content: "✓ "; color: #4caf50; font-weight: bold; margin-right: 6px; }
+        .governance-box { background: #fff3e0; border-radius: 12px; padding: 22px; margin: 20px 0; border-left: 4px solid #ff8c42; }
+        .governance-box h4 { color: #e65100; margin-top: 0; }
+        .section-badge { display: inline-block; padding: 3px 10px; background: #ff8c42; color: white; border-radius: 10px; font-size: 0.75rem; font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="images/logos/smartaiedu-logo.jpg" alt="Smart edu AI Logo" />
+                <a href="index.html" class="logo">Smart edu AI</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="handbook.html">Handbook</a></li>
+                <li><a href="handbook-teaching.html">Teaching</a></li>
+                <li><a href="handbook-professional.html">Professional</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <header class="chapter-hero">
+        <h1>Developing Digital Pedagogy with AI</h1>
+        <p>How AI transforms teaching methods and digital pedagogy in modern education</p>
+    </header>
+
+    <main class="chapter-content">
+        <a href="handbook-teaching.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Chapter: Teaching</a>
+
+        <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=1200&h=500&fit=crop" alt="Books and digital learning" class="chapter-image" data-aos="fade-up" />
+
+        <section class="chapter-card" data-aos="fade-up">
+            <div class="resource-meta">
+                <span class="badge badge-ai">Digital Pedagogy</span>
+                <span class="badge badge-level">Intermediate</span>
+                <span class="badge badge-duration">6–8 Hours</span>
+                <span class="badge badge-target">Teachers / Instructional Designers</span>
+                <span class="badge badge-prereq">Teaching experience required</span>
+            </div>
+            <h2>Resource Overview</h2>
+            <p>AI is fundamentally transforming how we think about teaching and learning. This resource explores
+                the intersection of AI and digital pedagogy, examining how intelligent tools reshape curriculum
+                design, assessment strategies, and the teacher's role in the modern classroom.</p>
+            <p>Drawing on experiences from all four partner countries (France, Spain, Türkiye, Poland), the
+                resource presents practical examples of AI-enhanced pedagogy, from flipped classrooms to
+                project-based learning supported by AI assistants.</p>
+
+            <div class="chapter-quote">
+                "Digital pedagogy is not about using technology; it is about creating learning experiences that
+                could not exist without technology."
+            </div>
+
+            <h3>Measurable Learning Objectives</h3>
+            <p>By the end of this module, participants will be able to:</p>
+            <ul>
+                <li>Define digital pedagogy with reference to at least 3 established frameworks and distinguish it from technology-enhanced traditional teaching (scored rubric ≥ 80%).</li>
+                <li>Design 2 AI-enhanced learning activities across different subject areas, each aligned with specific learning objectives and assessed for pedagogical integrity.</li>
+                <li>Evaluate 3+ existing digital pedagogy practices for inclusivity and accessibility using a structured audit tool (minimum: 75% compliance). </li>
+                <li>Implement one flipped classroom or project-based learning sequence with AI support, achieving student satisfaction ≥ 80%.</li>
+                <li>Propose a professional development plan for AI-integrated digital pedagogy covering at least 4 colleagues or departments.</li>
+            </ul>
+
+            <h3>Target Audience, Level &amp; Prerequisites</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h4><i class="fas fa-users"></i> Audience</h4>
+                    <p>K-12 and higher education teachers, instructional designers, curriculum developers, and school technology coordinators.</p>
+                </div>
+                <div class="info-item">
+                    <h4><i class="fas fa-signal"></i> Level</h4>
+                    <p>Intermediate — requires established teaching practice and familiarity with digital learning environments.</p>
+                </div>
+                <div class="info-item">
+                    <h4><i class="fas fa-clock"></i> Duration</h4>
+                    <p>6–8 hours: 2 hours framework study, 2 hours activity design, 2 hours peer review, 1–2 hours implementation and reflection.</p>
+                </div>
+                <div class="info-item">
+                    <h4><i class="fas fa-book"></i> Prerequisites</h4>
+                    <p>Teaching experience required. Familiarity with LMS platforms and basic AI concepts. Access to students for implementing and testing activities.</p>
+                </div>
+            </div>
+
+            <h3>Detailed Pedagogical Sequence</h3>
+            <div class="pd-grid">
+                <div class="pd-card">
+                    <h4><i class="fas fa-1"></i> Phase 1 — Framework &amp; Foundations (60 min)</h4>
+                    <p>Participants study 3 digital pedagogy frameworks (e.g., TPACK, SAMR, Technological Pedagogical Content Knowledge). They map their current practice onto each framework and identify gaps. Facilitator introduces the concept of "pedagogical integrity" — when AI adds value versus when it adds complexity. Pre-assessment: participants self-assess digital pedagogy maturity across 6 dimensions.</p>
+                </div>
+                <div class="pd-card">
+                    <h4><i class="fas fa-2"></i> Phase 2 — Strategy Exploration (60 min)</h4>
+                    <p>Rotating stations explore 4 AI-enhanced strategies: flipped classroom, project-based learning, peer feedback, and reflective practice. At each station, participants experience the strategy as a learner, then evaluate it as a teacher. They complete a strategy comparison matrix.</p>
+                </div>
+                <div class="pd-card">
+                    <h4><i class="fas fa-3"></i> Phase 3 — Design &amp; Build (90 min)</h4>
+                    <p>Participants redesign one existing lesson using an AI-enhanced strategy from Phase 2. They must specify: learning objective, AI tool and role, student activity sequence, teacher role at each stage, and accessibility accommodations. Peer review in groups of 3 using a structured rubric.</p>
+                </div>
+                <div class="pd-card">
+                    <h4><i class="fas fa-4"></i> Phase 4 — Test, Reflect &amp; Plan (60 min)</h4>
+                    <p>Participants pilot their redesigned activity with students (or a peer group). They collect feedback using a structured survey. Group discussion: what worked, what didn't, what would they change. Each participant creates an action plan for integrating digital pedagogy into their teaching context over the next semester.</p>
+                </div>
+            </div>
+
+            <h3>Assessment Strategy</h3>
+            <ul>
+                <li><strong>Formative:</strong> Facilitator observation during peer review; strategy comparison matrix review; exit tickets after each phase.</li>
+                <li><strong>Portfolio:</strong> Redesigned lesson plan, strategy comparison matrix, student feedback summary, and action plan.</li>
+                <li><strong>Rubric-based:</strong> Redesigned lesson scored on pedagogical alignment (25%), AI integration value (25%), accessibility (20%), innovation (15%), and clarity of teacher-role definition (15%). Minimum passing: 70/100.</li>
+                <li><strong>Student feedback:</strong> Where piloted with students, satisfaction survey results (target: ≥ 80% positive) contribute to the final assessment.</li>
+            </ul>
+
+            <h3>Differentiation</h3>
+            <ul>
+                <li><strong>Beginner pathway:</strong> Pre-designed lesson templates with AI integration prompts; structured peer review guides; paired implementation.</li>
+                <li><strong>Intermediate pathway:</strong> Choose from 4 strategies; independent lesson design; self-directed peer review.</li>
+                <li><strong>Advanced pathway:</strong> Participants lead a departmental workshop on one strategy; develop a cross-curricular AI pedagogy proposal; mentor 2 colleagues.</li>
+                <li><strong>Language support:</strong> Framework summaries in project languages; visual frameworks; bilingual glossaries.</li>
+                <li><strong>Neurodiversity:</strong> Multiple representation formats; flexible pacing; chunked activities with clear transitions.</li>
+            </ul>
+
+            <h3>Inclusion &amp; Accessibility</h3>
+            <ul>
+                <li>All materials meet WCAG 2.1 AA standards; minimum 16px body text; high contrast ratios.</li>
+                <li>Video content includes captions, transcripts, and audio descriptions.</li>
+                <li>Activities designed for low-bandwidth and offline contexts; print-compatible versions available.</li>
+                <li>Multiple means of expression accepted: written, oral, visual, video submissions.</li>
+                <li>AI tools demonstrated include accessibility features (text-to-speech, translation, alternative formats).</li>
+                <li>Culturally responsive examples reflecting diverse classrooms across partner countries.</li>
+            </ul>
+
+            <h3>Data Protection &amp; GDPR</h3>
+            <ul>
+                <li>Student data is never used in examples or demonstrations; all case studies use synthetic or anonymised data.</li>
+                <li>When AI tools are explored, only public/demo accounts are used; no school credentials are entered.</li>
+                <li>Participant data from assessments is stored in compliance with applicable regulations; deletion upon request within 30 days.</li>
+                <li>A GDPR compliance checklist for evaluating AI tools in educational settings is provided.</li>
+                <li>Data Processing Agreements (DPAs) must be reviewed before any AI tool is adopted in a school or institution.</li>
+                <li>Student data rights are discussed explicitly: access, rectification, erasure, portability.</li>
+            </ul>
+
+            <h3>Limitations</h3>
+            <ul>
+                <li>AI tools and platforms evolve rapidly; specific references may require updating within 6–12 months.</li>
+                <li>Effectiveness of AI-enhanced pedagogy depends heavily on institutional support, infrastructure, and teacher training.</li>
+                <li>Case studies from partner countries may not transfer directly to all educational contexts.</li>
+                <li>This module does not provide legal advice on data protection; consult a Data Protection Officer.</li>
+                <li>Measuring learning quality when AI is involved remains an active research area; metrics are indicative, not definitive.</li>
+            </ul>
+
+            <h3>Tools Are Supports, Not Guarantees — Governance &amp; Human Verification</h3>
+            <div class="governance-box">
+                <h4><i class="fas fa-shield-alt"></i> Governance Framework</h4>
+                <p>All AI tools, learning analytics dashboards, and assessment platforms referenced in this resource are <strong>supports for teaching</strong> — they are <strong>not guarantees</strong> of learning outcomes, data accuracy, or pedagogical quality. The following governance principles apply:</p>
+                <ul class="checklist">
+                    <li><strong>Human-in-the-loop:</strong> Every AI-generated assessment, feedback, or recommendation must be reviewed by a qualified educator before use with students.</li>
+                    <li><strong>Verification protocol:</strong> AI outputs must be cross-checked against curriculum standards, subject-matter expertise, and institutional policy before adoption.</li>
+                    <li><strong>Decision authority:</strong> Teachers and institutions retain full authority over curriculum decisions, student assessment, and grading; AI may inform but never decide.</li>
+                    <li><strong>Analytics are descriptive:</strong> Learning analytics dashboards show patterns and trends; they do not diagnose causation or prescribe pedagogical action without human interpretation.</li>
+                    <li><strong>Tool adoption governance:</strong> Before adopting any AI tool, institutions must complete a privacy impact assessment, verify GDPR compliance, and obtain stakeholder input.</li>
+                    <li><strong>Annual review cycle:</strong> All AI tools in educational use must be reviewed annually by a team including teachers, a DPO, and student/parent representatives.</li>
+                </ul>
+                <p><em>Clarification:</em> Trello and Slack are coordination platforms. Analytics dashboards provide data summaries. None of these tools guarantee learning improvement, data security, or decision quality. All tools require human governance, institutional oversight, and ongoing verification.</p>
+            </div>
+
+            <h3>Critical Reflection Questions</h3>
+            <div class="reflection-box">
+                <h4>Discussion prompts:</h4>
+                <ul>
+                    <li>Does AI change the fundamental nature of teaching, or just the tools teachers use?</li>
+                    <li>How can we ensure that AI-enhanced pedagogy does not widen the digital divide?</li>
+                    <li>What aspects of student-teacher relationships remain irreplaceable by AI?</li>
+                    <li>Should digital pedagogy with AI be taught as a separate subject, or integrated throughout the curriculum?</li>
+                    <li>How do we measure the quality of learning when AI is involved in instruction?</li>
+                    <li>Who is responsible when an AI tool provides incorrect pedagogical advice to a teacher?</li>
+                    <li>How should institutions govern AI adoption to ensure it serves educational values rather than commercial interests?</li>
+                </ul>
+            </div>
+
+            <h3>Downloadable Resource</h3>
+            <p><strong>Download the full presentation (PDF):</strong>
+                <a href="./pdf/france/11.Developing-Digital-Pedagogy-with-Artificial-Intelligence-How-AI-is-Transforming-Teaching-Methods%20%281%29.pptx%20%281%29.pdf" target="_blank" class="chapter-download">
+                    <i class="fas fa-file-pdf"></i> Developing Digital Pedagogy (PDF)
+                </a>
+            </p>
+            <p><strong>Explore related resources:</strong>
+                <div class="related-resources">
+                    <a href="resource-integrating-ai-design.html" class="related-link">Integrating AI into Instructional Design →</a>
+                    <a href="resource-ai-teaching-methods.html" class="related-link">AI-Supported Teaching Methods →</a>
+                    <a href="handbook-professional.html" class="related-link">Professional Chapter →</a>
+                </div>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Smart edu AI – Erasmus+ Project</p>
+        <img src="images/logos/eu_funded_en.jpg" alt="Erasmus+ Logo" />
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+    </script>
+</body>
+</html>

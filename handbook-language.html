@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Handbook – Languages &amp; Communication</title>
+    <link rel="icon" type="image/png" href="images/logos/smartaiedu-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        .chapter-hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chapter-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255, 140, 66, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(255, 210, 63, 0.1) 0%, transparent 50%);
+            animation: heroGlow 15s ease-in-out infinite alternate;
+        }
+
+        @keyframes heroGlow {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(2%, 2%) rotate(3deg); }
+        }
+
+        .chapter-hero h1 {
+            font-size: 2.6rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .chapter-hero .chapter-number {
+            display: inline-block;
+            background: rgba(255, 140, 66, 0.2);
+            color: #ffd23f;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .chapter-hero p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+
+        .chapter-content {
+        .chapter-content {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .chapter-content h2 {
+            color: #ff8c42;
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        .chapter-content h3 {
+            color: #333;
+            margin-top: 30px;
+        }
+
+        .chapter-content p,
+        .chapter-content li {
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .chapter-content ul {
+            padding-left: 25px;
+        }
+
+        .chapter-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+
+        .chapter-image {
+            width: 100%;
+            border-radius: 16px;
+            height: 260px;
+            object-fit: cover;
+            margin: 20px 0;
+        }
+
+        .chapter-download {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 18px;
+            background: #ff8c42;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: background 0.3s ease;
+        }
+
+        .chapter-download:hover {
+            background: #e67625;
+        }
+
+        .chapter-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: #ff8c42;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .chapter-link:hover {
+            text-decoration: underline;
+        }
+
+        .chapter-quote {
+            background: #fff7e8;
+            border-left: 5px solid #ffd23f;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            color: #ff8c42;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .handbook-index {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .handbook-index h3 {
+            color: #ff8c42;
+            margin-top: 0;
+        }
+
+        .handbook-index ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .handbook-index li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .handbook-index li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .handbook-index a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .handbook-index a:hover {
+            color: #ff8c42;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .tool-card {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 22px;
+            border-left: 4px solid #ffd23f;
+        }
+
+        .tool-card h4 {
+            color: #ff8c42;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .tool-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="images/logos/smartaiedu-logo.jpg" alt="Smart edu AI Logo" />
+                <a href="index.html" class="logo">Smart edu AI</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="handbook.html">Handbook</a></li>
+                <li><a href="handbook-foundations.html">Foundations</a></li>
+                <li><a href="handbook-teaching.html">Teaching</a></li>
+                <li><a href="handbook-ethics.html">Ethics</a></li>
+                <li><a href="handbook-language.html" class="active">Language</a></li>
+                <li><a href="handbook-creative.html">Creative</a></li>
+                <li><a href="handbook-professional.html">Professional</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="chapter-hero">
+        <span class="chapter-number">Chapter 4</span>
+        <h1>Languages &amp; Communication</h1>
+        <p>AI tools for translation, language learning, subtitling, and video creation</p>
+    </header>
+
+    <main class="chapter-content">
+        <a href="handbook.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Handbook</a>
+
+        <img src="https://images.unsplash.com/photo-150568529644-76ac073a005f?w=1200&h=500&fit=crop" alt="Digital language learning" class="chapter-image" data-aos="fade-up" />
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>In this chapter</h2>
+            <p>AI is transforming how we learn, use, and communicate across languages. This chapter explores AI
+                tools for translation, language learning, video subtitling, and educational video creation. Each
+                section below links to a dedicated resource page with learning objectives, classroom activities,
+                tool guides, and critical reflection questions.</p>
+
+            <div class="handbook-index">
+                <h3>Resources in this chapter</h3>
+                <ul>
+                    <li>
+                        <a href="resource-ai-translation.html">AI for Translation</a>
+                        <p style="font-size: 0.9rem; color: #666; margin: 5px 0 0;">Using AI translation tools
+                            to break language barriers in multilingual classrooms.</p>
+                    </li>
+                    <li>
+                        <a href="resource-language-tools-2025.html">Best AI Tools for Learning a Language in
+                            2025</a>
+                        <p style="font-size: 0.9rem; color: #666; margin: 5px 0 0;">Curated selection of AI
+                            language learning tools for all levels.</p>
+                    </li>
+                    <li>
+                        <a href="resource-ai-subtitling.html">Best AI Tools for Subtitling Videos in 2025</a>
+                        <p style="font-size: 0.9rem; color: #666; margin: 5px 0 0;">AI subtitling for
+                            accessibility and language comprehension.</p>
+                    </li>
+                    <li>
+                        <a href="resource-ai-video-tools.html">Best AI Video Creation Tools for Educators in
+                            2025</a>
+                        <p style="font-size: 0.9rem; color: #666; margin: 5px 0 0;">Generative video tools for
+                            student multimedia projects.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>1. AI for Translation</h2>
+            <p>AI translation tools are powerful allies in multilingual classrooms. They can translate texts
+                instantly, help learners compare expressions across languages, and support teachers in creating
+                inclusive multilingual materials. However, machine translation is not perfect — it can miss nuance,
+                cultural context, and make errors that reinforce stereotypes. Critical use means verifying outputs
+                and teaching students to do the same.</p>
+
+            <div class="chapter-quote">
+                "Translation tools should support human understanding, not replace it. Always verify and adapt."
+            </div>
+
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/AI-for-Translation.pptx.pdf" target="_blank" class="chapter-download">
+                    <i class="fas fa-file-pdf"></i> AI for Translation (PDF)
+                </a>
+            </p>
+            <a href="resource-ai-translation.html" class="chapter-link"><i class="fas fa-book"></i> Read the full pedagogical page →</a>
+        </section>
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>2. Language Learning with AI</h2>
+            <p>Modern AI language tools go far beyond simple translation. They offer personalised vocabulary
+                practice, intelligent grammar correction, conversational chatbots, and adaptive content that adjusts to
+                each learner's level. The key is choosing tools that align with your curriculum and encourage
+                genuine communication, not rote pattern-matching.</p>
+
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h4><i class="fas fa-brain"></i> Personalised Learning</h4>
+                    <p>AI adapts difficulty and content to individual student progress, helping learners at all
+                        levels advance at their own pace.</p>
+                </div>
+                <div class="tool-card">
+                    <h4><i class="fas fa-comments"></i> Conversational Practice</h4>
+                    <p>Chatbots provide 24/7 speaking and writing practice, with instant feedback and
+                        error correction.</p>
+                </div>
+                <div class="tool-card">
+                    <h4><i class="fas fa-chart-line"></i> Progress Tracking</h4>
+                    <p>AI dashboards show vocabulary growth, grammar accuracy, and areas needing more focus.</p>
+                </div>
+            </div>
+
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/Best-AI-Tools-for-Learning-a-Language-in-2025.pptx.pdf" target="_blank" class="chapter-download">
+                    <i class="fas fa-file-pdf"></i> Best AI Tools for Language Learning 2025 (PDF)
+                </a>
+            </p>
+            <a href="resource-language-tools-2025.html" class="chapter-link"><i class="fas fa-book"></i> Read the full pedagogical page →</a>
+        </section>
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>3. AI Subtitling and Accessibility</h2>
+            <p>AI-powered subtitling tools can automatically transcribe and translate video content, making
+                educational materials more accessible to students with hearing impairments, language learners, and
+                neurodiverse learners. When combined with human review, these tools dramatically reduce the time
+                needed to create inclusive multimedia content.</p>
+            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200&h=500&fit=crop" alt="Data visualization on screen" class="chapter-image" data-aos="fade-up" />
+
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/Best-AI-tools-for-subtitling-videos-in-2025.pptx.pdf" target="_blank" class="chapter-download">
+                    <i class="fas fa-file-pdf"></i> Best AI Tools for Subtitling Videos 2025 (PDF)
+                </a>
+            </p>
+            <a href="resource-ai-subtitling.html" class="chapter-link"><i class="fas fa-book"></i> Read the full pedagogical page →</a>
+        </section>
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>4. AI Video Creation for Educators</h2>
+            <p>Generative AI video tools allow educators and students to create engaging multimedia content without
+                expensive equipment. From explainer videos to student documentary projects, AI video tools can
+                transform how ideas are communicated and learning is demonstrated.</p>
+
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/Best-AI-Video-Creation-Tools-for-Educators-in-2025.pptx.pdf" target="_blank" class="chapter-download">
+                    <i class="fas fa-file-pdf"></i> Best AI Video Creation Tools for Educators 2025 (PDF)
+                </a>
+            </p>
+            <a href="resource-ai-video-tools.html" class="chapter-link"><i class="fas fa-book"></i> Read the full pedagogical page →</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Smart edu AI – Erasmus+ Project</p>
+        <img src="images/logos/eu_funded_en.jpg" alt="Erasmus+ Logo" />
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

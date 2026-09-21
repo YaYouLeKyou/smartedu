@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Handbook – Professional Development &amp; Project Practice</title>
+    <link rel="icon" type="image/png" href="images/logos/smartaiedu-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        .chapter-hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chapter-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255, 140, 66, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(255, 210, 63, 0.1) 0%, transparent 50%);
+            animation: heroGlow 15s ease-in-out infinite alternate;
+        }
+
+        @keyframes heroGlow {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(2%, 2%) rotate(3deg); }
+        }
+
+        .chapter-hero h1 {
+            font-size: 2.6rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .chapter-hero .chapter-number {
+            display: inline-block;
+            background: rgba(255, 140, 66, 0.2);
+            color: #ffd23f;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .chapter-hero p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+
+        .chapter-content {
+        .chapter-content {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .chapter-content h2 {
+            color: #ff8c42;
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        .chapter-content h3 {
+            color: #333;
+            margin-top: 30px;
+        }
+
+        .chapter-content p,
+        .chapter-content li {
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .chapter-content ul {
+            padding-left: 25px;
+        }
+
+        .chapter-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+
+        .chapter-image {
+            width: 100%;
+            border-radius: 16px;
+            height: 260px;
+            object-fit: cover;
+            margin: 20px 0;
+        }
+
+        .chapter-download {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 18px;
+            background: #ff8c42;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: background 0.3s ease;
+        }
+
+        .chapter-download:hover {
+            background: #e67625;
+        }
+
+        .chapter-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: #ff8c42;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .chapter-link:hover {
+            text-decoration: underline;
+        }
+
+        .chapter-quote {
+            background: #fff7e8;
+            border-left: 5px solid #ffd23f;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            color: #ff8c42;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .handbook-index {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .handbook-index h3 {
+            color: #ff8c42;
+            margin-top: 0;
+        }
+
+        .handbook-index ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .handbook-index li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .handbook-index li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .handbook-index a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .handbook-index a:hover {
+            color: #ff8c42;
+        }
+
+        .pd-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .pd-card {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 22px;
+            border-left: 4px solid #ffd23f;
+        }
+
+        .pd-card h4 {
+            color: #ff8c42;
+            margin-top: 0;
+        }
+
+        .pd-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .timeline-item {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .timeline-item h4 {
+            color: #ff8c42;
+            margin-top: 0;
+        }
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #ff8c42;
+            color: white;
+            padding: 8px 16px;
+            z-index: 2000;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 0 0 8px 0;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+        .breadcrumb {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+            font-size: 0.9rem;
+            margin: 10px 0 5px;
+            color: #666;
+        }
+        .breadcrumb a {
+            color: #ff8c42;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb span {
+            color: #999;
+        }
+        .governance-box {
+            background: #e3f2fd;
+            border-left: 5px solid #1565c0;
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 0 12px 12px 0;
+            font-size: 0.95rem;
+        }
+        .governance-box strong {
+            color: #0d47a1;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <nav role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="images/logos/smartaiedu-logo.jpg" alt="Smart edu AI Logo" />
+                <a href="index.html" class="logo">Smart edu AI</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="handbook.html">Handbook</a></li>
+                <li><a href="handbook-foundations.html">Foundations</a></li>
+                <li><a href="handbook-teaching.html">Teaching</a></li>
+                <li><a href="handbook-ethics.html">Ethics</a></li>
+                <li><a href="handbook-language.html">Language</a></li>
+                <li><a href="handbook-creative.html">Creative</a></li>
+                <li><a href="handbook-professional.html" class="active" aria-current="page">Professional</a></li>
+            </ul>
+            <div class="hamburger" role="button" aria-label="Toggle navigation menu" aria-expanded="false" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="chapter-hero">
+        <span class="chapter-number">Chapter 6</span>
+        <h1>Professional Development &amp; Project Practice</h1>
+        <p>Supporting teachers, youth workers, and institutions on their AI learning journey</p>
+    </header>
+
+    <main class="chapter-content" id="main-content">
+        <a href="handbook.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Handbook</a>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <a href="handbook.html">Handbook</a>
+            <span aria-hidden="true">/</span>
+            <a href="handbook-professional.html" aria-current="page">Professional</a>
+        </nav>
+
+        <img src="https://images.unsplash.com/photo-1544717285-bd969877904a?w=1200&h=500&fit=crop" alt="Digital technology and data" class="chapter-image" data-aos="fade-up" />
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>In this chapter</h2>
+            <p>This chapter supports educators, youth workers, and institutions in building the knowledge and
+                skills to integrate AI into their practice. It covers teacher training, instructional design with
+                AI, project management for international partnerships, and the role of AI in youth work and social
+                impact. Each section links to a dedicated resource page with learning objectives, activities, and
+                reflection points.</p>
+
+            <div class="handbook-index">
+                <h3>Learning objectives</h3>
+                <ul>
+                    <li>Design and deliver a structured 5-day AI professional development programme for educators and youth workers.</li>
+                    <li>Apply AI tools to pedagogical design, differentiating materials and assessment for diverse learners.</li>
+                    <li>Manage international educational projects using collaborative tools with AI-assisted workflows.</li>
+                    <li>Implement AI-enhanced youth work practices that amplify youth voice and foster digital citizenship.</li>
+                    <li>Evaluate AI-supported teaching methods against measurable student outcomes.</li>
+                    <li>Apply data governance principles and GDPR-compliant practices in all AI-enhanced educational activities.</li>
+                </ul>
+            </div>
+
+            <div class="handbook-index">
+                <h3>Resources in this chapter</h3>
+                <ul>
+                    <li>
+                        <a href="resource-ai-5-day-training.html">AI in Education: A 5-Day Training Program</a>
+                        <p style="font-size: 0.9rem; color: #666; margin: 5px 0 0;">Comprehensive training
+                            covering AI fundamentals, tools, and ethical integration.</p>
+                    </li>
+                    <li>
+                        <a href="resource-empowering-teachers.html">Empowering Teachers with AI</a>
+                        <p style="font-size: 0.9rem; color: #666; margin: 5px 0 0;">A new era of professional
+                            development for educators in the AI age.</p>
+                    </li>
+                    <li>
+                        <a href="resource-integrating-ai-design.html">Integrating AI into Instructional Design</a>
+                        <p style="font-size: 0.9rem; color: #666; margin: 5px 0 0;">Enhancing youth work through
+                            AI-powered instructional design.</p>
+                    </li>
+                    <li>
+                        <a href="resource-digital-pedagogy.html">Developing Digital Pedagogy with AI</a>
+                        <p style="font-size: 0.9rem; color: #666; margin: 5px 0 0;">How AI is transforming
+                            teaching methods and digital pedagogy.</p>
+                    </li>
+                    <li>
+                        <a href="resource-project-management.html">Project Management Tools for Teachers</a>
+                        <p style="font-size: 0.9rem; color: #666; margin: 5px 0 0;">Mastering Trello and Slack
+                            for educational project management.</p>
+                    </li>
+                    <li>
+                        <a href="resource-empowering-youth-work.html">Empowering Youth Work with AI</a>
+                        <p style="font-size: 0.9rem; color: #666; margin: 5px 0 0;">AI for youth engagement,
+                            digital citizenship, and social inclusion.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>1. Training Teachers for the AI Era</h2>
+            <p>Effective AI integration starts with confident, critically aware teachers. Professional development
+                should be practical, collaborative, and ongoing. The 5-day training programme developed in the
+                Smart Edu AI partnership provides a comprehensive introduction combining theoretical foundations
+                with hands-on workshops.</p>
+
+            <div class="chapter-quote">
+                "Teachers do not need to become AI experts; they need to become confident facilitators of AI-enhanced
+                learning."
+            </div>
+
+            <div class="project-meta">
+                <span class="meta-badge duration"><i class="fas fa-clock"></i> 5 days x 6 hours (30 hours total)</span>
+                <span class="meta-badge materials"><i class="fas fa-box"></i> Laptop, projector, handouts, AI tool accounts</span>
+                <span class="meta-badge"><i class="fas fa-users"></i> Groups of 4-5</span>
+                <span class="meta-badge"><i class="fas fa-graduation-cap"></i> Educators &amp; youth workers</span>
+            </div>
+
+            <h3>Measurable Learning Objectives</h3>
+            <ul>
+                <li>Participants will define AI and identify at least 5 key technologies used in educational contexts (pre/post-test scored: 0-4).</li>
+                <li>Participants will demonstrate proficiency with at least 3 AI-powered educational tools (portfolio submitted).</li>
+                <li>Participants will apply pedagogical models (Gagné's 9 Events, 5E Model) to design one AI-enhanced learning activity (rubric: 0-4).</li>
+                <li>Participants will evaluate AI tools for privacy, bias, and accessibility using a structured checklist (completed checklist).</li>
+                <li>Participants will design a 12-month follow-up action plan for AI integration in their institution (document submitted).</li>
+            </ul>
+
+            <h3>Programme Structure (5 Days)</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Day 1 — Foundations</h4>
+                    <p><strong>Duration:</strong> 6 hours<br><strong>Materials:</strong> Slides, handouts, AI demo accounts<br><strong>Steps:</strong> (1) Ice-breaker and pre-assessment. (2) What is AI? Key concepts and history. (3) Educational applications overview. (4) Hands-on: explore 3 AI tools. (5) Reflection journal.</p>
+                    <p><strong>Evaluation:</strong> Pre-test (knowledge baseline); exit ticket: define AI in own words.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Day 2 — Tools &amp; Design</h4>
+                    <p><strong>Duration:</strong> 6 hours<br><strong>Materials:</strong> Laptops, pedagogical model templates<br><strong>Steps:</strong> (1) Review Day 1 reflections. (2) Deep dive into Gagné's 9 Events and 5E Model. (3) Groups design one lesson using an AI tool and a pedagogical model. (4) Peer review of lesson plans. (5) Instructor feedback.</p>
+                    <p><strong>Evaluation:</strong> Lesson plan submitted (rubric: objectives, AI integration, pedagogical alignment).</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Day 3 — Management &amp; Ethics</h4>
+                    <p><strong>Duration:</strong> 6 hours<br><strong>Materials:</strong> Project management templates, GDPR overview handout, case studies<br><strong>Steps:</strong> (1) Introduction to project management for educational projects. (2) Hands-on: set up Trello board for a mock project. (3) AI ethics discussion: bias, privacy, accessibility. (4) Case study analysis: ethical dilemmas in AI education. (5) GDPR and data protection essentials.</p>
+                    <p><strong>Evaluation:</strong> Ethics reflection paper (250 words); completed GDPR awareness checklist.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Day 4 — Practice</h4>
+                    <p><strong>Duration:</strong> 6 hours<br><strong>Materials:</strong> VR headsets (if available), AI tools from Day 1, data sets for practice<br><strong>Steps:</strong> (1) AR/VR exploration station rotation. (2) AI data analysis mini-project. (3) Groups create a multimedia presentation using AI tools. (4) Presentation rehearsal with peer feedback. (5) Instructor coaching.</p>
+                    <p><strong>Evaluation:</strong> Multimedia presentation scored on creativity, AI integration, and clarity (rubric: 0-4).</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Day 5 — Future &amp; Action</h4>
+                    <p><strong>Duration:</strong> 6 hours<br><strong>Materials:</strong> Action plan templates, evaluation forms<br><strong>Steps:</strong> (1) Innovation contest: pitch an AI-enhanced project. (2) Final presentations. (3) Post-assessment (compare with Day 1 pre-test). (4) Individual 12-month action plan development. (5) Programme evaluation and certificate ceremony.</p>
+                    <p><strong>Evaluation:</strong> Post-test comparison; action plan quality (rubric: feasibility, specificity, evaluation component).</p>
+                </div>
+            </div>
+
+            <h3>Differentiation</h3>
+            <ul>
+                <li><strong>Support:</strong> Pair participants with different skill levels. Provide step-by-step tool guides. Offer extra practice time for those new to digital tools.</li>
+                <li><strong>Extension:</strong> Challenge experienced participants to mentor others and explore advanced AI features. Encourage cross-country collaboration on project ideas.</li>
+                <li><strong>EAL participants:</strong> Provide key vocabulary sheets in multiple languages. Use visual guides and demonstrations.</li>
+            </ul>
+
+            <h3>Collaboration</h3>
+            <ul>
+                <li>All activities are group-based (4-5 participants), mixing nationalities to foster cross-cultural collaboration.</li>
+                <li>Peer coaching circles continue beyond the 5 days via shared Slack/Teams channels.</li>
+                <li>Partners document and share outcomes with the full partnership for sustainability.</li>
+            </ul>
+
+            <div class="notice-box">
+                <strong><i class="fas fa-shield-halved"></i> Data and Governance:</strong>
+                All participant data collected during the training (assessments, evaluations, action plans)
+                must be handled in compliance with applicable data protection regulations (e.g., GDPR).
+                Collect only necessary data. Store securely with restricted access. Inform participants of
+                data processing purposes. Retain data only as long as needed. Assign a data protection
+                contact within the partnership.
+            </div>
+
+            <p><strong>Downloadable resources:</strong>
+                <a href="./pdf/france/10.Empowering-Teachers-with-AI-A-New-Era-of-Professional-Development.pptx%20%281%29.pdf" target="_blank" class="chapter-download">
+                    <i class="fas fa-file-pdf"></i> Empowering Teachers with AI (PDF)
+                </a>
+                <a href="./pdf/france/1.AI-in-Education-A-5-Day-Training-Program-for-Youth-Workers.pptx%20%281%29.pdf" target="_blank" class="chapter-download" style="margin-left: 10px;">
+                    <i class="fas fa-file-pdf"></i> 5-Day Training Program (PDF)
+                </a>
+            </p>
+            <a href="resource-ai-5-day-training.html" class="chapter-link"><i class="fas fa-book"></i> Read the full pedagogical page →</a>
+        </section>
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>2. Instructional Design with AI</h2>
+            <p>AI can accelerate instructional design by helping teachers plan lessons, generate activities,
+                differentiate materials, and assess learning outcomes. The key is to use AI as a creative assistant
+                rather than a replacement for professional pedagogical reasoning.</p>
+
+            <div class="project-meta">
+                <span class="meta-badge duration"><i class="fas fa-clock"></i> 3 sessions x 60 min (180 min)</span>
+                <span class="meta-badge materials"><i class="fas fa-box"></i> Laptop, AI tool access, lesson plan templates</span>
+                <span class="meta-badge"><i class="fas fa-users"></i> Pairs or individual</span>
+                <span class="meta-badge"><i class="fas fa-graduation-cap"></i> Educators &amp; youth workers</span>
+            </div>
+
+            <h3>Measurable Learning Objectives</h3>
+            <ul>
+                <li>Participants will use AI to brainstorm at least 3 lesson hooks and cross-curricular connections (peer-evaluated).</li>
+                <li>Participants will generate differentiated activities for 3 learner levels using AI assistance (rubric: 0-4).</li>
+                <li>Participants will design inclusive assessment rubrics with AI support, aligning to learning objectives (submitted rubric).</li>
+                <li>Participants will apply AI-generated content ethically, providing proper attribution (checklist completed).</li>
+                <li>Participants will evaluate AI-generated materials for cultural relevance and bias (written review, 200+ words).</li>
+            </ul>
+
+            <h3>Step-by-Step Instructions</h3>
+            <ol class="step-list">
+                <li><strong>Introduction and Idea Generation (40 min):</strong> Present the concept of AI as a design assistant. Demonstrate prompting for lesson hooks. Brainstorm together as a group. Each participant generates 3+ ideas using AI.</li>
+                <li><strong>Differentiation Workshop (50 min):</strong> Participants use AI to create tiered activities (beginner, intermediate, advanced) for a chosen topic. Review and refine AI outputs for quality and cultural relevance. Compare with self-designed materials.</li>
+                <li><strong>Assessment Design (40 min):</strong> Generate rubrics and formative checks using AI. Critically evaluate alignment with learning objectives. Ensure rubrics include higher-order thinking skills. Peer review and revision.</li>
+                <li><strong>Ethical Review and Finalisation (50 min):</strong> Review all AI-generated content for bias, cultural sensitivity, and proper attribution. Complete licensing/attribution checklist. Finalise portfolio of redesigned materials.</li>
+            </ol>
+
+            <h3>Evaluation Criteria</h3>
+            <div class="criteria-list">
+                <h4>Rubric (4-point scale: 1=Beginning, 2=Developing, 3=Proficient, 4=Exemplary)</h4>
+                <ul>
+                    <li><strong>Lesson design quality:</strong> Are learning objectives clear, measurable, and AI-enhanced?</li>
+                    <li><strong>Differentiation:</strong> Are activities appropriately tiered for diverse learner levels?</li>
+                    <li><strong>Assessment alignment:</strong> Do rubrics and checks align with stated objectives?</li>
+                    <li><strong>Ethical practice:</strong> Is AI content properly attributed and culturally reviewed?</li>
+                </ul>
+            </div>
+
+            <h3>Collaboration</h3>
+            <ul>
+                <li>Participants work in pairs to review and critique each other's AI-enhanced lesson plans.</li>
+                <li>Cross-cultural peer review: exchange materials with international partners for feedback on cultural relevance.</li>
+                <li>Build a shared repository of AI-enhanced lesson plans accessible to all partnership members.</li>
+            </ul>
+
+            <div class="notice-box">
+                <strong><i class="fas fa-shield-halved"></i> Data and Governance:</strong>
+                When using AI instructional design tools, educators must be aware that
+                lesson plans and student data may be processed by third-party servers.
+                Verify the tool's data processing location and compliance with data protection
+                regulations. Do not upload student work samples or personal data to AI tools
+                without proper consent and data processing agreements. Use anonymised data
+                for testing AI tools.
+            </div>
+
+            <p><strong>Downloadable resources:</strong>
+                <a href="./pdf/france/3.Integrating-AI-into-Instructional-Design-Enhancing-Youth-Work.pptx%20%281%29.pdf" target="_blank" class="chapter-download">
+                    <i class="fas fa-file-pdf"></i> Integrating AI into Instructional Design (PDF)
+                </a>
+                <a href="./pdf/france/11.Developing-Digital-Pedagogy-with-Artificial-Intelligence-How-AI-is-Transforming-Teaching-Methods%20%281%29.pptx%20%281%29.pdf" target="_blank" class="chapter-download" style="margin-left: 10px;">
+                    <i class="fas fa-file-pdf"></i> Developing Digital Pedagogy (PDF)
+                </a>
+            </p>
+            <a href="resource-integrating-ai-design.html" class="chapter-link"><i class="fas fa-book"></i> Read the full pedagogical page →</a>
+        </section>
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>3. Project Management for Educational Projects</h2>
+            <p>Managing an international Erasmus+ project requires coordination across time zones, languages, and
+                institutions. AI-powered tools can support communication, task tracking, and reporting when used with
+                clear processes and human oversight. Management tools are <strong>supports, not guarantees</strong> —
+                successful projects depend on human coordination, clear agreements, and consistent follow-through.</p>
+
+            <div class="project-meta">
+                <span class="meta-badge duration"><i class="fas fa-clock"></i> Ongoing throughout project lifecycle</span>
+                <span class="meta-badge materials"><i class="fas fa-box"></i> Trello, Slack, Google Workspace, AI translation tools</span>
+                <span class="meta-badge"><i class="fas fa-users"></i> Project team</span>
+                <span class="meta-badge"><i class="fas fa-graduation-cap"></i> Project leaders &amp; coordinators</span>
+            </div>
+
+            <h3>Measurable Learning Objectives</h3>
+            <ul>
+                <li>Participants will set up a Trello board with structured phases, milestones, and responsibilities (completed board scored: 0-4).</li>
+                <li>Participants will use Slack channels effectively with international, multilingual teams (communication log submitted).</li>
+                <li>Participants will apply AI translation and summarisation to bridge communication gaps (before/after comparison document).</li>
+                <li>Participants will track project progress using shared dashboards with AI-assisted reporting (dashboard link submitted).</li>
+                <li>Participants will evaluate project outcomes using AI-analysed feedback while maintaining human judgement (evaluation report, 300+ words).</li>
+            </ul>
+
+            <h3>Step-by-Step Instructions</h3>
+            <ol class="step-list">
+                <li><strong>Plan — Project Setup (60 min):</strong> Define project scope, deliverables, and roles. Use AI to structure timeline and identify dependencies. Create Trello board with lists: To Do, In Progress, Review, Done. Add cards with clear descriptions, deadlines, and assigned members.</li>
+                <li><strong>Coordinate — Communication (ongoing):</strong> Set up Slack channels per topic (general, tasks, outputs, social). Use AI translation for cross-language communication. Schedule regular check-ins. Document decisions and action items after each meeting.</li>
+                <li><strong>Monitor — Progress Tracking (ongoing):</strong> Update Trello board consistently. Use shared dashboards for milestone tracking. Generate AI-assisted progress reports. Flag blockers early. Hold weekly 15-min standups.</li>
+                <li><strong>Evaluate — Outcomes Assessment (end of project):</strong> Collect feedback via survey. Use AI to analyse sentiment and identify themes. Interpret results through pedagogical and ethical lens. Prepare impact report. Hold retrospective meeting with all partners.</li>
+            </ol>
+
+            <h3>Evaluation Criteria</h3>
+            <div class="criteria-list">
+                <h4>Rubric (4-point scale: 1=Beginning, 2=Developing, 3=Proficient, 4=Exemplary)</h4>
+                <ul>
+                    <li><strong>Organisation:</strong> Is the Trello board well-structured and consistently updated?</li>
+                    <li><strong>Communication:</strong> Are channels used effectively with clear documentation?</li>
+                    <li><strong>AI tool integration:</strong> Are AI tools used as supports, not replacements, for human decision-making?</li>
+                    <li><strong>Outcome quality:</strong> Are deliverables completed on time and to agreed standard?</li>
+                </ul>
+            </div>
+
+            <h3>Collaboration</h3>
+            <ul>
+                <li>Establish clear communication protocols and escalation paths.</li>
+                <li>Rotate coordination roles across partnership organisations.</li>
+                <li>Use collaborative documents for real-time co-editing of reports and plans.</li>
+                <li>Document all decisions in shared workspace for transparency.</li>
+            </ul>
+
+            <div class="notice-box">
+                <strong><i class="fas fa-shield-halved"></i> Data and Governance:</strong>
+                Project management tools (Trello, Slack, Google Workspace) process and store
+                project data on third-party servers. Before adopting any tool:
+                <ul>
+                    <li>Verify data processing location and compliance with GDPR or equivalent regulations.</li>
+                    <li>Ensure data processing agreements are in place with each provider.</li>
+                    <li>Do not upload sensitive personal data (student information, health records) to project management tools.</li>
+                    <li>Define data retention and deletion policies at project end.</li>
+                    <li>Confirm that all partners have agreed on data sharing protocols.</li>
+                </ul>
+                <strong>Management tools are supports, not guarantees.</strong> They facilitate
+                coordination but cannot replace clear agreements, human oversight, and
+                consistent team discipline. A poorly managed Trello board is as ineffective
+                as a well-managed one — the tool amplifies process, not replaces it.
+            </div>
+
+            <div class="notice-box" style="background:#fce4ec; border-left-color:#c62828;">
+                <strong><i class="fas fa-exclamation-triangle"></i> Limitations:</strong>
+                AI translation may produce inaccurate or culturally insensitive outputs
+                in multilingual project communication. Always have a human reviewer for
+                official translations. AI summarisation may omit context or nuance.
+                Project dashboards reflect quantitative data but miss qualitative factors
+                like team morale and relationship dynamics.
+            </div>
+
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/5.Mastering-Project-Management-Tools-Trello-and-Slack-for-Teachers-and-Youth-Workers.pptx%20%281%29.pdf" target="_blank" class="chapter-download">
+                    <i class="fas fa-file-pdf"></i> Project Management Tools (PDF)
+                </a>
+            </p>
+            <a href="resource-project-management.html" class="chapter-link"><i class="fas fa-book"></i> Read the full pedagogical page →</a>
+        </section>
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>4. AI in Youth Work and Social Impact</h2>
+            <p>Youth workers use AI to engage young people in creative projects, enhance digital citizenship, and
+                promote social inclusion. The resources below explore how AI can support empowerment, community
+                building, and critical awareness among young people.</p>
+
+            <div class="project-meta">
+                <span class="meta-badge duration"><i class="fas fa-clock"></i> 4 sessions x 60 min (240 min)</span>
+                <span class="meta-badge materials"><i class="fas fa-box"></i> Computer/tablet, internet, AI tools, community space</span>
+                <span class="meta-badge"><i class="fas fa-users"></i> Youth groups</span>
+                <span class="meta-badge"><i class="fas fa-graduation-cap"></i> Ages 12-18</span>
+            </div>
+
+            <h3>Measurable Learning Objectives</h3>
+            <ul>
+                <li>Youth will identify at least 3 appropriate AI tools for creative projects (quiz scored: 0-4).</li>
+                <li>Youth will design an AI-enhanced social action project with a clear objective and plan (project plan scored: 0-4).</li>
+                <li>Youth will critically discuss AI's role in amplifying versus replacing human voice (group discussion, rubric).</li>
+                <li>Youth will connect AI activities to at least 1 real-world social issue with a proposed action plan.</li>
+                <li>Youth will demonstrate collaborative peer-learning through a documented group process.</li>
+            </ul>
+
+            <h3>Step-by-Step Instructions</h3>
+            <ol class="step-list">
+                <li><strong>Interest Mapping (40 min):</strong> Start with young people's questions, curiosities, and community observations. Map interests to potential AI tools. Do not introduce tools before identifying needs.</li>
+                <li><strong>AI Tool Exploration (50 min):</strong> Youth explore 2-3 AI tools relevant to their interests. They document what each tool does well and where it falls short. Guided facilitation ensures critical engagement.</li>
+                <li><strong>Project Design (50 min):</strong> Groups design a social action project using AI for research, content creation, or organisation. Projects must include: a clear social issue, a target audience, a proposed action, and how AI supports (not drives) the work.</li>
+                <li><strong>Peer Feedback and Revision (30 min):</strong> Groups present project plans. Structured peer feedback using rubric. Groups revise based on feedback.</li>
+                <li><strong>Action and Reflection (30 min):</strong> Begin implementing projects (or create detailed action steps for later). Reflect on: What did AI help with? What would be lost without it? What ethical considerations emerged?</li>
+            </ol>
+
+            <h3>Evaluation Criteria</h3>
+            <div class="criteria-list">
+                <h4>Rubric (4-point scale: 1=Beginning, 2=Developing, 3=Proficient, 4=Exemplary)</h4>
+                <ul>
+                    <li><strong>Project quality:</strong> Is the social action project well-planned with clear objectives?</li>
+                    <li><strong>AI integration:</strong> Does AI amplify youth voice rather than replace it?</li>
+                    <li><strong>Social awareness:</strong> Is the connection to a real-world issue meaningful?</li>
+                    <li><strong>Collaboration:</strong> Did all members contribute? Is peer feedback constructive?</li>
+                </ul>
+            </div>
+
+            <h3>Collaboration</h3>
+            <ul>
+                <li>All project work is group-based, fostering peer learning and shared responsibility.</li>
+                <li>Encourage intergenerational mentoring — youth teach adults their preferred tools.</li>
+                <li>Connect with community organisations for real-world project impact.</li>
+            </ul>
+
+            <div class="notice-box">
+                <strong><i class="fas fa-shield-halved"></i> Data and Governance (incl. RGPD):</strong>
+                When working with youth, data protection is paramount:
+                <ul>
+                    <li>Obtain parental/guardian consent before collecting any youth data.</li>
+                    <li>Do not register youth under 16 on AI tools without verified parental consent (per GDPR Article 8).</li>
+                    <li>Minimise data collection: only gather what is necessary for the project.</li>
+                    <li>Store youth data securely and delete after project completion.</li>
+                    <li>Inform youth and families about what data is collected, why, and how it is protected.</li>
+                    <li>Designate a data protection contact within the youth organisation.</li>
+                </ul>
+            </div>
+
+            <div class="notice-box" style="background:#fce4ec; border-left-color:#c62828;">
+                <strong><i class="fas fa-exclamation-triangle"></i> Limitations:</strong>
+                AI tools may collect usage data from young users. Free tools often
+                monetise through data. Youth workers must verify each tool's
+                data practices before recommending to minors. AI-generated content
+                may reinforce stereotypes that youth lack the experience to identify.
+                Youth workers must model critical evaluation at every step.
+            </div>
+
+            <p><strong>Downloadable resources:</strong>
+                <a href="./pdf/france/7.Empowering-Youth-Work-with-AI-and-Digital-Tools.pptx%20%281%29.pdf" target="_blank" class="chapter-download">
+                    <i class="fas fa-file-pdf"></i> Empowering Youth Work with AI (PDF)
+                </a>
+                <a href="./pdf/france/8.0AI-Tools-for-Youth-Work-Enhancing-Engagement-and-Development.pptx%20%281%29.pdf" target="_blank" class="chapter-download" style="margin-left: 10px;">
+                    <i class="fas fa-file-pdf"></i> AI Tools for Youth Work (PDF)
+                </a>
+            </p>
+            <a href="resource-empowering-youth-work.html" class="chapter-link"><i class="fas fa-book"></i> Read the full pedagogical page →</a>
+            <a href="resource-ai-tools-youth-work.html" class="chapter-link"><i class="fas fa-book"></i> Read the AI tools for youth work page →</a>
+        </section>
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>5. AI-Supported Teaching Methods</h2>
+            <p>Effective pedagogy with AI combines evidence-based teaching strategies with intelligent assistance.
+                The following methods are particularly well-suited to AI enhancement while maintaining critical
+                teacher involvement.</p>
+
+            <div class="project-meta">
+                <span class="meta-badge duration"><i class="fas fa-clock"></i> 6 sessions x 45 min (270 min)</span>
+                <span class="meta-badge materials"><i class="fas fa-box"></i> Laptop, AI tools, assessment rubrics</span>
+                <span class="meta-badge"><i class="fas fa-users"></i> Class groups</span>
+                <span class="meta-badge"><i class="fas fa-graduation-cap"></i> All levels</span>
+            </div>
+
+            <h3>Measurable Learning Objectives</h3>
+            <ul>
+                <li>Students will participate in at least 2 AI-enhanced teaching methods (flipped classroom, project-based learning, peer feedback, or reflective practice) (participation log).</li>
+                <li>Students will compare AI-supported and traditional approaches, measuring engagement and outcomes (comparison chart with at least 3 data points).</li>
+                <li>Students will evaluate whether AI-enhanced methods improve their learning experience (survey, Likert scale).</li>
+                <li>Teachers will assess student outcomes using both quantitative metrics and qualitative observation (evaluation report).</li>
+            </ul>
+
+            <h3>Step-by-Step Instructions</h3>
+            <ol class="step-list">
+                <li><strong>Flipped Classroom (45 min):</strong> AI generates pre-lesson content (summary, questions, practice). In class, focus on discussion and application. Measure: compare pre-lesson quiz scores with in-class performance.</li>
+                <li><strong>Project-Based Learning (45 min):</strong> AI supports research, planning, and presentation phases. Students lead inquiry. Measure: project rubric on research depth, creativity, and AI integration quality.</li>
+                <li><strong>Peer Feedback (45 min):</strong> AI analyses draft work for structure and grammar; students provide human judgement and encouragement. Measure: compare AI feedback quality vs. peer feedback quality (table).</li>
+                <li><strong>Reflective Practice (45 min):</strong> AI helps students journal about learning; teacher guides reflection. Measure: depth and self-awareness of journal entries (rubric).</li>
+                <li><strong>Cross-Method Comparison (45 min):</strong> Students compare all methods experienced. Complete comparison chart. Discuss what worked, what didn't, and what AI contributed.</li>
+                <li><strong>Evaluation and Reflection (45 min):</strong> Students complete survey on AI-enhanced learning experience. Teacher compiles evaluation report. Class discusses future of AI in their learning.</li>
+            </ol>
+
+            <h3>Evaluation Criteria</h3>
+            <div class="criteria-list">
+                <h4>Rubric (4-point scale: 1=Beginning, 2=Developing, 3=Proficient, 4=Exemplary)</h4>
+                <ul>
+                    <li><strong>Method implementation:</strong> Was the teaching method applied with fidelity?</li>
+                    <li><strong>Student engagement:</strong> Did AI enhancement increase engagement measurably?</li>
+                    <li><strong>Outcome quality:</strong> Are learning outcomes at or above class baseline?</li>
+                    <li><strong>Critical reflection:</strong> Can students articulate AI's role in their learning?</li>
+                </ul>
+            </div>
+
+            <h3>Collaboration</h3>
+            <ul>
+                <li>Peer feedback method requires structured collaboration protocols.</li>
+                <li>Project-based learning uses team-based AI-assisted research.</li>
+                <li>Cross-method comparison involves group discussion and consensus-building.</li>
+                <li>Teachers share outcomes across the partnership for comparative analysis.</li>
+            </ul>
+
+            <div class="notice-box">
+                <strong><i class="fas fa-shield-halved"></i> Data and Governance:</strong>
+                AI teaching tools process student work and performance data.
+                Before using any AI tool with students:
+                <ul>
+                    <li>Verify the tool's data processing and storage policies.</li>
+                    <li>Ensure compliance with applicable data protection regulations (GDPR, FERPA, etc.).</li>
+                    <li>Do not upload identifiable student work to unapproved tools.</li>
+                    <li>Use anonymised or aggregated data for testing and comparison.</li>
+                    <li>Inform parents/guardians about AI tools used in the classroom.</li>
+                </ul>
+            </div>
+
+            <div class="notice-box" style="background:#fce4ec; border-left-color:#c62828;">
+                <strong><i class="fas fa-exclamation-triangle"></i> Limits of AI in Teaching:</strong>
+                AI cannot replace the relational, emotional, and ethical dimensions of
+                teaching. AI feedback on writing lacks contextual understanding of student
+                growth. AI-curated content may be outdated or inaccurate. AI cannot build
+                trust, motivation, or classroom culture. Teachers remain essential — AI
+                is an augmentation, not a substitute.
+            </div>
+
+            <p><strong>Downloadable resources:</strong>
+                <a href="./pdf/france/12.AI-Supported-Teaching-Methods-Strategies-Enhanced-by-AI-and-Their-Classroom-Impact.pptx%20%281%29.pdf" target="_blank" class="chapter-download">
+                    <i class="fas fa-file-pdf"></i> AI-Supported Teaching Methods (PDF)
+                </a>
+                <a href="./pdf/france/10.Empowering-Teachers-with-AI-A-New-Era-of-Professional-Development.pptx%20%281%29.pdf" target="_blank" class="chapter-download" style="margin-left: 10px;">
+                    <i class="fas fa-file-pdf"></i> Empowering Teachers with AI (PDF)
+                </a>
+            </p>
+            <a href="resource-ai-teaching-methods.html" class="chapter-link"><i class="fas fa-book"></i> Read the full pedagogical page →</a>
+        </section>
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>6. Data Governance and Ethical AI Use</h2>
+            <p>Every AI-enhanced educational activity involves data — student work, performance metrics,
+                behavioural patterns, and personal information. Responsible governance ensures that AI
+                serves learning goals without compromising privacy, equity, or trust.</p>
+
+            <div class="project-meta">
+                <span class="meta-badge duration"><i class="fas fa-clock"></i> 1 session x 90 min (90 min)</span>
+                <span class="meta-badge materials"><i class="fas fa-box"></i> Data audit template, policy examples, GDPR/FERPA reference</span>
+                <span class="meta-badge"><i class="fas fa-users"></i> School leadership, IT coordinators, teachers</span>
+                <span class="meta-badge"><i class="fas fa-graduation-cap"></i> All levels</span>
+            </div>
+
+            <h3>Measurable Learning Objectives</h3>
+            <ul>
+                <li>Participants will conduct a data audit identifying all AI tools in use and the data each processes (completed audit template).</li>
+                <li>Participants will evaluate 3 AI tools against a GDPR/FERPA compliance checklist (compliance matrix submitted).</li>
+                <li>Participants will draft or update an institutional AI data governance policy (policy document scored: 0-4).</li>
+                <li>Participants will design a communication plan for informing stakeholders (parents, students, staff) about AI data practices (plan submitted).</li>
+            </ul>
+
+            <h3>Step-by-Step Instructions</h3>
+            <ol class="step-list">
+                <li><strong>Data Audit (30 min):</strong> Map all AI tools currently used in the institution. For each, document: what data is collected, where it is stored, who has access, retention policy, and consent mechanism. Use the provided template.</li>
+                <li><strong>Compliance Assessment (30 min):</strong> Evaluate each tool against GDPR/FERPA requirements. Check: legal basis for processing, data minimisation, purpose limitation, storage limitation, data subject rights. Flag non-compliant tools.</li>
+                <li><strong>Policy Drafting (20 min):</strong> Draft or revise institutional AI data governance policy. Include: acceptable use, data retention and deletion, breach notification, consent procedures, and roles/responsibilities.</li>
+                <li><strong>Stakeholder Communication (10 min):</strong> Design a communication plan for parents, students, and staff. Address: what data is collected, why, how it is protected, and how to opt out.</li>
+            </ol>
+
+            <h3>Evaluation Criteria</h3>
+            <div class="criteria-list">
+                <h4>Rubric (4-point scale: 1=Beginning, 2=Developing, 3=Proficient, 4=Exemplary)</h4>
+                <ul>
+                    <li><strong>Audit completeness:</strong> Are all AI tools identified and documented?</li>
+                    <li><strong>Compliance rigour:</strong> Does the compliance matrix address all key GDPR/FERPA requirements?</li>
+                    <li><strong>Policy quality:</strong> Is the governance policy clear, actionable, and up to date?</li>
+                    <li><strong>Communication clarity:</strong> Is the stakeholder plan accessible and transparent?</li>
+                </ul>
+            </div>
+
+            <h3>Key Principles</h3>
+            <ul>
+                <li><strong>Transparency:</strong> All stakeholders understand what data AI tools collect and why.</li>
+                <li><strong>Data minimisation:</strong> Collect only what is strictly necessary for educational purposes.</li>
+                <li><strong>Purpose limitation:</strong> Data collected for education is not repurposed for surveillance or commercial use.</li>
+                <li><strong>Storage limitation:</strong> Data is retained only as long as needed and securely deleted afterwards.</li>
+                <li><strong>Accountability:</strong> Designated individuals are responsible for governance compliance.</li>
+            </ul>
+
+            <div class="governance-box">
+                <strong><i class="fas fa-gavel"></i> Tools Are Supports, Not Guarantees:</strong>
+                No management tool, platform, or AI system guarantees
+                compliance or good practice. Governance requires human
+                commitment — clear policies, consistent enforcement, regular
+                reviews, and willingness to discontinue tools that do not meet
+                standards. The best tool is the one your institution can actually
+                govern effectively.
+            </div>
+
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/8.2Essential-Measures-for-Student-Data-Security-and-Confidentiality.pptx%20%281%29.pdf" target="_blank" class="chapter-download">
+                    <i class="fas fa-file-pdf"></i> Student Data Security (PDF)
+                </a>
+                <a href="./pdf/france/8.1 Ethics-and-Artificial-Intelligence-in-Education-Challenges-Issues-and-Perspectives.pptx%20%281%29.pdf" target="_blank" class="chapter-download" style="margin-left: 10px;">
+                    <i class="fas fa-file-pdf"></i> Ethics in AI Education (PDF)
+                </a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Smart edu AI – Erasmus+ Project</p>
+        <img src="images/logos/eu_funded_en.jpg" alt="Erasmus+ Logo" />
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

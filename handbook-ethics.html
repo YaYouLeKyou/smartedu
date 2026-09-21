@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Handbook – Ethics, Data &amp; Critical Perspectives</title>
+    <link rel="icon" type="image/png" href="images/logos/smartaiedu-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        .chapter-hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chapter-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255, 140, 66, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(255, 210, 63, 0.1) 0%, transparent 50%);
+            animation: heroGlow 15s ease-in-out infinite alternate;
+        }
+
+        @keyframes heroGlow {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(2%, 2%) rotate(3deg); }
+        }
+
+        .chapter-hero h1 {
+            font-size: 2.6rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .chapter-hero .chapter-number {
+            display: inline-block;
+            background: rgba(255, 140, 66, 0.2);
+            color: #ffd23f;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .chapter-hero p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+
+        .chapter-content {
+        .chapter-content {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .chapter-content h2 {
+            color: #ff8c42;
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        .chapter-content h3 {
+            color: #333;
+            margin-top: 30px;
+        }
+
+        .chapter-content p,
+        .chapter-content li {
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .chapter-content ul {
+            padding-left: 25px;
+        }
+
+        .chapter-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+
+        .chapter-image {
+            width: 100%;
+            border-radius: 16px;
+            height: 260px;
+            object-fit: cover;
+            margin: 20px 0;
+        }
+
+        .chapter-download {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 18px;
+            background: #ff8c42;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: background 0.3s ease;
+        }
+
+        .chapter-download:hover {
+            background: #e67625;
+        }
+
+        .chapter-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: #ff8c42;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .chapter-link:hover {
+            text-decoration: underline;
+        }
+
+        .chapter-quote {
+            background: #fff7e8;
+            border-left: 5px solid #ffd23f;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            color: #ff8c42;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .handbook-index {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .handbook-index h3 {
+            color: #ff8c42;
+            margin-top: 0;
+        }
+
+        .handbook-index ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .handbook-index li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .handbook-index li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .handbook-index a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .handbook-index a:hover {
+            color: #ff8c42;
+        }
+
+        .ethics-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .ethics-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .ethics-list li i {
+            color: #ff8c42;
+            margin-top: 4px;
+        }
+
+        .scenario-box {
+            background: #f0f8ff;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .scenario-box h4 {
+            color: #333;
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="images/logos/smartaiedu-logo.jpg" alt="Smart edu AI Logo" />
+                <a href="index.html" class="logo">Smart edu AI</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="handbook.html">Handbook</a></li>
+                <li><a href="handbook-foundations.html">Foundations</a></li>
+                <li><a href="handbook-teaching.html">Teaching</a></li>
+                <li><a href="handbook-ethics.html" class="active">Ethics</a></li>
+                <li><a href="handbook-language.html">Language</a></li>
+                <li><a href="handbook-creative.html">Creative</a></li>
+                <li><a href="handbook-professional.html">Professional</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="chapter-hero">
+        <span class="chapter-number">Chapter 3</span>
+        <h1>Ethics, Data &amp; Critical Perspectives</h1>
+        <p>Developing responsible AI practices: bias, privacy, accessibility, and transparency</p>
+    </header>
+
+    <main class="chapter-content">
+        <a href="handbook.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Handbook</a>
+
+        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=1200&h=500&fit=crop" alt="Group discussion and collaborative learning" class="chapter-image" data-aos="fade-up" />
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>In this chapter</h2>
+            <p>Responsible AI use requires more than technical skills — it requires ethical awareness, critical
+                thinking, and a commitment to inclusion. This chapter helps educators and students navigate the
+                key ethical challenges of AI in education. Each section below links to a dedicated resource page
+                with deeper content, discussion scenarios, and practical checklists.</p>
+
+            <div class="handbook-index">
+                <h3>Resources in this chapter</h3>
+                <ul>
+                    <li>
+                        <a href="resource-ethics-ai-education.html">Ethics and Artificial Intelligence in
+                            Education</a>
+                        <p style="font-size: 0.9rem; color: #666; margin: 5px 0 0;">Challenges, issues, and
+                            perspectives on AI ethics in educational settings.</p>
+                    </li>
+                    <li>
+                        <a href="resource-student-data-security.html">Essential Measures for Student Data
+                            Security and Confidentiality</a>
+                        <p style="font-size: 0.9rem; color: #666; margin: 5px 0 0;">Key measures to protect
+                            student data and maintain confidentiality.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>1. Why Critical AI Literacy Matters</h2>
+            <p>AI systems are not neutral. They reflect the data they are trained on, the design choices of their
+                creators, and the economic incentives of the companies that deploy them. In education, uncritical
+                adoption can reinforce stereotypes, deepen inequality, and erode student privacy. Critical AI
+                literacy means understanding both the potential and the limits of AI, and empowering learners to
+                question and shape the technologies that affect their lives.</p>
+
+            <div class="chapter-quote">
+                "Critical thinking about AI is not a barrier to innovation; it is the foundation of responsible
+                innovation."
+            </div>
+
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/8.1 Ethics-and-Artificial-Intelligence-in-Education-Challenges-Issues-and-Perspectives.pptx%20%281%29.pdf" target="_blank" class="chapter-download">
+                    <i class="fas fa-file-pdf"></i> Ethics and AI in Education (PDF)
+                </a>
+            </p>
+            <a href="resource-ethics-ai-education.html" class="chapter-link"><i class="fas fa-book"></i> Read the full pedagogical page →</a>
+        </section>
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>2. Key Ethical Dimensions</h2>
+            <ul class="ethics-list">
+                <li><i class="fas fa-balance-scale"></i>
+                    <div><strong>Bias and fairness</strong>
+                        <br>AI can reproduce and amplify societal biases. Educators must test tools with diverse
+                        learner groups and discuss any unfair outcomes as a learning opportunity.</div>
+                </li>
+                <li><i class="fas fa-shield-alt"></i>
+                    <div><strong>Privacy and data security</strong>
+                        <br>Student data must be protected. Use tools that are transparent about data handling,
+                        prefer anonymised or synthetic data, and comply with GDPR and local regulations.</div>
+                </li>
+                <li><i class="fas fa-eye"></i>
+                    <div><strong>Transparency and explainability</strong>
+                        <br>Students should understand how AI tools make decisions. Choose tools that offer
+                        explanations and encourage learners to interrogate outputs.</div>
+                </li>
+                <li><i class="fas fa-universal-access"></i>
+                    <div><strong>Accessibility and inclusion</strong>
+                        <br>AI tools should be tested for accessibility across devices, languages, and abilities.
+                        Always provide non-digital alternatives.</div>
+                </li>
+                <li><i class="fas fa-leaf"></i>
+                    <div><strong>Environmental impact</strong>
+                        <br>Training and running AI models consumes energy. Discuss the environmental cost of AI
+                        with students and model sustainable digital practices.</div>
+                </li>
+            </ul>
+
+            <p><strong>Downloadable resources:</strong>
+                <a href="./pdf/france/8.2Essential-Measures-for-Student-Data-Security-and-Confidentiality.pptx%20%281%29.pdf" target="_blank" class="chapter-download">
+                    <i class="fas fa-file-pdf"></i> Student Data Security (PDF)
+                </a>
+                <a href="./pdf/france/8.1 Ethics-and-Artificial-Intelligence-in-Education-Challenges-Issues-and-Perspectives.pptx%20%281%29.pdf" target="_blank" class="chapter-download" style="margin-left: 10px;">
+                    <i class="fas fa-file-pdf"></i> Ethics and AI in Education (PDF)
+                </a>
+            </p>
+            <a href="resource-ethics-ai-education.html" class="chapter-link"><i class="fas fa-book"></i> Read the ethics pedagogical page →</a>
+            <a href="resource-student-data-security.html" class="chapter-link"><i class="fas fa-book"></i> Read the data security page →</a>
+        </section>
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>3. Classroom Scenarios for Discussion</h2>
+            <div class="scenario-box">
+                <h4>Scenario A: Automated grading</h4>
+                <p>An AI tool grades student essays quickly and consistently. Some students receive scores that
+                    feel unfair. <strong>Discussion:</strong> Who is accountable for the grade? How can students
+                    appeal? What aspects of writing can AI not judge? What biases might the tool contain?</p>
+            </div>
+            <div class="scenario-box">
+                <h4>Scenario B: AI-assisted language practice</h4>
+                <p>Students use an AI chatbot to practise conversation. Some find it helpful; others feel it
+                    replaces real interaction. <strong>Discussion:</strong> When is AI practice better than human
+                    practice? How does it affect motivation and social skills?</p>
+            </div>
+            <div class="scenario-box">
+                <h4>Scenario C: AI-generated content</h4>
+                <p>Students use generative AI to produce essays. How do you assess learning? How do you maintain
+                    academic integrity while still benefiting from AI as a brainstorming tool?</p>
+            </div>
+
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/3.Integrating-AI-into-Instructional-Design-Enhancing-Youth-Work.pptx%20%281%29.pdf" target="_blank" class="chapter-download">
+                    <i class="fas fa-file-pdf"></i> Integrating AI into Instructional Design (PDF)
+                </a>
+            </p>
+            <a href="resource-ethics-ai-education.html" class="chapter-link"><i class="fas fa-book"></i> Read the ethics pedagogical page →</a>
+        </section>
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>4. Building a School AI Policy</h2>
+            <p>A clear, co-created policy helps the whole school community use AI responsibly. Key elements include:</p>
+            <ul>
+                <li>Approved and prohibited uses of AI by students and staff.</li>
+                <li>Data protection and consent procedures.</li>
+                <li>A process for evaluating and approving new AI tools.</li>
+                <li>Training for teachers, students, and parents.</li>
+                <li>Regular review cycles based on evidence and feedback.</li>
+                <li>Clear escalation paths for ethical concerns.</li>
+            </ul>
+
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&h=500&fit=crop" alt="Classroom discussion with a projector" class="chapter-image" data-aos="fade-up" />
+
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/9.Technology-is-fundamentally-transforming-education.pptx%20%281%29.pdf" target="_blank" class="chapter-download">
+                    <i class="fas fa-file-pdf"></i> Technology Transforming Education (PDF)
+                </a>
+            </p>
+            <a href="resource-student-data-security.html" class="chapter-link"><i class="fas fa-book"></i> Read the data security page →</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Smart edu AI – Erasmus+ Project</p>
+        <img src="images/logos/eu_funded_en.jpg" alt="Erasmus+ Logo" />
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

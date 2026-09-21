@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Handbook – Creative AI Projects | Smart Edu AI</title>
+    <link rel="icon" type="image/png" href="images/logos/smartaiedu-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        .chapter-hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chapter-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255, 140, 66, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(255, 210, 63, 0.1) 0%, transparent 50%);
+            animation: heroGlow 15s ease-in-out infinite alternate;
+        }
+
+        @keyframes heroGlow {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(2%, 2%) rotate(3deg); }
+        }
+
+        .chapter-hero h1 {
+            font-size: 2.6rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .chapter-hero .chapter-number {
+            display: inline-block;
+            background: rgba(255, 140, 66, 0.2);
+            color: #ffd23f;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .chapter-hero p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+
+        .chapter-content {
+        .chapter-content {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .chapter-content h2 {
+            color: #ff8c42;
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        .chapter-content h3 {
+            color: #333;
+            margin-top: 30px;
+        }
+
+        .chapter-content p,
+        .chapter-content li {
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .chapter-content ul {
+            padding-left: 25px;
+        }
+
+        .chapter-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+
+        .chapter-image {
+            width: 100%;
+            border-radius: 16px;
+            height: 260px;
+            object-fit: cover;
+            margin: 20px 0;
+        }
+
+        .chapter-download {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 18px;
+            background: #ff8c42;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: background 0.3s ease;
+        }
+
+        .chapter-download:hover {
+            background: #e67625;
+        }
+
+        .chapter-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: #ff8c42;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .chapter-link:hover {
+            text-decoration: underline;
+        }
+
+        .chapter-quote {
+            background: #fff7e8;
+            border-left: 5px solid #ffd23f;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            color: #ff8c42;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .handbook-index {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .handbook-index h3 {
+            color: #ff8c42;
+            margin-top: 0;
+        }
+
+        .handbook-index ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .handbook-index li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .handbook-index li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .handbook-index a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .handbook-index a:hover {
+            color: #ff8c42;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .tool-card {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 22px;
+            border-left: 4px solid #ffd23f;
+        }
+
+        .tool-card h4 {
+            color: #ff8c42;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .tool-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #ff8c42;
+            color: white;
+            padding: 8px 16px;
+            z-index: 2000;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 0 0 8px 0;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+        .breadcrumb {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+            font-size: 0.9rem;
+            margin: 10px 0 5px;
+            color: #666;
+        }
+        .breadcrumb a {
+            color: #ff8c42;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb span {
+            color: #999;
+        }
+        .project-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 12px 0;
+        }
+        .meta-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+        .meta-badge.duration {
+            background: #fff3e0;
+            color: #e65100;
+        }
+        .meta-badge.materials {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        .criteria-list {
+            background: #f5f5f5;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        .criteria-list h4 {
+            color: #ff8c42;
+            margin-top: 0;
+        }
+        .step-list {
+            counter-reset: step;
+            list-style: none;
+            padding-left: 0;
+        }
+        .step-list > li {
+            position: relative;
+            padding-left: 45px;
+            margin-bottom: 15px;
+        }
+        .step-list > li::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            background: #ff8c42;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+        .notice-box {
+            background: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 0 12px 12px 0;
+            font-size: 0.95rem;
+        }
+        .notice-box strong {
+            color: #e65100;
+        }
+        .alt-box {
+            background: #e8f5e9;
+            border-left: 5px solid #4caf50;
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 0 12px 12px 0;
+            font-size: 0.95rem;
+        }
+        .alt-box strong {
+            color: #2e7d32;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <nav role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="images/logos/smartaiedu-logo.jpg" alt="Smart edu AI Logo" />
+                <a href="index.html" class="logo">Smart edu AI</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="handbook.html">Handbook</a></li>
+                <li><a href="handbook-foundations.html">Foundations</a></li>
+                <li><a href="handbook-teaching.html">Teaching</a></li>
+                <li><a href="handbook-ethics.html">Ethics</a></li>
+                <li><a href="handbook-language.html">Language</a></li>
+                <li><a href="handbook-creative.html" class="active" aria-current="page">Creative</a></li>
+                <li><a href="handbook-professional.html">Professional</a></li>
+            </ul>
+            <div class="hamburger" role="button" aria-label="Toggle navigation menu" aria-expanded="false" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="chapter-hero">
+        <span class="chapter-number">Chapter 5</span>
+        <h1>Creative AI Projects</h1>
+        <p>Image generation, AI music, 3D design, and science-art fusion</p>
+    </header>
+
+    <main class="chapter-content" id="main-content">
+        <a href="handbook.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Handbook</a>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <a href="handbook.html">Handbook</a>
+            <span aria-hidden="true">/</span>
+            <a href="handbook-creative.html" aria-current="page">Creative</a>
+        </nav>
+
+        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200&h=500&fit=crop" alt="AI-assisted creative design" class="chapter-image" data-aos="fade-up" />
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>In this chapter</h2>
+            <p>AI is not just a tool for analysis and automation — it is a powerful creative partner. This chapter
+                explores how students and educators can use AI for image generation, music composition, 3D
+                design, and the fusion of science and art. Each project encourages students to direct, evaluate, and
+                remix AI outputs rather than accept them passively.</p>
+
+            <div class="handbook-index">
+                <h3>Learning objectives</h3>
+                <ul>
+                    <li>Design and implement AI-assisted creative projects across four domains: image, music, science, and 3D design.</li>
+                    <li>Apply critical thinking to evaluate AI-generated outputs for accuracy, bias, and cultural sensitivity.</li>
+                    <li>Demonstrate understanding of copyright, licensing, and intellectual property when using AI tools.</li>
+                    <li>Adapt projects for diverse learners through differentiated instruction and accessibility alternatives.</li>
+                    <li>Create non-digital alternatives to ensure inclusive participation for all students.</li>
+                </ul>
+            </div>
+
+            <div class="handbook-index">
+                <h3>Resources in this chapter</h3>
+                <ul>
+                    <li>
+                        <a href="resource-ai-image-generation.html">AI Image Generation Tools for Education and
+                            Creation</a>
+                        <p style="font-size: 0.9rem; color: #666; margin: 5px 0 0;">Using AI image generation as
+                            a creative and instructional tool.</p>
+                    </li>
+                    <li>
+                        <a href="resource-ai-music.html">AI in Music – Suno, BandLab, Soundraw and Cultural
+                            Fusion</a>
+                        <p style="font-size: 0.9rem; color: #666; margin: 5px 0 0;">AI-assisted music
+                            composition and cultural fusion.</p>
+                    </li>
+                    <li>
+                        <a href="resource-science-education-ai.html">Transforming Science Education with Digital
+                            Innovation</a>
+                        <p style="font-size: 0.9rem; color: #666; margin: 5px 0 0;">AR/VR, simulations, and
+                            AI-driven experiments in science.</p>
+                    </li>
+                    <li>
+                        <a href="resource-ai-3d-design.html">Unlocking Creativity: AI Image Generation and 3D
+                            Design in Education</a>
+                        <p style="font-size: 0.9rem; color: #666; margin: 5px 0 0;">Students create AI-assisted
+                            digital content and 3D visual designs.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>1. AI Image Generation in the Classroom</h2>
+            <p>Generative AI image tools let students and teachers create visual content quickly — from concept
+                art to scientific diagrams to historical recreations. But the power of these tools lies not in
+                simply generating images, but in learning to <strong>prompt, critique, and remix</strong> the outputs.</p>
+
+            <div class="chapter-quote">
+                "The goal is not to replace the artist's eye, but to give every student an imagination amplifier."
+            </div>
+
+            <div class="project-meta">
+                <span class="meta-badge duration"><i class="fas fa-clock"></i> 4 sessions x 45 min (160 min)</span>
+                <span class="meta-badge materials"><i class="fas fa-box"></i> Computer/tablet, internet, AI image tool, paper &amp; colours for alternatives</span>
+                <span class="meta-badge"><i class="fas fa-users"></i> Individual or pairs</span>
+                <span class="meta-badge"><i class="fas fa-graduation-cap"></i> Ages 12+</span>
+            </div>
+
+            <h3>Measurable Learning Objectives</h3>
+            <ul>
+                <li>Students will craft effective text prompts to generate at least 3 distinct images aligned with a learning goal (scored rubric: 0-4).</li>
+                <li>Students will critically evaluate 2 AI-generated images for accuracy, bias, and cultural sensitivity (written reflection, 200+ words).</li>
+                <li>Students will produce a final composite artwork combining AI-generated and hand-drawn elements.</li>
+                <li>Students will properly attribute AI tools and source images, demonstrating understanding of copyright (checklist completed).</li>
+            </ul>
+
+            <h3>Materials</h3>
+            <ul>
+                <li>Computers, tablets, or Chromebooks with internet access</li>
+                <li>Access to an AI image generation tool (e.g., DALL-E, Midjourney, Stable Diffusion, Leonardo.Ai)</li>
+                <li>Projector or interactive whiteboard for demonstrations</li>
+                <li>Paper, coloured pencils, markers, or paints for hand-drawn alternatives</li>
+                <li>Student reflection journals or worksheets</li>
+            </ul>
+
+            <h3>Step-by-Step Instructions</h3>
+            <ol class="step-list">
+                <li><strong>Introduction (20 min):</strong> Present the concept of AI image generation. Demonstrate how prompts influence output. Discuss what AI "understands" versus what a human artist creates.</li>
+                <li><strong>Prompt Workshop (30 min):</strong> Students write 3 prompts on the same theme (e.g., "a scientist"), varying detail and style. Compare outputs. Discuss how word choice affects results.</li>
+                <li><strong>Creation Session (40 min):</strong> Students generate images for their project topic. They select, refine, and iterate on prompts. They save chosen outputs and note the prompt used for each.</li>
+                <li><strong>Critical Review (30 min):</strong> Students evaluate their own and 2 peers' images using the evaluation rubric: accuracy, bias, cultural sensitivity, creativity. Written feedback provided.</li>
+                <li><strong>Remix and Finalise (25 min):</strong> Students combine AI images with hand-drawn or text elements to create a final piece. They write a 100-word artist statement explaining their creative choices.</li>
+                <li><strong>Gallery and Reflection (15 min):</strong> Students present their work. Class discusses ethical implications and what they learned about AI creativity.</li>
+            </ol>
+
+            <h3>Evaluation Criteria</h3>
+            <div class="criteria-list">
+                <h4>Rubric (4-point scale: 1=Beginning, 2=Developing, 3=Proficient, 4=Exemplary)</h4>
+                <ul>
+                    <li><strong>Prompt quality:</strong> Can the student write specific, effective prompts producing relevant images?</li>
+                    <li><strong>Critical evaluation:</strong> Does the student identify biases, inaccuracies, and stereotyping in outputs?</li>
+                    <li><strong>Creative synthesis:</strong> Does the final artwork meaningfully combine AI and human-made elements?</li>
+                    <li><strong>Copyright awareness:</strong> Does the student correctly attribute sources and understand licensing?</li>
+                    <li><strong>Reflection depth:</strong> Is the artist statement thoughtful and self-aware?</li>
+                </ul>
+            </div>
+
+            <h3>Differentiation</h3>
+            <ul>
+                <li><strong>Support:</strong> Provide prompt templates with fill-in-the-blank structure. Pair students. Offer a word bank of descriptive terms. Allow verbal explanation instead of written reflection.</li>
+                <li><strong>Extension:</strong> Challenge students to generate images from opposing perspectives on a topic, then critique both. Explore advanced prompt techniques (negative prompts, style weights).</li>
+                <li><strong>EAL learners:</strong> Provide visual prompt examples. Use image-to-text tools to support vocabulary development. Allow native-language reflections.</li>
+            </ul>
+
+            <div class="notice-box">
+                <strong><i class="fas fa-exclamation-triangle"></i> Copyright and Licensing Notice:</strong>
+                AI-generated images are not automatically free of copyright. Terms of service for each tool differ:
+                some allow commercial use with attribution, others restrict redistribution. Students must check the
+                specific tool's terms of service before using outputs publicly. Even when tools grant usage rights,
+                the AI may have been trained on copyrighted images — this raises unresolved legal questions.
+                Always verify licensing conditions for each tool and each output. When in doubt, treat AI-generated
+                images as requiring attribution and non-commercial use only.
+            </div>
+
+            <div class="notice-box" style="background:#fce4ec; border-left-color:#c62828;">
+                <strong><i class="fas fa-eye"></i> Representation and Bias:</strong>
+                AI image generators may reproduce societal biases — underrepresenting certain ethnicities in
+                professional roles, stereotyping genders in occupations, or favouring Western aesthetics. Have
+                students generate images with identity-neutral prompts and compare results across different
+                descriptors. Discuss patterns observed and their implications.
+            </div>
+
+            <h3>Accessibility and Inclusive Design</h3>
+            <ul>
+                <li>Ensure AI tools are screen-reader compatible. Provide alt-text descriptions for all generated images.</li>
+                <li>Offer high-contrast mode and adjustable font sizes in the interface.</li>
+                <li>For students with motor impairments, provide voice-to-text prompting options.</li>
+                <li>Ensure all visual content is described verbally during gallery presentations.</li>
+            </ul>
+
+            <div class="alt-box">
+                <strong><i class="fas fa-hand-pointer"></i> Alternative Without AI Tool:</strong>
+                Students use magazines, newspapers, and their own drawings to create a collage exploring the same
+                theme. They apply the same evaluation rubric to assess representation, accuracy, and creativity in
+                their handmade visuals. The learning objectives on critical thinking and copyright awareness remain
+                fully achievable through analog methods.
+            </div>
+
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/france/3.1AI-Image-Generation-Tools-for-Education-and-Creation.pptx%20%281%29.pdf" target="_blank" class="chapter-download">
+                    <i class="fas fa-file-pdf"></i> AI Image Generation for Education (PDF)
+                </a>
+            </p>
+            <a href="resource-ai-image-generation.html" class="chapter-link"><i class="fas fa-book"></i> Read the full pedagogical page →</a>
+        </section>
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>2. AI in Music and Cultural Fusion</h2>
+            <p>AI music tools help students compose, experiment, and blend cultural music traditions. The Smart Edu AI Turkey mobility demonstrated how students created AI-assisted rhythms inspired by scientific themes and cultural elements, producing collaborative digital music projects.</p>
+
+            <div class="project-meta">
+                <span class="meta-badge duration"><i class="fas fa-clock"></i> 5 sessions x 45 min (225 min)</span>
+                <span class="meta-badge materials"><i class="fas fa-box"></i> Computer/tablet, internet, AI music tool, speakers, instruments if available</span>
+                <span class="meta-badge"><i class="fas fa-users"></i> Groups of 3-4</span>
+                <span class="meta-badge"><i class="fas fa-graduation-cap"></i> Ages 12+</span>
+            </div>
+
+            <h3>Measurable Learning Objectives</h3>
+            <ul>
+                <li>Students will compose a 2-minute AI-assisted piece using at least 2 different AI tools, demonstrating understanding of prompt control (rubric: 0-4).</li>
+                <li>Students will identify and discuss at least 2 cultural musical elements incorporated into their composition.</li>
+                <li>Students will evaluate AI-generated music for originality, emotional expression, and cultural authenticity (written review, 250+ words).</li>
+                <li>Students will verify and document the licensing conditions of each AI tool used before publishing outputs (checklist completed).</li>
+                <li>Students will collaborate effectively in international/multicultural teams (peer assessment form).</li>
+            </ul>
+
+            <h3>Materials</h3>
+            <ul>
+                <li>Computers, tablets, or Chromebooks with internet access</li>
+                <li>Speakers or headphones for audio playback</li>
+                <li>Access to AI music tools (Suno, BandLab, Soundraw)</li>
+                <li>Optional: traditional instruments, microphones</li>
+                <li>Lyric sheets and cultural research materials</li>
+                <li>Student reflection journals</li>
+            </ul>
+
+            <h3>Step-by-Step Instructions</h3>
+            <ol class="step-list">
+                <li><strong>Cultural Research (30 min):</strong> Each group selects a cultural musical tradition to explore (e.g., folk rhythms, classical structures). They research its characteristics, instruments, and cultural significance.</li>
+                <li><strong>Tool Introduction (25 min):</strong> Demonstrate each AI music tool. Students create accounts and explore free features. Introduce basic prompt structures (genre, mood, tempo, instruments).</li>
+                <li><strong>Composition Session 1 (40 min):</strong> Groups use one AI tool to generate a short musical piece inspired by their researched culture. They document the prompt used and the output received.</li>
+                <li><strong>Composition Session 2 (40 min):</strong> Groups use a second AI tool to create a variation. They compare outputs, select the best elements, and combine them manually where possible.</li>
+                <li><strong>Critical Review (30 min):</strong> Groups evaluate their own and 2 other groups' pieces using the evaluation rubric. Written feedback is provided focusing on cultural authenticity and originality.</li>
+                <li><strong>Presentation and Licensing Check (30 min):</strong> Groups present their compositions. Each group presents a licensing verification sheet confirming they checked terms of service for each tool used.</li>
+            </ol>
+
+            <h3>Evaluation Criteria</h3>
+            <div class="criteria-list">
+                <h4>Rubric (4-point scale: 1=Beginning, 2=Developing, 3=Proficient, 4=Exemplary)</h4>
+                <ul>
+                    <li><strong>Musical quality:</strong> Does the composition demonstrate intentional structure, rhythm, and tonal coherence?</li>
+                    <li><strong>Cultural integration:</strong> Are cultural elements authentically represented rather than superficially copied?</li>
+                    <li><strong>Critical evaluation:</strong> Can the student identify strengths and weaknesses in AI-generated music?</li>
+                    <li><strong>Licensing diligence:</strong> Has the student verified and documented the terms of use for each tool?</li>
+                    <li><strong>Collaboration:</strong> Did all group members contribute meaningfully?</li>
+                </ul>
+            </div>
+
+            <h3>Differentiation</h3>
+            <ul>
+                <li><strong>Support:</strong> Provide prompt templates for music generation (e.g., "Genre: [folk], Mood: [joyful], Tempo: [moderate], Instruments: [drum, flute]"). Offer pre-researched cultural information sheets. Allow oral presentations instead of written reviews.</li>
+                <li><strong>Extension:</strong> Explore AI-generated music in contrasting cultural contexts. Analyse how AI handles microtonal scales, non-Western time signatures, or oral traditions. Compose lyrics alongside the music.</li>
+                <li><strong>EAL learners:</strong> Provide multilingual research materials. Use visual musical notation. Allow presentation in native language with peer translation.</li>
+            </ul>
+
+            <div class="notice-box">
+                <strong><i class="fas fa-exclamation-triangle"></i> Copyright and Licensing Verification:</strong>
+                Suno, BandLab, and Soundraw are <strong>not automatically free of rights</strong>. Each tool has
+                distinct terms of service that change over time:
+                <ul>
+                    <li><strong>Suno:</strong> Free tier grants personal, non-commercial use only. Outputs may not be used commercially without a paid plan. Users must verify current terms at suno.com/terms.</li>
+                    <li><strong>BandLab:</strong> Free tier allows editing and sharing within the platform, but commercial use and distribution require verification of licensing. Check bandlab.com/terms.</li>
+                    <li><strong>Soundraw:</strong> Generators claim royalty-free output for subscribers, but free-tier users must confirm usage rights per the current license at soundraw.io.</li>
+                </ul>
+                <strong>Action required:</strong> Before any public sharing or publishing, students must visit each tool's official terms of service page, read the current license, and document their findings. Tool terms change — always verify at the time of use. Outputs from free tiers often carry non-commercial or attribution-only restrictions.
+            </div>
+
+            <div class="notice-box" style="background:#fce4ec; border-left-color:#c62828;">
+                <strong><i class="fas fa-eye"></i> Representation and Bias:</strong>
+                AI music tools may underrepresent non-Western scales, instruments, and traditions.
+                They may "flatten" cultural specificity into generic world-music patterns. Have students
+                compare AI outputs for different cultural traditions and discuss representational gaps.
+                Encourage students to supplement AI outputs with authentic cultural research.
+            </div>
+
+            <h3>Accessibility and Inclusive Design</h3>
+            <ul>
+                <li>Ensure music tools are keyboard-navigable. Provide visual waveform displays alongside audio.</li>
+                <li>Offer transcript/literal descriptions of musical elements for deaf and hard-of-hearing students.</li>
+                <li>Ensure colour-blind-friendly visual interfaces.</li>
+                <li>Provide alternative non-digital activities: rhythm clapping, body percussion, or acoustic instrument exploration.</li>
+            </ul>
+
+            <div class="alt-box">
+                <strong><i class="fas fa-hand-pointer"></i> Alternative Without AI Tool:</strong>
+                Students use body percussion, found sounds, or traditional instruments to create a
+                collaborative composition inspired by their researched cultural tradition. The same
+                evaluation criteria (musical quality, cultural integration, critical review) apply.
+                Students create a licensing awareness poster explaining why they checked copyright
+                for any recorded music they reference.
+            </div>
+
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/turquie/presentations/AI-in-Music-Suno-BandLab-Soundraw-and-Cultural-Fusion%20%281%29.pptx" target="_blank" class="chapter-download">
+                    <i class="fas fa-file-powerpoint"></i> AI in Music Presentation
+                </a>
+            </p>
+            <a href="resource-ai-music.html" class="chapter-link"><i class="fas fa-book"></i> Read the full pedagogical page →</a>
+        </section>
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>3. Science and Digital Innovation</h2>
+            <p>The intersection of science and AI opens new frontiers for hands-on learning. From AI-powered
+                microscopy to virtual lab simulations, students can conduct experiments, collect data, and
+                analyse results in ways previously impossible. The Smart Edu AI Turkey mobility showcased AI-enhanced
+                science experiments including VR cell exploration and iNaturalist for biodiversity observation.</p>
+
+            <div class="project-meta">
+                <span class="meta-badge duration"><i class="fas fa-clock"></i> 4 sessions x 50 min (200 min)</span>
+                <span class="meta-badge materials"><i class="fas fa-box"></i> Computer/tablet, internet, VR headset (optional), lab equipment, specimen photos</span>
+                <span class="meta-badge"><i class="fas fa-users"></i> Groups of 3-4</span>
+                <span class="meta-badge"><i class="fas fa-graduation-cap"></i> Ages 13+</span>
+            </div>
+
+            <h3>Measurable Learning Objectives</h3>
+            <ul>
+                <li>Students will conduct at least 1 virtual experiment using an AI-powered simulation, recording hypotheses, methods, and results (lab report scored: 0-4).</li>
+                <li>Students will identify and discuss at least 3 limitations of AI tools in scientific contexts (written analysis, 200+ words).</li>
+                <li>Students will use AI-assisted tools (e.g., iNaturalist) to classify and analyse biological data, achieving at least 80% accuracy against expert benchmarks.</li>
+                <li>Students will produce a science-art fusion piece combining scientific accuracy with creative expression.</li>
+            </ul>
+
+            <h3>Materials</h3>
+            <ul>
+                <li>Computers, tablets, or Chromebooks with internet access</li>
+                <li>Optional: VR headsets for immersive exploration</li>
+                <li>Access to VR cell exploration platforms, iNaturalist, Khan Academy AI</li>
+                <li>Lab equipment for comparative real-world experiments (microscopes, slides, plant samples)</li>
+                <li>Art supplies for science-art fusion projects</li>
+                <li>Data recording sheets and graph paper</li>
+            </ul>
+
+            <h3>Step-by-Step Instructions</h3>
+            <ol class="step-list">
+                <li><strong>Hypothesis Formation (20 min):</strong> Introduce the scientific question (e.g., "How do cells divide?"). Students form hypotheses and design a basic method. Discuss how AI can support vs. replace hands-on work.</li>
+                <li><strong>Virtual Experiment (40 min):</strong> Students conduct a virtual experiment using AI-powered simulation (e.g., VR cell exploration). They record observations systematically and compare with real-world data where available.</li>
+                <li><strong>Data Analysis (35 min):</strong> Students use AI tools (iNaturalist for species ID, AI data analysis tools) to classify and analyse their data. They compare AI results with manual verification.</li>
+                <li><strong>Critical Analysis (30 min):</strong> Students write a reflection on at least 3 limitations of AI in scientific contexts (e.g., accuracy gaps, missing contextual understanding, data bias). Peer review in pairs.</li>
+                <li><strong>Science-Art Fusion (40 min):</strong> Students create a visual or multimedia piece that accurately represents a scientific concept while demonstrating creative expression. They explain both the science and the art in their choices.</li>
+                <li><strong>Presentation and Discussion (35 min):</strong> Students present findings. Class discusses ethical implications and the role of human judgement in science.</li>
+            </ol>
+
+            <h3>Evaluation Criteria</h3>
+            <div class="criteria-list">
+                <h4>Rubric (4-point scale: 1=Beginning, 2=Developing, 3=Proficient, 4=Exemplary)</h4>
+                <ul>
+                    <li><strong>Scientific method:</strong> Does the student follow the scientific method rigorously, including hypothesis, method, and analysis?</li>
+                    <li><strong>Critical awareness:</strong> Can the student identify specific limitations of AI tools in their experiment?</li>
+                    <li><strong>Data accuracy:</strong> Are AI-assisted analyses verified against reliable sources?</li>
+                    <li><strong>Science-art integration:</strong> Does the fusion piece meaningfully represent both scientific accuracy and creative expression?</li>
+                </ul>
+            </div>
+
+            <h3>Differentiation</h3>
+            <ul>
+                <li><strong>Support:</strong> Provide structured lab report templates. Pair students strategically. Offer pre-selected AI tools with guided tutorials. Allow verbal presentations instead of written reports.</li>
+                <li><strong>Extension:</strong> Design a comparative study between AI-assisted and traditional methods. Explore edge cases where AI fails in scientific classification. Publish findings to a class blog.</li>
+                <li><strong>EAL learners:</strong> Provide bilingual scientific vocabulary lists. Use visual lab protocols. Allow research in native language with peer translation.</li>
+            </ul>
+
+            <div class="notice-box" style="background:#fce4ec; border-left-color:#c62828;">
+                <strong><i class="fas fa-eye"></i> Representation and Bias:</strong>
+                AI scientific tools may carry training biases — for example, species databases may be
+                skewed toward Western biodiversities, or medical AI may underperform for underrepresented
+                populations. Discuss with students: whose science is represented in the data?
+                How might AI tools fail in non-Western scientific contexts?
+            </div>
+
+            <h3>Accessibility and Inclusive Design</h3>
+            <ul>
+                <li>Ensure VR simulations are accessible (subtitles, audio descriptions, motion sensitivity options).</li>
+                <li>Provide screen-reader compatible data analysis tools.</li>
+                <li>Offer tactile models for visually impaired students alongside virtual explorations.</li>
+                <li>Ensure lab equipment is adaptable for students with physical disabilities.</li>
+            </ul>
+
+            <div class="alt-box">
+                <strong><i class="fas fa-hand-pointer"></i> Alternative Without AI Tool:</strong>
+                Students conduct the same experiments using traditional microscopy, physical
+                specimens, and manual classification. They create comparison charts between AI-assisted
+                and manual methods, achieving the same critical analysis and scientific method learning
+                objectives. The science-art fusion project can use hand-drawn or sculptural media.
+            </div>
+
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/turquie/presentations/Transforming-Science-Education-with-Digital-Innovation (1).pptx" target="_blank" class="chapter-download">
+                    <i class="fas fa-file-powerpoint"></i> Transforming Science Education Presentation
+                </a>
+            </p>
+            <a href="resource-science-education-ai.html" class="chapter-link"><i class="fas fa-book"></i> Read the full pedagogical page →</a>
+        </section>
+
+        <section class="chapter-card" data-aos="fade-up">
+            <h2>4. AI 3D Design and Digital Creation</h2>
+            <p>Students create AI-assisted 3D models, digital sculptures, and visual designs reflecting
+                their cultures and scientific themes. This combines technical skill development with cultural
+                expression and scientific inquiry, fostering creativity across multiple domains.</p>
+
+            <div class="project-meta">
+                <span class="meta-badge duration"><i class="fas fa-clock"></i> 5 sessions x 45 min (225 min)</span>
+                <span class="meta-badge materials"><i class="fas fa-box"></i> Computer/tablet, internet, 3D software, 3D printer (optional), craft supplies</span>
+                <span class="meta-badge"><i class="fas fa-users"></i> Groups of 3-4</span>
+                <span class="meta-badge"><i class="fas fa-graduation-cap"></i> Ages 12+</span>
+            </div>
+
+            <h3>Measurable Learning Objectives</h3>
+            <ul>
+                <li>Students will create at least 1 AI-assisted 3D model or design that reflects a cultural or scientific theme (rubric: 0-4).</li>
+                <li>Students will evaluate 2 AI-generated 3D designs for cultural sensitivity and aesthetic value (written review, 200+ words).</li>
+                <li>Students will articulate the relationship between cultural identity and digital design in a 150-word reflection.</li>
+                <li>Students will verify and document the licensing terms for each 3D AI tool used (checklist completed).</li>
+            </ul>
+
+            <h3>Materials</h3>
+            <ul>
+                <li>Computers, tablets, or Chromebooks with internet access</li>
+                <li>Access to AI 3D design tools (e.g., Runway ML, Canva AI features, DALL-E + 3D tools)</li>
+                <li>Optional: 3D printer for physical output</li>
+                <li>Craft supplies (clay, cardboard, paper) for tactile alternatives</li>
+                <li>Cultural research materials and reference images</li>
+                <li>Student reflection journals</li>
+            </ul>
+
+            <h3>Step-by-Step Instructions</h3>
+            <ol class="step-list">
+                <li><strong>Cultural Research (25 min):</strong> Each group selects a cultural heritage element (architecture, patterns, artefacts) or a scientific concept (DNA, solar system). They research its significance and visual characteristics.</li>
+                <li><strong>Tool Exploration (20 min):</strong> Students explore AI 3D design tools. They test prompts, style settings, and output formats. Document successful and unsuccessful prompts.</li>
+                <li><strong>Design Session 1 (40 min):</strong> Groups create an AI-assisted 3D design or digital model. They iterate on prompts, adjusting style, detail, and cultural references.</li>
+                <li><strong>Critical Review (30 min):</strong> Groups evaluate their own and 2 other groups' designs using the evaluation rubric. Focus on cultural sensitivity, aesthetic quality, and scientific accuracy.</li>
+                <li><strong>Refinement and Remix (35 min):</strong> Students refine designs based on feedback. They manually add or modify elements to ensure cultural authenticity and personal voice.</li>
+                <li><strong>Presentation and Licensing Check (35 min):</strong> Groups present their designs with cultural context. Each group presents a licensing verification sheet.</li>
+            </ol>
+
+            <h3>Evaluation Criteria</h3>
+            <div class="criteria-list">
+                <h4>Rubric (4-point scale: 1=Beginning, 2=Developing, 3=Proficient, 4=Exemplary)</h4>
+                <ul>
+                    <li><strong>Design quality:</strong> Does the 3D design demonstrate technical skill and creative vision?</li>
+                    <li><strong>Cultural/scientific depth:</strong> Does the design meaningfully engage with the cultural or scientific theme?</li>
+                    <li><strong>Critical evaluation:</strong> Does the student identify biases or inaccuracies in AI outputs?</li>
+                    <li><strong>Licensing diligence:</strong> Has the student verified and documented the terms of use for each tool?</li>
+                </ul>
+            </div>
+
+            <h3>Differentiation</h3>
+            <ul>
+                <li><strong>Support:</strong> Provide design templates and example prompts. Pair students with complementary skills. Offer pre-researched cultural/scientific information. Allow 2D design instead of 3D as an alternative.</li>
+                <li><strong>Extension:</strong> Explore AI 3D design for architectural planning or scientific modelling. Create animations from static designs. Submit designs to a digital gallery.</li>
+                <li><strong>EAL learners:</strong> Provide visual design rubrics. Allow research in native language. Use multilingual 3D design vocabulary cards.</li>
+            </ul>
+
+            <div class="notice-box">
+                <strong><i class="fas fa-exclamation-triangle"></i> Copyright and Licensing Verification:</strong>
+                3D AI design tools have varying licensing terms:
+                <ul>
+                    <li><strong>Runway ML:</strong> Check current terms at runwayml.com — free tier typically grants limited usage rights; commercial use requires verification.</li>
+                    <li><strong>Canva AI:</strong> Canva's terms vary by subscription level — verify at canva.com/terms what constitutes acceptable use of AI-generated elements.</li>
+                    <li><strong>DALL-E + 3D tools:</strong> OpenAI's terms permit use of generated images, but when combined with 3D software, licensing becomes layered and must be verified per component.</li>
+                </ul>
+                <strong>Action required:</strong> Students must check each tool's current terms of service, document what usage rights they have, and confirm before any public display. Free-tier outputs often carry attribution requirements or non-commercial restrictions only.
+            </div>
+
+            <div class="notice-box" style="background:#fce4ec; border-left-color:#c62828;">
+                <strong><i class="fas fa-eye"></i> Representation and Bias:</strong>
+                AI 3D tools may default to Western architectural styles, body proportions, and
+                aesthetic norms. When students generate cultural designs, discuss whether the output
+                reflects authentic representation or a stereotypical interpretation. Encourage students
+                to manually adjust AI outputs for cultural accuracy.
+            </div>
+
+            <h3>Accessibility and Inclusive Design</h3>
+            <ul>
+                <li>Ensure 3D software has keyboard navigation and screen-reader support.</li>
+                <li>Provide tactile 3D models (clay, 3D prints) alongside digital designs.</li>
+                <li>Offer high-contrast visual interfaces and adjustable workspace sizes.</li>
+                <li>Ensure VR/AR experiences have accessibility settings (seated mode, reduced motion).</li>
+            </ul>
+
+            <div class="alt-box">
+                <strong><i class="fas fa-hand-pointer"></i> Alternative Without AI Tool:</strong>
+                Students sculpt, build, or draw cultural/scientific models using physical
+                materials (clay, cardboard, paper mache). They apply the same evaluation criteria
+                for design quality, cultural depth, and critical reflection. The licensing awareness
+                component shifts to researching and documenting copyright for referenced images
+                and cultural artefacts used as inspiration.
+            </div>
+
+            <p><strong>Downloadable resource:</strong>
+                <a href="./pdf/turquie/presentations/Unlocking-Creativity-AI-Image-Generation-and-3D-Design-in-Education.pptx" target="_blank" class="chapter-download">
+                    <i class="fas fa-file-powerpoint"></i> AI 3D Design Presentation
+                </a>
+            </p>
+            <a href="resource-ai-3d-design.html" class="chapter-link"><i class="fas fa-book"></i> Read the full pedagogical page →</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Smart edu AI – Erasmus+ Project</p>
+        <img src="images/logos/eu_funded_en.jpg" alt="Erasmus+ Logo" />
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
