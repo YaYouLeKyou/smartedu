@@ -297,7 +297,6 @@
         }
 
         .hamburger {
-            display: flex;
             flex-direction: column;
             cursor: pointer;
             gap: 5px;
@@ -327,7 +326,7 @@
         }
 
         .nav-links {
-            display: none !important;
+            display: none;
             flex-direction: column;
             gap: 12px;
             background: linear-gradient(135deg, #ff8c42, #ffd23f);
@@ -342,7 +341,7 @@
         }
 
         .nav-links.active {
-            display: flex;
+            display: flex !important;
             animation: slideDown 0.3s ease;
         }
 
@@ -767,7 +766,10 @@
             </div>
         </section>
 
-        <section class="handbook-section" data-aos="fade-up" style="text-align:center;margin:50px 0;">
+        <a href="https://portefolio-2026.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link" style="background:linear-gradient(135deg,#1a1a2e,#16213e);">
+                <i class="fas fa-envelope" aria-hidden="true"></i> Contacter le dev
+            </a>
+            <section class="handbook-section" data-aos="fade-up" style="text-align:center;margin:50px 0;">
             <h2 class="section-title">Explore the Project</h2>
             <a href="index.html" class="project-link">
                 <i class="fas fa-globe" aria-hidden="true"></i> Back to Smart Edu AI Project Home
