@@ -343,6 +343,9 @@ footer img {
     transform: scale(1.07);
 }
 
+.hamburger {
+    display: none;
+}
 
 @media (max-width: 600px) {
     .nav-links {
