@@ -325,35 +325,16 @@
             transform: rotate(-45deg) translate(5px, -5px);
         }
 
-        .nav-links {
-            display: none;
-            flex-direction: column;
-            gap: 12px;
-            background: linear-gradient(135deg, #ff8c42, #ffd23f);
-            position: absolute;
-            top: 62px;
-            left: 15px;
-            right: 15px;
-            border-radius: 10px;
-            padding: 15px 20px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-            z-index: 998;
-        }
+        
 
-        .nav-links.active {
-            display: flex !important;
-            animation: slideDown 0.3s ease;
-        }
+        
 
         @keyframes slideDown {
             from { opacity: 0; transform: translateY(-10px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .nav-links a {
-            padding: 4px 0;
-            font-size: 1rem;
-        }
+        
 
         .res-img {
             width: 100%;
@@ -385,6 +366,7 @@
         }
 
         @media (max-width: 600px) {
+            
             .handbook-hero h1 {
                 font-size: 1.8rem;
             }
@@ -400,11 +382,7 @@
             .stat-item .stat-number {
                 font-size: 2rem;
             }
-            .nav-links {
-                top: 58px;
-                left: 10px;
-                right: 10px;
-            }
+            
             .about-image {
                 height: 200px;
             }
@@ -766,10 +744,7 @@
             </div>
         </section>
 
-        <a href="https://portefolio-2026.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link" style="background:linear-gradient(135deg,#1a1a2e,#16213e);">
-                <i class="fas fa-envelope" aria-hidden="true"></i> Contacter le dev
-            </a>
-            <section class="handbook-section" data-aos="fade-up" style="text-align:center;margin:50px 0;">
+        <section class="handbook-section" data-aos="fade-up" style="text-align:center;margin:50px 0;">
             <h2 class="section-title">Explore the Project</h2>
             <a href="index.html" class="project-link">
                 <i class="fas fa-globe" aria-hidden="true"></i> Back to Smart Edu AI Project Home
@@ -779,6 +754,9 @@
             </a>
             <a href="https://www.instagram.com/smart.edu.ai/" target="_blank" rel="noopener noreferrer" class="project-link" style="margin-left:12px;background:linear-gradient(135deg,#e4405f,#c13584);">
                 <i class="fab fa-instagram" aria-hidden="true"></i> Follow on Instagram
+            </a>
+            <a href="https://portefolio-2026.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link" style="margin-left:24px;background:linear-gradient(135deg,#1a1a2e,#16213e);">
+                <i class="fas fa-envelope" aria-hidden="true"></i> Contact the Developer
             </a>
         </section>
 
