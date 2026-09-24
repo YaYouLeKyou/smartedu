@@ -549,3 +549,37 @@ footer img {
     margin-bottom: 15px;
     /* space before website link */
 }
+
+/* Language toggle button */
+.lang-toggle {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.lang-toggle:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-1px);
+}
+
+.lang-flag {
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+@media (max-width: 600px) {
+    .lang-toggle {
+        margin-top: 10px;
+    }
+}
